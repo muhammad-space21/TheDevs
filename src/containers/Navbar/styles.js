@@ -1,120 +1,321 @@
 import styled from 'styled-components';
+import { Navbar, Nav } from 'react-bootstrap';
+import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 
-import { 
-  Navbar, 
-  Nav, 
-  NavDropdown, 
-  Form, 
-  FormControl 
-} from 'react-bootstrap';
 
-// $primary-color	: #7c32ff;
-// $primary-color2	: #c738d8;
-// $title-color	: #222222;
-// $text-color		: #828bb2;
-
-// $white			: #fff;
-// $offwhite		: #f9f9fb;
-// $black			: #222;
-
-export const Header = styled.header`
-  width: 100%;
-  position: absolute;
-	top: 0;
-	left: 0;
-  z-index: 9;
-  background-color: #fff;
-  box-shadow: -21.213px 21.213px 30px 0px 
-    rgba(158, 158, 158, 0.3);
-  -webkit-transition: all 0.3s ease 0s;
-	-moz-transition: all 0.3s ease 0s;
-	-o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-`;
-
-export const NavbarStyle = styled(Navbar)`
-  color: #fff;
-  border-color: #fff;
-  padding: 25px 15px;
-	&:focus {
-		outline: 0px;
-  }
-  @media (max-width: 992px) {
-		background: #222222;
-		margin-top: 20px;
-	}
-`;
-
-export const NavStyle = styled(Nav)`
-  @media (max-width: 992px) {
-		margin-top: 10px;
-		height: auto;
-		max-height: 400px;
-		overflow-x: hidden;
-	}
-`;
-
-export const NavLinkStyle = styled(Nav.Link)`
-  text-transform: uppercase;
-  font-size: 12px;
-  font-weight: 500;
-  color: #fff;
-  padding: 20px;
-  @media (max-width: 992px) {
-    padding: 10px 0;
+export const NavbarStyled = styled(Navbar)`
+  width: 100vw;
+  height: 100px;
+  background-color: #F4F7F6;
+  position: fixed;
+  z-index: 100;
+  font-family: 'Varela Round', sans-serif;
+  @media screen and (max-width: 550px) {
+    height: 80px;
   }
 `;
 
-export const NavDropdownStyle = styled(NavDropdown)`
-  display: block;
-  text-transform: uppercase;
-  font-size: 12px;
-  font-weight: 500;
-  color: #fff;
-  @media (max-width: 992px) {
-    padding: 10px 0;
-  }
-  -webkit-transition: all 0.3s ease 0s;
-	-moz-transition: all 0.3s ease 0s;
-	-o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-  @media (max-width: 991px) {
-		display: block;
-		opacity: 1;
-    visibility: visible;
-    border: none;
-    background: transparent;
-	}
-  /* &.show {
-    display: block;
-    opacity: 1;
-    visibility: visible;
-    @media (max-width: 991px) {
-      background: transparent;
-      box-shadow: none;
-      border: 0px;
+export const NavStyled = styled(Nav)`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: 888;
+    @media screen and (max-width: 991px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      background-color: black;
+      height: 75vh;
+      margin: 0;
       padding: 0;
     }
-  } */
+`;
+
+export const NavbarCollapse = styled(Navbar.Collapse)`
+  z-index: 888;
+  @media screen and (max-width: 991px) {
+    margin-left: -50px;
+    margin-right: -50px;
+  }
+`;
+
+export const NavLinkHide = styled(HashLink)`
+  display: none;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 300;
+  color: black;
+  text-decoration: none;
   &:hover {
-    @media (min-width: 992px) {
-      display: block;
-      opacity: 1;
-      visibility: visible;
+    color: #00AF66;
+    cursor: pointer; 
+    text-decoration: none;
+  }
+  @media screen and (max-width: 991px) {
+    display: block;
+  }
+`;
+
+export const NavLinkCustom = styled(HashLink)`
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 300;
+  color: black;
+  margin-right: 30px;
+  text-decoration: none;
+  &:hover {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+    &::before {
+      width: 70px;
+    }
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: 20px;
+    background-color: #1EE5CF;
+    height: 5px;
+    width: 0;
+    transition: .3s;
+    border-radius: 5px;
+    @media screen and (max-width: 991px) {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 991px) {
+    margin-right: 0;
+    margin-bottom: -32px;
+    &:hover {
+      color: #1EE5CF;
+      cursor: pointer;
     }
   }
 `;
 
-export const NavDropdownItemStyle = styled(NavDropdown.Item)`
-  color: #222222;
-  padding: 10px 20px;
-  font-size: 11px;
-  @media (max-width: 991px) {
-		display: block;
-		opacity: 1;
-    visibility: visible;
-    border: none;
-    background: transparent;
-    background-color: #fff;
-	}
+export const NavLinkStyledDropdown = styled(Link)`
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 300;
+  color: black;
+  text-decoration: none;
+  margin-left: 10px;
+    &:hover {
+      cursor: pointer;
+      color: #00AF66; 
+      text-decoration: none;
+    }
+  @media screen and (max-width: 1100px) {
+    padding-right: 20px;
+  }
+  @media screen and (max-width: 991px) {
+    margin-right: 0;
+    display: none;
+  }
+`;
+
+export const NavLinkStyled = styled(HashLink)`
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 300;
+  color: black;
+  margin-right: 30px;
+  text-decoration: none;
+  &:hover {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+    &::before {
+      width: 70px;
+    }
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: 20px;
+    background-color: #00AF66;
+    height: 5px;
+    width: 0;
+    transition: .3s;
+    border-radius: 5px;
+    @media screen and (max-width: 991px) {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 991px) {
+    margin-right: 0;
+    &:hover {
+      color: #00AF66;
+      cursor: pointer;
+    }
+  }
+  img {
+    width: 40px;
+    height: 40px;
+  }
+`;
+
+export const NavLinkStyledLogin = styled(Nav.Link)`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 20px;
+  color: black;
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+    color: #00AF66;
+    text-decoration: none;
+  }
+  span {
+    display: none;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 300;
+    &:hover {
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+  img {
+    width: 40px;
+    height: 40px;
+  }
+  @media screen and (max-width: 991px) {
+    span {
+      display: block;
+    }
+    img {
+      width: 30px;
+      height: 30px;
+      margin-right: 5px;
+    }
+  }
+
+`;
+
+export const NavItemStyled = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @media screen and (min-width: 991px) and (max-width: 1100px) {
+    display: none;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+  img {
+    width: 20px;
+    height: 20px;
+    @media screen and (max-width: 991px) {
+      margin-top: 20px;
+    }
+  }
+  a {
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-left: 15px;
+    font-family: 'Montserrat', sans-serif;
+    &:hover {
+      text-decoration: none;
+    }
+    @media screen and (max-width: 991px) {
+      margin-left: 10px;
+      margin-top: 20px;
+      &:hover {
+        color: #00AF66;
+      }
+        img {
+          width: 30px;
+          height: 30px;
+        }
+      }
+  }
+`;
+
+export const NavItem = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+export const HR = styled.div`
+  height: 50px;
+  border-left: 1px solid black;
+  margin-right: 10px;
+  @media screen and (max-width: 991px) {
+    display: none;
+  }
+`;
+
+export const NavbarBrand = styled(Navbar.Brand)`
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  img {
+    width: auto;
+    height: 25px;
+    @media screen and (max-width: 550px) {
+      width: auto;
+      height: 20px;
+    }
+  }
+`;
+
+export const NavbarToggle = styled(Navbar.Toggle)`
+  margin-left: auto;
+  margin-right: 5px;
+  margin-top: auto;
+  margin-bottom: auto;
+  &:focus {
+    outline: none;
+  }
+  img {
+    width: 35px;
+    height: 20px;
+    @media screen and (max-width: 550px) {
+      width: 30px;
+      height: 15px;
+    }
+  }
+`;
+
+export const Language = styled.div`
+  width: 30px;
+  height: 30px;
+  border-radius: 40px;
+  border: 2.5px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+    span {
+      font-size: 12px;
+      color: black;
+      font-weight: 600;
+      &:hover {
+        color: black;
+        cursor: pointer;
+      }
+    }
+`;
+
+export const LinkCustom = styled(Link)`
+  &:hover {
+    text-decoration: none;
+  }
+`;
+
+export const NavItemStyledButton = styled.div`
+  display: block;
+  margin-right: 20px;
+  @media screen and (max-width: 991px) {
+    margin-right: 0;
+    }
 `;
