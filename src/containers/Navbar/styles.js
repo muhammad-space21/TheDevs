@@ -17,15 +17,18 @@ export const NavbarStyled = styled(Navbar)`
 `;
 
 export const NavStyled = styled(Nav)`
+  width: 60vw; 
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-around;
   z-index: 888;
     @media screen and (max-width: 991px) {
+      width: 100vw;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
-      background-color: black;
+      background-color: #F4F7F6;
       height: 75vh;
       margin: 0;
       padding: 0;
@@ -34,10 +37,6 @@ export const NavStyled = styled(Nav)`
 
 export const NavbarCollapse = styled(Navbar.Collapse)`
   z-index: 888;
-  @media screen and (max-width: 991px) {
-    margin-left: -50px;
-    margin-right: -50px;
-  }
 `;
 
 export const NavLinkHide = styled(HashLink)`
@@ -48,7 +47,7 @@ export const NavLinkHide = styled(HashLink)`
   color: black;
   text-decoration: none;
   &:hover {
-    color: #00AF66;
+    color: black;
     cursor: pointer; 
     text-decoration: none;
   }
@@ -60,7 +59,7 @@ export const NavLinkHide = styled(HashLink)`
 export const NavLinkCustom = styled(HashLink)`
   font-size: 16px;
   line-height: 20px;
-  font-weight: 300;
+  font-weight: 500;
   color: black;
   margin-right: 30px;
   text-decoration: none;
@@ -77,7 +76,7 @@ export const NavLinkCustom = styled(HashLink)`
     content: "";
     bottom: 20px;
     background-color: #1EE5CF;
-    height: 5px;
+    height: 7px;
     width: 0;
     transition: .3s;
     border-radius: 5px;
@@ -98,13 +97,13 @@ export const NavLinkCustom = styled(HashLink)`
 export const NavLinkStyledDropdown = styled(Link)`
   font-size: 15px;
   line-height: 20px;
-  font-weight: 300;
+  font-weight: 500;
   color: black;
   text-decoration: none;
   margin-left: 10px;
     &:hover {
       cursor: pointer;
-      color: #00AF66; 
+      color: #1EE5CF; 
       text-decoration: none;
     }
   @media screen and (max-width: 1100px) {
@@ -135,8 +134,8 @@ export const NavLinkStyled = styled(HashLink)`
     position: absolute;
     content: "";
     bottom: 20px;
-    background-color: #00AF66;
-    height: 5px;
+    background-color: #1EE5CF;
+    height: 7px;
     width: 0;
     transition: .3s;
     border-radius: 5px;
@@ -147,7 +146,7 @@ export const NavLinkStyled = styled(HashLink)`
   @media screen and (max-width: 991px) {
     margin-right: 0;
     &:hover {
-      color: #00AF66;
+      color: black;
       cursor: pointer;
     }
   }
@@ -155,52 +154,15 @@ export const NavLinkStyled = styled(HashLink)`
     width: 40px;
     height: 40px;
   }
-`;
-
-export const NavLinkStyledLogin = styled(Nav.Link)`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-right: 20px;
-  color: black;
-  text-decoration: none;
-  &:hover {
-    cursor: pointer;
-    color: #00AF66;
-    text-decoration: none;
-  }
-  span {
-    display: none;
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: 300;
-    &:hover {
-      text-decoration: none;
-      cursor: pointer;
-    }
-  }
-  img {
-    width: 40px;
-    height: 40px;
-  }
-  @media screen and (max-width: 991px) {
-    span {
-      display: block;
-    }
-    img {
-      width: 30px;
-      height: 30px;
-      margin-right: 5px;
-    }
-  }
-
 `;
 
 export const NavItemStyled = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  @media screen and (min-width: 991px) and (max-width: 1100px) {
+  @media screen 
+  and (min-width: 991px) 
+  and (max-width: 1100px) {
     display: none;
   }
   &:hover {
@@ -237,20 +199,6 @@ export const NavItemStyled = styled.div`
   }
 `;
 
-export const NavItem = styled.div`
-  display: flex;
-  flex-direction: row;
-`;
-
-export const HR = styled.div`
-  height: 50px;
-  border-left: 1px solid black;
-  margin-right: 10px;
-  @media screen and (max-width: 991px) {
-    display: none;
-  }
-`;
-
 export const NavbarBrand = styled(Navbar.Brand)`
   width: fit-content;
   height: 100%;
@@ -284,38 +232,4 @@ export const NavbarToggle = styled(Navbar.Toggle)`
       height: 15px;
     }
   }
-`;
-
-export const Language = styled.div`
-  width: 30px;
-  height: 30px;
-  border-radius: 40px;
-  border: 2.5px solid black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 10px;
-    span {
-      font-size: 12px;
-      color: black;
-      font-weight: 600;
-      &:hover {
-        color: black;
-        cursor: pointer;
-      }
-    }
-`;
-
-export const LinkCustom = styled(Link)`
-  &:hover {
-    text-decoration: none;
-  }
-`;
-
-export const NavItemStyledButton = styled.div`
-  display: block;
-  margin-right: 20px;
-  @media screen and (max-width: 991px) {
-    margin-right: 0;
-    }
 `;

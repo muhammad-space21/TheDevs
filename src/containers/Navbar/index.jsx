@@ -6,21 +6,17 @@ import {
   NavStyled, 
   NavLinkStyled,
   NavLinkStyledDropdown,
-  // NavItemStyled,
-  // HR,
   NavbarBrand,
   NavbarToggle,
   NavbarCollapse,
-  // NavLinkStyledLogin,
   NavLinkHide,
-  NavLinkCustom,
-  // Language,
-  // NavItem,
-  // LinkCustom,
-  NavItemStyledButton
+  NavLinkCustom
 } from './styles';
 
 import './styles.scss';
+
+import ButtonPrimary from '../../components/PrimaryButton';
+
 
 export const NavbarMain = () => {
   const history = useHistory();
@@ -39,18 +35,20 @@ export const NavbarMain = () => {
         <NavbarCollapse id="responsive-navbar-nav">
           <NavStyled className="ml-auto">
             <NavLinkCustom to="/">HOME</NavLinkCustom>
+            <NavLinkCustom to="/">ABOUT</NavLinkCustom>
             <li>
               <NavLinkStyled className='nav-item' to="#1">COURSES</NavLinkStyled>
               <ul className="sub-menu">
-                <NavLinkStyledDropdown to="/">Frontend</NavLinkStyledDropdown>
-                <NavLinkStyledDropdown to="/">Backend</NavLinkStyledDropdown>
-                <NavLinkStyledDropdown to="/">Mobile</NavLinkStyledDropdown>
+                <NavLinkStyledDropdown to="/">Frontend development</NavLinkStyledDropdown>
+                <NavLinkStyledDropdown to="/">Backend development</NavLinkStyledDropdown>
+                <NavLinkStyledDropdown to="/">Mobile development</NavLinkStyledDropdown>
               </ul>
             </li>
-              <NavLinkHide to="/">Frontend</NavLinkHide>
-              <NavLinkHide to="/">Backend</NavLinkHide>
-              <NavLinkHide to="/">Mobile</NavLinkHide>
-            <NavLinkStyled to="/">CLASSES</NavLinkStyled>
+              <NavLinkHide to="/">Frontend development</NavLinkHide>
+              <NavLinkHide to="/">Backend development</NavLinkHide>
+              <NavLinkHide to="/">Mobile development</NavLinkHide>
+            <NavLinkStyled to="/">PRICES</NavLinkStyled>
+            <ButtonPrimary btnEnrollNavbar>enroll to the course</ButtonPrimary>
           </NavStyled>
         </NavbarCollapse>
     </NavbarStyled>
