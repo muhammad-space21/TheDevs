@@ -10,17 +10,22 @@
 .nav-item {
   font-size: 16px;
   line-height: 20px;
-  font-weight: 300;
+  font-weight: 600;
   color: black;
   text-decoration: none;
   margin-right: 30px;
   font-family: 'Varela Round', sans-serif;
     &:hover {
-      color: #1EE5CF;
+      color: black;
       text-decoration: none;
     }
     @media screen and (max-width: 991px) {
-      display: none;
+      margin-right: 0;
+      font-weight: 500;
+      &:hover {
+        color: #1EE5CF;
+        cursor: pointer;
+      }
     }
 }
 

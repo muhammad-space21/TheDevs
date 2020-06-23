@@ -1,10 +1,8 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
 
 import {
   NavbarStyled, 
   NavStyled, 
-  NavLinkStyled,
   NavLinkStyledDropdown,
   NavbarBrand,
   NavbarToggle,
@@ -16,28 +14,23 @@ import {
 import './styles.scss';
 
 import ButtonPrimary from '../../components/PrimaryButton';
-
+import IconMenu from '../../assets/icons/open-menu.svg';
 
 export const NavbarMain = () => {
-  const history = useHistory();
-  const routeChange = () => {
-    history.push(`/form-old-cars`)
-  };
-
   return (
     <NavbarStyled bg='default' variant='default' expand="lg">
       <NavbarBrand href="/"> 
-        Developer
+        The <span>Devs</span>
       </NavbarBrand>
       <NavbarToggle aria-controls="responsive-navbar-nav">
-        
+        <img src={IconMenu} alt="menu"/>
       </NavbarToggle>
         <NavbarCollapse id="responsive-navbar-nav">
           <NavStyled className="ml-auto">
-            <NavLinkCustom to="/">HOME</NavLinkCustom>
-            <NavLinkCustom to="/">ABOUT</NavLinkCustom>
+            <NavLinkCustom to="/">Home</NavLinkCustom>
+            <NavLinkCustom to="/">About</NavLinkCustom>
             <li>
-              <NavLinkStyled className='nav-item' to="#1">COURSES</NavLinkStyled>
+              <NavLinkCustom className='nav-item' to="#1">Courses</NavLinkCustom>
               <ul className="sub-menu">
                 <NavLinkStyledDropdown to="/">Frontend development</NavLinkStyledDropdown>
                 <NavLinkStyledDropdown to="/">Backend development</NavLinkStyledDropdown>
@@ -47,7 +40,7 @@ export const NavbarMain = () => {
               <NavLinkHide to="/">Frontend development</NavLinkHide>
               <NavLinkHide to="/">Backend development</NavLinkHide>
               <NavLinkHide to="/">Mobile development</NavLinkHide>
-            <NavLinkStyled to="/">PRICES</NavLinkStyled>
+            <NavLinkCustom to="/">Prices</NavLinkCustom>
             <ButtonPrimary btnEnrollNavbar>enroll to the course</ButtonPrimary>
           </NavStyled>
         </NavbarCollapse>

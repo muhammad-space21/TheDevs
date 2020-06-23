@@ -29,14 +29,19 @@ export const NavStyled = styled(Nav)`
       flex-direction: column;
       justify-content: space-evenly;
       background-color: #F4F7F6;
-      height: 75vh;
-      margin: 0;
-      padding: 0;
+      height: 60vh;
+      margin-left: auto;
+      margin-right: auto;
     }
 `;
 
 export const NavbarCollapse = styled(Navbar.Collapse)`
   z-index: 888;
+  background-color: #F4F7F6;
+  @media screen and (max-width: 991px) {
+    margin-left: -50px;
+    margin-right: -50px;
+  }
 `;
 
 export const NavLinkHide = styled(HashLink)`
@@ -53,16 +58,23 @@ export const NavLinkHide = styled(HashLink)`
   }
   @media screen and (max-width: 991px) {
     display: block;
+    margin-bottom: -16px;
+    margin-top: -16px;
+    &:hover {
+      color: #1EE5CF;
+      cursor: pointer;
+    }
   }
 `;
 
 export const NavLinkCustom = styled(HashLink)`
   font-size: 16px;
   line-height: 20px;
-  font-weight: 500;
+  font-weight: 600;
   color: black;
   margin-right: 30px;
   text-decoration: none;
+  text-transform: uppercase;
   &:hover {
     color: black;
     cursor: pointer;
@@ -82,11 +94,14 @@ export const NavLinkCustom = styled(HashLink)`
     border-radius: 5px;
     @media screen and (max-width: 991px) {
       display: none;
+      text-decoration: none;
     }
   }
   @media screen and (max-width: 991px) {
     margin-right: 0;
     margin-bottom: -32px;
+    text-transform: none;
+    font-weight: 500;
     &:hover {
       color: #1EE5CF;
       cursor: pointer;
@@ -112,47 +127,10 @@ export const NavLinkStyledDropdown = styled(Link)`
   @media screen and (max-width: 991px) {
     margin-right: 0;
     display: none;
-  }
-`;
-
-export const NavLinkStyled = styled(HashLink)`
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 300;
-  color: black;
-  margin-right: 30px;
-  text-decoration: none;
-  &:hover {
-    color: black;
-    cursor: pointer;
     text-decoration: none;
-    &::before {
-      width: 70px;
-    }
-  }
-  &::before {
-    position: absolute;
-    content: "";
-    bottom: 20px;
-    background-color: #1EE5CF;
-    height: 7px;
-    width: 0;
-    transition: .3s;
-    border-radius: 5px;
-    @media screen and (max-width: 991px) {
-      display: none;
-    }
-  }
-  @media screen and (max-width: 991px) {
-    margin-right: 0;
     &:hover {
-      color: black;
-      cursor: pointer;
+      color: #1EE5CF;
     }
-  }
-  img {
-    width: 40px;
-    height: 40px;
   }
 `;
 
@@ -206,14 +184,20 @@ export const NavbarBrand = styled(Navbar.Brand)`
   align-items: center;
   justify-content: center;
   margin-left: 10px;
-  img {
-    width: auto;
-    height: 25px;
-    @media screen and (max-width: 550px) {
-      width: auto;
-      height: 20px;
+  font-size: 20px;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+    span {
+      color: #1EE5CF;
+      font-size: 20px;
+      font-weight: 600;
+      margin-left: 5px;
+      text-transform: uppercase;
     }
-  }
+    &:hover {
+      color: black;
+    }
 `;
 
 export const NavbarToggle = styled(Navbar.Toggle)`
@@ -225,11 +209,8 @@ export const NavbarToggle = styled(Navbar.Toggle)`
     outline: none;
   }
   img {
-    width: 35px;
-    height: 20px;
-    @media screen and (max-width: 550px) {
-      width: 30px;
-      height: 15px;
-    }
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
   }
 `;
