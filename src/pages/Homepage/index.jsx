@@ -2,6 +2,7 @@ import React from 'react';
 
 import NavbarMain from '../../components/Navbar';
 import HeaderHomepage from '../../components/HeaderHomepage';
+import Footer from '../../components/Footer';
 
 const styles = {
   width: '100vw',
@@ -16,6 +17,7 @@ const Homepage = () => {
     <div style={styles}>
       <NavbarMain />
       <HeaderHomepage />
+      <Footer />
     </div>
   );
 };
