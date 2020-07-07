@@ -2,6 +2,7 @@ import React from 'react';
 
 import NavbarMain from '../../components/Navbar';
 import HeaderHomepage from '../../components/HeaderHomepage';
+import CallToActionSection from '../../components/CallToActionSection';
 import Footer from '../../components/Footer';
 
 const styles = {
@@ -17,6 +18,7 @@ const Homepage = () => {
     <div style={styles}>
       <NavbarMain />
       <HeaderHomepage />
+      <CallToActionSection />
       <Footer />
     </div>
   );
