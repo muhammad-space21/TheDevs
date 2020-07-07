@@ -9,7 +9,7 @@ export const NavbarStyled = styled(Navbar)`
   height: 100px;
   background-color: #F4F7F6;
   position: fixed;
-  z-index: 100;
+  z-index: 1000;
   font-family: 'Varela Round', sans-serif;
   @media screen and (max-width: 550px) {
     height: 80px;
