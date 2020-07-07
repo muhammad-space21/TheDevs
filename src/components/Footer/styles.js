@@ -12,6 +12,10 @@ export const Container = styled.div`
   /* border: 2px solid black; */
   padding-left: 50px;
   padding-right: 50px;
+  @media screen and (max-width: 550px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 `;
 
 export const Row = styled.div`
@@ -32,6 +36,9 @@ export const Row2 = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  @media screen and (max-width: 550px) {
+    flex-direction: column;
+  }
 `;
 
 export const Brand = styled.div`
@@ -65,6 +72,12 @@ export const Col1 = styled.div`
   justify-content: center;
   align-items: center;
   /* border: 2px solid pink; */
+  @media screen and (max-width: 1100px) {
+    width: 60%;
+  }
+  @media screen and (max-width: 991px) {
+   width: 100%;
+  }
 `;
 
 export const TextWrapper = styled.div`
@@ -72,6 +85,11 @@ export const TextWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  @media screen and (max-width: 550px) {
+   width: 100%;
+   order: 1;
+   justify-content: space-between;
+  }
 `;
 
 export const SubRow = styled.div`
@@ -102,6 +120,9 @@ export const SubCol2 = styled.div`
   /* border: 2px solid red; */
   align-self: flex-start;
   margin-top: 50px;
+  @media screen and (max-width: 991px) {
+    align-self: center;
+  }
 `;
 
 export const Heading = styled.span`
@@ -111,6 +132,9 @@ export const Heading = styled.span`
   color: #F5F8FA;
   opacity: 1;
   margin-bottom: 10px;
+  @media screen and (max-width: 550px) {
+    font-size: 16px;
+  }
 `;
 
 export const Links = styled(Link)`
@@ -123,6 +147,9 @@ export const Links = styled(Link)`
     color: #F5F8FA;
     text-decoration: none;
   }
+  @media screen and (max-width: 550px) {
+    font-size: 16px;
+  }
 `;
 
 export const ImageWrapper = styled.div`
@@ -132,6 +159,16 @@ export const ImageWrapper = styled.div`
   justify-content: center;
   align-items: center;
   /* border: 2px solid black; */
+  @media screen and (max-width: 1100px) {
+    width: 40%;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  @media screen and (max-width: 991px) {
+    display: none;
+  }
   img {
     width: 70%;
     height: auto;
@@ -148,7 +185,22 @@ export const HR = styled.div`
 export const H6 = styled.h6`
   font-size: 14px;
   color: #F5F8FA;
-  font-weight: 300;
+  font-weight: 500;
   margin-top: 20px;
   margin-bottom: 20px;
+  cursor: pointer;
+`;
+
+export const H7 = styled.h6`
+  font-size: 14px;
+  color: #F5F8FA;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  @media screen and (max-width: 550px) {
+    order: 2;
+    margin-top: 0;
+    align-self: start;
+  }
 `;

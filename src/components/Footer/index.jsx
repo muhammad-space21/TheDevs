@@ -14,7 +14,8 @@ import {
   SubCol2,
   Row2,
   TextWrapper,
-  H6
+  H6,
+  H7
 } from './styles';
 
 import ImageFooter from '../../assets/images/footer.png';
@@ -29,21 +30,21 @@ const Footer = () => {
           <SubRow> 
               <SubCol>
                 <Heading>Service Links</Heading>
-                <Links>Our Portfolio</Links>
-                <Links>Pricing</Links>
-                <Links>Courses</Links>
+                <Links to='our-porfolio'>Our Portfolio</Links>
+                <Links to='pricing'>Pricing</Links>
+                <Links to='courses'>Courses</Links>
               </SubCol>
               <SubCol>
                 <Heading>Links</Heading>
-                <Links>About us</Links>
-                <Links>Process of study</Links>
-                <Links>Our Benefits</Links>
+                <Links to='about-us'>About us</Links>
+                <Links to='process-of-study'>Process of study</Links>
+                <Links to='our-benefits'>Our Benefits</Links>
               </SubCol>
           </SubRow>
           <SubCol2>
             <Heading>Contacts</Heading>
-            <Links>+998 90 909 09 09</Links>
-            <Links>example@gmail.com</Links>
+            <Links to='#'>+998 90 909 09 09</Links>
+            <Links to='#'>example@gmail.com</Links>
           </SubCol2>
         </Col1>
         <ImageWrapper>
@@ -52,7 +53,7 @@ const Footer = () => {
       </Row>
       <HR />
       <Row2>
-        <H6>© Copyright 2020 The Devs. All Rights Reserved.</H6>
+        <H7>© Copyright 2020 The Devs. All Rights Reserved.</H7>
         <TextWrapper>
           <H6>Terms of Service</H6>
           <H6>Privacy Policy</H6>
