@@ -52,10 +52,8 @@ export const Row = styled.div`
   align-items: center;
   justify-content: space-evenly;
   margin-top: 100px;
-  margin-bottom: 100px;
   @media screen and (max-width: 700px) {
     margin-top: 50px;
-    margin-bottom: 50px;
   }
 `;
 
