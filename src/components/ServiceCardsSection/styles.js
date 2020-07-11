@@ -18,15 +18,28 @@ export const Container = styled.div`
 `;
 
 export const Heading = styled.div`
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
   font-size: 20px;
-  line-height: 22px;
+  line-height: 25px;
   font-weight: 500;
   color: black;
+  text-align: center;
   span {
     font-size: 20px;
     font-weight: 500;
     color: #2669FF;
     font-style: italic;
+    @media screen and (max-width: 550px) {
+      font-size: 17px;
+      line-height: 22px;
+    }
+  }
+  @media screen and (max-width: 550px) {
+    font-size: 17px;
+    line-height: 22px;
+    padding: 0;
   }
 `;
 

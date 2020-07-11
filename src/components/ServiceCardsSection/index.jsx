@@ -20,7 +20,10 @@ import {
 const ServiceCardsSection = () => {
   return (
     <Container>
-      <Heading> Make <span> profitable career </span> as a developer faster than ever</Heading>
+      <Heading> 
+        Make <span> profitable career </span> 
+        as a developer <br/> faster than ever
+      </Heading>
       <Row>
         <ServiceCard>
           <IconWrapper>
