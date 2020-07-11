@@ -14,7 +14,7 @@ import {
 import './styles.scss';
 
 import ButtonPrimary from '../../components/PrimaryButton';
-import IconMenu from '../../assets/icons/open-menu.svg';
+import IconMenu from '../../assets/icons/menu-mobile.png';
 
 export const NavbarMain = () => {
   return (

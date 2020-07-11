@@ -2,6 +2,7 @@ import React from 'react';
 
 import NavbarMain from '../../components/Navbar';
 import HeaderHomepage from '../../components/HeaderHomepage';
+import CoursesContainer from '../../containers/CoursesContainer';
 import ArticleSection from '../../components/ArticleSection';
 import CallToActionSection from '../../components/CallToActionSection';
 import Footer from '../../components/Footer';
@@ -19,6 +20,7 @@ const Homepage = () => {
     <div style={styles}>
       <NavbarMain />
       <HeaderHomepage />
+      <CoursesContainer />
       <ArticleSection />
       <CallToActionSection />
       <Footer />

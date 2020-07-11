@@ -209,8 +209,8 @@ export const NavbarToggle = styled(Navbar.Toggle)`
     outline: none;
   }
   img {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: auto;
     cursor: pointer;
   }
 `;
