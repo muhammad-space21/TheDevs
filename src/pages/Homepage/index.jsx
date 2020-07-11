@@ -3,6 +3,7 @@ import React from 'react';
 import NavbarMain from '../../components/Navbar';
 import HeaderHomepage from '../../components/HeaderHomepage';
 import CoursesContainer from '../../containers/CoursesContainer';
+import ServiceCardsSection from '../../components/ServiceCardsSection';
 import ArticleSection from '../../components/ArticleSection';
 import CallToActionSection from '../../components/CallToActionSection';
 import Footer from '../../components/Footer';
@@ -21,6 +22,7 @@ const Homepage = () => {
       <NavbarMain />
       <HeaderHomepage />
       <CoursesContainer />
+      <ServiceCardsSection />
       <ArticleSection />
       <CallToActionSection />
       <Footer />

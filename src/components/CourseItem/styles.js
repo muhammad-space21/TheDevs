@@ -9,7 +9,7 @@ export const Container = styled.div`
     width: 40%;
     margin-bottom: 30px;
   }
-  @media screen and (max-width: 748px) {
+  @media screen and (max-width: 769px) {
     width: 45%;
   }
   @media screen and (max-width: 600px) {
@@ -22,7 +22,7 @@ export const Container = styled.div`
 
 export const ImageWrapper = styled.div`
   width: 100%;
-  height: 37vh;
+  height: 35vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,11 +30,14 @@ export const ImageWrapper = styled.div`
     width: 100%;
     height: 100%;
   }
-  @media screen and (max-width: 991px) {
-    height: 34vh;
-  }
-  @media screen and (max-width: 748px) {
+  @media screen and (max-width: 1100px) {
     height: 30vh;
+  }
+  @media screen and (max-width: 991px) {
+    height: 28vh;
+  }
+  @media screen and (max-width: 769px) {
+    height: 25vh;
   }
 `;
 
