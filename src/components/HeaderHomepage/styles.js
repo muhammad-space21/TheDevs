@@ -8,9 +8,9 @@ export const Container = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  background: 
-    transparent linear-gradient(244deg, #B2A3FD 0%, #412CB0 100%, #000000 100%)
-    0% 0% no-repeat padding-box;
+  background: #7F00FF;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #E100FF, #7F00FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   opacity: 1;
   margin-top: 100px;
   @media screen and (max-width: 550px) {
