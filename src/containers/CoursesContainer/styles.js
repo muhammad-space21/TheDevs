@@ -43,7 +43,7 @@ export const HeadingOne = styled.div`
   height: fit-content;
   font-size: 18px;
   font-style: italic;
-  font-weight: 700;
+  font-weight: 600;
   color: black;
   span {
     font-size: 18px;
@@ -52,7 +52,7 @@ export const HeadingOne = styled.div`
     margin-left: 10px;
     @media screen and (max-width: 550px) {
       font-size: 14px;
-      margin-left: 8px;
+      margin-left: 6px;
     }
   }
   @media screen and (max-width: 550px) {
@@ -65,7 +65,7 @@ export const HeadingTwo = styled.div`
   height: fit-content;
   font-size: 18px;
   font-style: italic;
-  font-weight: 700;
+  font-weight: 600;
   color: black;
   span {
     font-size: 18px;
@@ -74,7 +74,7 @@ export const HeadingTwo = styled.div`
     margin-left: 10px;
     @media screen and (max-width: 550px) {
       font-size: 14px;
-      margin-left: 8px;
+      margin-left: 6px;
     }
   }
   @media screen and (max-width: 550px) {

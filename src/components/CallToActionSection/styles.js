@@ -106,10 +106,16 @@ export const Heading = styled.div`
     @media screen and (max-width: 768px) {
       font-size: 22px;
     }
+    @media screen and (max-width: 550px) {
+      font-weight: 500;
+    }
   }
   @media screen and (max-width: 768px) {
     font-size: 22px;
     margin-right: 0;
     margin-bottom: 30px;
+  }
+  @media screen and (max-width: 550px) {
+    font-weight: 500;
   }
 `;

@@ -15,6 +15,7 @@ export const Container = styled.div`
   margin-top: 100px;
   @media screen and (max-width: 550px) {
     margin-top: 80px;
+    height: 50vh;
   }
 `;
 

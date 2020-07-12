@@ -69,6 +69,9 @@ export const CourseTitle = styled.div`
     font-style: normal;
     margin-left: 10px;
   }
+  @media screen and (max-width: 550px) {
+    font-weight: 500;
+  }
 `;
 
 export const Duration = styled.div`
@@ -88,6 +91,9 @@ export const Duration = styled.div`
     font-weight: 600;
     font-style: italic;
     color: black;
+    @media screen and (max-width: 550px) {
+      font-weight: 500;
+    }
   }
 `;
 
