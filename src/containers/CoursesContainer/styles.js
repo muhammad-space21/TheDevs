@@ -57,6 +57,7 @@ export const HeadingOne = styled.div`
   }
   @media screen and (max-width: 550px) {
     font-size: 16px;
+    font-weight: 500;
   }
 `;
 
@@ -79,5 +80,6 @@ export const HeadingTwo = styled.div`
   }
   @media screen and (max-width: 550px) {
     font-size: 16px;
+    font-weight: 500;
   }
 `;
