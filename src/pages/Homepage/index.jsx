@@ -5,6 +5,7 @@ import HeaderHomepage from '../../components/HeaderHomepage';
 import CoursesContainer from '../../containers/CoursesContainer';
 import ServiceCardsSection from '../../components/ServiceCardsSection';
 import ArticleSection from '../../components/ArticleSection';
+import PricesContainer from '../../containers/PricesContainer';
 import CallToActionSection from '../../components/CallToActionSection';
 import Footer from '../../components/Footer';
 
@@ -24,6 +25,7 @@ const Homepage = () => {
       <CoursesContainer />
       <ServiceCardsSection />
       <ArticleSection />
+      <PricesContainer />
       <CallToActionSection />
       <Footer />
     </div>

@@ -5,8 +5,10 @@ const getBtnStyle = props => {
     return BtnEnrollNavbar;
    } else if (props.btnCircle) {
       return BtnCircle;
+    } else if (props.btnCard) {
+      return BtnCard;
     } else {
-    return Container;
+      return Container;
   };
 };
 
@@ -55,6 +57,29 @@ export const BtnCircle = css`
   text-transform: uppercase;
   text-align: center;
   box-shadow: 3px 3px 6px #1EE5CF50;
+    &:hover {
+      cursor: pointer;
+    }
+    &:focus {
+      border: none;
+      outline: none;
+    }
+`;
+
+
+export const BtnCard = css`
+  width: 90%;
+  height: 55px;
+  border-radius: 10px;
+  border: none;
+  background-color: #1EE5CF;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  box-shadow: 3px 3px 6px #1EE5CF50;
+  z-index: 500;
     &:hover {
       cursor: pointer;
     }
