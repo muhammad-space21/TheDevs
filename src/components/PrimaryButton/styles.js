@@ -7,6 +7,8 @@ const getBtnStyle = props => {
       return BtnCircle;
     } else if (props.btnHeaderLong) {
       return BtnHeaderLong;
+    } else if (props.btnCircleRed) {
+      return ButtonCircleRed;
     } else if (props.btnCard) {
       return BtnCard;
     } else {
@@ -112,4 +114,30 @@ export const BtnHeaderLong = css`
       height: 50px;
       font-size: 16px;
     }
+`;
+
+export const ButtonCircleRed = css`
+  width: 240px;
+  height: 55px;
+  background-color: #FC4062;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  border-radius: 25px;
+  &:hover {
+      cursor: pointer;
+    }
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  img {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+  }
 `;
