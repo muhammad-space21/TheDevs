@@ -55,7 +55,6 @@ export const BtnCircle = css`
   color: white;
   font-size: 17px;
   font-weight: 600;
-  text-transform: uppercase;
   text-align: center;
   box-shadow: 3px 3px 6px #1EE5CF50;
     &:hover {

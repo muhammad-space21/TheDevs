@@ -3,6 +3,7 @@ import React from 'react';
 import NavbarMain from '../../components/Navbar';
 import HeaderCoursePage from '../../components/HeaderCoursePage';
 import CoursesTechsContainer from '../../containers/CoursesTechsContainer';
+import CallToActionSectionTwo from '../../components/CallToActionSectionTwo';
 import CallToActionSection from '../../components/CallToActionSection';
 import Footer from '../../components/Footer';
 
@@ -22,6 +23,7 @@ const CoursePage = () => {
       <NavbarMain />
       <HeaderCoursePage />
       <CoursesTechsContainer />
+      <CallToActionSectionTwo />
       <CallToActionSection />
       <Footer />
     </div>
