@@ -32,4 +32,8 @@ export const Heading = styled.div`
   font-weight: 600;
   font-style: italic;
   margin-bottom: 50px;
+  text-align: center;
+  @media screen and (max-width: 550px) {
+    font-size: 20px;
+  }
 `;
