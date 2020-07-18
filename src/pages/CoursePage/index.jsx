@@ -4,6 +4,7 @@ import NavbarMain from '../../components/Navbar';
 import HeaderCoursePage from '../../components/HeaderCoursePage';
 import CoursesTechsContainer from '../../containers/CoursesTechsContainer';
 import CallToActionSectionTwo from '../../components/CallToActionSectionTwo';
+import WhatYouLearnSection from '../../components/WhatYouLearnSection';
 import CallToActionSection from '../../components/CallToActionSection';
 import Footer from '../../components/Footer';
 
@@ -24,6 +25,7 @@ const CoursePage = () => {
       <HeaderCoursePage />
       <CoursesTechsContainer />
       <CallToActionSectionTwo />
+      <WhatYouLearnSection />
       <CallToActionSection />
       <Footer />
     </div>

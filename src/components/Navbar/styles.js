@@ -39,8 +39,8 @@ export const NavbarCollapse = styled(Navbar.Collapse)`
   z-index: 888;
   background-color: #F4F7F6;
   @media screen and (max-width: 991px) {
-    margin-left: -50px;
-    margin-right: -50px;
+    margin-left: -16px;
+    margin-right: -16px;
   }
 `;
 
