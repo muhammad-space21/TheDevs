@@ -1,5 +1,9 @@
 import React from 'react';
 
+import NavbarMain from '../../components/Navbar';
+import HeaderCoursePage from '../../components/HeaderCoursePage';
+
+
 const styles = {
   width: '100vw',
   height: 'fit-content',
@@ -8,12 +12,14 @@ const styles = {
   flexDirection: 'column',
 };
 
-const AboutPage = () => {
+
+const CoursePage = () => {
   return (
     <div style={styles}>
-
+      <NavbarMain />
+      <HeaderCoursePage />
     </div>
   )
 };
 
-export default AboutPage;
+export default CoursePage;

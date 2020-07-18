@@ -5,6 +5,8 @@ const getBtnStyle = props => {
     return BtnEnrollNavbar;
    } else if (props.btnCircle) {
       return BtnCircle;
+    } else if (props.btnHeaderLong) {
+      return BtnHeaderLong;
     } else if (props.btnCard) {
       return BtnCard;
     } else {
@@ -20,7 +22,6 @@ export const Container = styled.button`
   background-color: none;
   border: none;
   outline: none;
-
   ${getBtnStyle}
 `;
 
@@ -86,5 +87,30 @@ export const BtnCard = css`
     &:focus {
       border: none;
       outline: none;
+    }
+`;
+
+export const BtnHeaderLong = css`
+  width: 250px;
+  height: 55px;
+  border-radius: 25px;
+  border: none;
+  background-color: #08d0bd;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  box-shadow: 3px 3px 6px #1EE5CF50;
+    &:hover {
+      cursor: pointer;
+    }
+    &:focus {
+      border: none;
+      outline: none;
+    }
+    @media screen and (max-width: 550px) {
+      width: 220px;
+      height: 50px;
+      font-size: 16px;
     }
 `;
