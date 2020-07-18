@@ -35,5 +35,6 @@ export const Heading = styled.div`
   text-align: center;
   @media screen and (max-width: 550px) {
     font-size: 20px;
+    font-weight: 500;
   }
 `;
