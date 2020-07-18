@@ -2,6 +2,9 @@ import React from 'react';
 
 import NavbarMain from '../../components/Navbar';
 import HeaderCoursePage from '../../components/HeaderCoursePage';
+import CoursesTechsContainer from '../../containers/CoursesTechsContainer';
+import CallToActionSection from '../../components/CallToActionSection';
+import Footer from '../../components/Footer';
 
 
 const styles = {
@@ -18,6 +21,9 @@ const CoursePage = () => {
     <div style={styles}>
       <NavbarMain />
       <HeaderCoursePage />
+      <CoursesTechsContainer />
+      <CallToActionSection />
+      <Footer />
     </div>
   )
 };
