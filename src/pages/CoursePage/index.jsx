@@ -9,6 +9,7 @@ import PreRequisities from '../../components/PreRequisities';
 import JoinITCommunitySection from '../../components/JoinITCommunitySection';
 import InstructorInfo from '../../components/InstructorInfo';
 import FAQ from '../../components/FAQ';
+import MoneyBackPolicy from '../../components/MoneyBackPolicy';
 import CallToActionSection from '../../components/CallToActionSection';
 import Footer from '../../components/Footer';
 
@@ -34,6 +35,7 @@ const CoursePage = () => {
       <JoinITCommunitySection />
       <InstructorInfo />
       <FAQ />
+      <MoneyBackPolicy />
       <CallToActionSection />
       <Footer />
     </div>
