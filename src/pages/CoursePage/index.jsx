@@ -8,6 +8,7 @@ import WhatYouLearnSection from '../../components/WhatYouLearnSection';
 import PreRequisities from '../../components/PreRequisities';
 import JoinITCommunitySection from '../../components/JoinITCommunitySection';
 import InstructorInfo from '../../components/InstructorInfo';
+import FAQ from '../../components/FAQ';
 import CallToActionSection from '../../components/CallToActionSection';
 import Footer from '../../components/Footer';
 
@@ -32,6 +33,7 @@ const CoursePage = () => {
       <PreRequisities />
       <JoinITCommunitySection />
       <InstructorInfo />
+      <FAQ />
       <CallToActionSection />
       <Footer />
     </div>
