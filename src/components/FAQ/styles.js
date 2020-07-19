@@ -36,8 +36,8 @@ export const Heading = styled.div`
     height: auto;
     margin-right: 20px;
     @media screen and (max-width: 550px) {
-      width: 35px;
-      height: auto;
+      width: 40px;
+      height: 40px;
       margin-right: 10px;
     }
   }
