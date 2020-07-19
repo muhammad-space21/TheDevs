@@ -10,6 +10,7 @@ import JoinITCommunitySection from '../../components/JoinITCommunitySection';
 import InstructorInfo from '../../components/InstructorInfo';
 import FAQ from '../../components/FAQ';
 import MoneyBackPolicy from '../../components/MoneyBackPolicy';
+import SalaryLabel from '../../components/SalaryLabel';
 import CallToActionSection from '../../components/CallToActionSection';
 import Footer from '../../components/Footer';
 
@@ -36,6 +37,7 @@ const CoursePage = () => {
       <InstructorInfo />
       <FAQ />
       <MoneyBackPolicy />
+      <SalaryLabel />
       <CallToActionSection />
       <Footer />
     </div>

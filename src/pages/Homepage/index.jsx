@@ -6,6 +6,7 @@ import CoursesContainer from '../../containers/CoursesContainer';
 import ServiceCardsSection from '../../components/ServiceCardsSection';
 import ArticleSection from '../../components/ArticleSection';
 import PricesContainer from '../../containers/PricesContainer';
+import SalaryLabel from '../../component/SalaryLabel';
 import CallToActionSection from '../../components/CallToActionSection';
 import Footer from '../../components/Footer';
 
@@ -26,6 +27,7 @@ const Homepage = () => {
       <ServiceCardsSection />
       <ArticleSection />
       <PricesContainer />
+      <SalaryLabel />
       <CallToActionSection />
       <Footer />
     </div>
