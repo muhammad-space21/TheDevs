@@ -80,6 +80,9 @@ export const TechTitle = styled.div`
   margin-right: auto;
   margin-top: 10px;
   text-align: center;
+  @media screen and (max-width: 550px) {
+    width: 95%;
+  }
 `;
 
 export const Duration = styled.div`
