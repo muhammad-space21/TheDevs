@@ -27,6 +27,8 @@ export const Heading = styled.div`
   height: fit-content;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
   font-size: 30px;
   font-weight: 700;
   color: black;
