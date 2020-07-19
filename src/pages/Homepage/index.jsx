@@ -6,7 +6,7 @@ import CoursesContainer from '../../containers/CoursesContainer';
 import ServiceCardsSection from '../../components/ServiceCardsSection';
 import ArticleSection from '../../components/ArticleSection';
 import PricesContainer from '../../containers/PricesContainer';
-import SalaryLabel from '../../component/SalaryLabel';
+import SalaryLabel from '../../components/SalaryLabel';
 import CallToActionSection from '../../components/CallToActionSection';
 import Footer from '../../components/Footer';
 
