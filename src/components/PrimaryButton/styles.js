@@ -11,6 +11,8 @@ const getBtnStyle = props => {
       return ButtonCircleRed;
     } else if (props.btnCard) {
       return BtnCard;
+    } else if (props.formBtn) {
+      return FormBtn;
     } else {
       return Container;
   };
@@ -65,6 +67,29 @@ export const BtnCircle = css`
     &:focus {
       border: none;
       outline: none;
+    }
+`;
+
+export const FormBtn = css`
+  width: 85%;
+  height: 55px;
+  border-radius: 25px;
+  border: none;
+  background-color: #1EE5CF;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 3px 3px 6px #1EE5CF50;
+    &:hover {
+      cursor: pointer;
+    }
+    &:focus {
+      border: none;
+      outline: none;
+    }
+    @media screen and (max-width: 550px) {
+      height: 50px;
     }
 `;
 

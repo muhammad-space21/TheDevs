@@ -8,7 +8,7 @@ import {
 } from './styles';
 
 import PrimaryButton from '../PrimaryButton';
-import ImageIllustration from '../../assets/images/header-web-developer.png';
+import ImageIllustration from '../../assets/images/header-webdeveloper-png.png';
 
 const CallToActionSectionTwo = () => {
   return (
