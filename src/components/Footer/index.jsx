@@ -26,7 +26,7 @@ import ImageFooter from '../../assets/images/footer.png';
 const Footer = () => {
   return (
     <Container>
-      <Brand>The <span>Devs</span></Brand>
+      <Brand to="/">The <span>Devs</span></Brand>
       <Row>
         <Col1>
           <SubRow> 
