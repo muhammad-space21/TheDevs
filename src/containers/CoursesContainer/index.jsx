@@ -14,7 +14,7 @@ import { coursesData } from '../../mockData/coursesData';
 
 const CoursesContainer = () => {
   return (
-    <Container>
+    <Container id="1">
       <TextWrapper>
         <HeadingOne>Courses <span>We offer</span></HeadingOne>
         <HeadingTwo>High quality<span>matters</span></HeadingTwo>

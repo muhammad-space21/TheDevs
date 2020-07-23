@@ -5,7 +5,7 @@ import BackgorundImage from '../../assets/images/background-aboutpage.png';
 
 export const Container = styled.div`
   width: 100vw;
-  height: 83vh;
+  height: 99vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,10 +14,9 @@ export const Container = styled.div`
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  margin-top: 100px;
+  position: relative;
   @media screen and (max-width: 550px) {
-    margin-top: 80px;
-    height: 70vh;
+    height: 80vh;
   }
 `;
 
@@ -28,6 +27,7 @@ export const TextWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 50px;
   @media screen and (max-width: 991px) {
     width: 90%;
     margin-bottom: 30px;

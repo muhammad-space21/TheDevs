@@ -32,9 +32,9 @@ export const Heading = styled.div`
   line-height: 35px;
   text-align: center;
   @media screen and (max-width: 550px) {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
-    line-height: 30px;
+    line-height: 25px;
   }
   span {
     border-radius: 5px; 

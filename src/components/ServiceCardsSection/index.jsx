@@ -19,7 +19,7 @@ import {
 
 const ServiceCardsSection = () => {
   return (
-    <Container>
+    <Container id="2">
       <Heading> 
         Make <span> profitable career </span> 
         as a developer <br/> faster than ever

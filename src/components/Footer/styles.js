@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
+
 
 
 export const Container = styled.div`
@@ -152,6 +154,36 @@ export const Links = styled(Link)`
   }
 `;
 
+export const Hashlink = styled(HashLink)`
+  font-size: 18px;
+  font-weight: 400;
+  color: #F5F8FA;
+  cursor: pointer;
+  margin-bottom: 5px;
+  &:hover {
+    color: #F5F8FA;
+    text-decoration: none;
+  }
+  @media screen and (max-width: 550px) {
+    font-size: 16px;
+  }
+`;
+
+export const Tel = styled.a`
+  font-size: 18px;
+  font-weight: 400;
+  color: #F5F8FA;
+  cursor: pointer;
+  margin-bottom: 5px;
+  &:hover {
+    color: #F5F8FA;
+    text-decoration: none;
+  }
+  @media screen and (max-width: 550px) {
+    font-size: 16px;
+  }
+`;
+
 export const ImageWrapper = styled.div`
   width: 50%;
   height: fit-content;
@@ -182,13 +214,17 @@ export const HR = styled.div`
   margin-top: 50px;
 `;
 
-export const H6 = styled.h6`
+export const H6 = styled(Link)`
   font-size: 14px;
   color: #F5F8FA;
   font-weight: 500;
   margin-top: 20px;
   margin-bottom: 20px;
   cursor: pointer;
+  &:hover {
+    text-decoration: none;
+    color:  #F5F8FA;
+  }
 `;
 
 export const H7 = styled.h6`
