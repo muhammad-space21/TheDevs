@@ -43,7 +43,7 @@ export const Row2 = styled.div`
   }
 `;
 
-export const Brand = styled.div`
+export const Brand = styled(Link)`
   width: 100%;
   height: fit-content;
   display: flex;
@@ -62,6 +62,14 @@ export const Brand = styled.div`
     font-weight: 600;
     margin-left: 5px;
     text-transform: uppercase;
+    &:hover {
+      text-decoration: none;
+      color: white;
+    }
+  }
+  &:hover {
+    text-decoration: none;
+    color: #1EE5CF;
   }
 `;
 
