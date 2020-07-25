@@ -12,6 +12,8 @@ const CoursePage = lazy(() => import('./pages/CoursePage'));
 const AboutPage = lazy(() => import('./pages/AboutPage'));
 const SignUpPage = lazy(() => import('./pages/SignUpPage'));
 const LoginPage = lazy(() => import('./pages/LoginPage'));
+const HowItWorks = lazy(() => import('./pages/HowItWorks'));
+
 
 const App = () => {
   return (
@@ -25,6 +27,7 @@ const App = () => {
               <Route exact key='r-3' path='/about' component={AboutPage} />
               <Route exact key='r-4' path='/sign-up' component={SignUpPage} />
               <Route exact key='r-5' path='/login' component={LoginPage} />
+              <Route exact key='4-6' path='/how-it-works' component={HowItWorks} />
             </Suspense>
           </ErrorBoundary>
         </Switch>

@@ -45,7 +45,7 @@ const Footer = () => {
           </SubRow>
           <SubCol2>
             <Heading>Contacts</Heading>
-            <Tel href="tel:99895-479-0770">+998 90 909 09 09</Tel>
+            <Tel href="tel:998909091016">+998 90 909 10 16</Tel>
             <Links to='#'>example@gmail.com</Links>
           </SubCol2>
         </Col1>
