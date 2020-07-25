@@ -93,7 +93,7 @@ const InstructionSteps = () => (
     </Component>
     <IconWrapper>
       <img src={ImgHacker} alt="illustration" />
-      Good luck in your journey.
+      Good luck in your journey 👍
     </IconWrapper>
     <BtnBackWrapper to="/">
       <img src={IconBack} alt="back-btn"/>
