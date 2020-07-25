@@ -39,7 +39,7 @@ const Footer = () => {
               <SubCol>
                 <Heading>Links</Heading>
                 <Links to='/about'>About us</Links>
-                <Links to='process-of-study'>Process of study</Links>
+                <Links to='/how-it-works'>How it works</Links>
                 <Hashlink to='#2'>Our Benefits</Hashlink>
               </SubCol>
           </SubRow>

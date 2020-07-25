@@ -28,6 +28,7 @@ export const NavbarMain = () => {
         <NavbarCollapse id="responsive-navbar-nav">
           <NavStyled className="ml-auto">
             <NavLinkCustom to="/">Home</NavLinkCustom>
+            <NavLinkCustom to="/how-it-works">process</NavLinkCustom>
             <NavLinkCustom to="/about">About</NavLinkCustom>
             <li>
               <NavLinkCustom className='nav-item' to="#1">Courses</NavLinkCustom>

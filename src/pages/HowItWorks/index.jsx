@@ -1,18 +1,25 @@
 import React from 'react';
 
-import { Container } from './styles';
-
 import NavbarMain from '../../components/Navbar';
 import HeaderHowItWorks from '../../components/HeaderHowItWorks';
+import InstructionSteps from '../../components/InstructionSteps';
+
+const styles = {
+  width: '100%',
+  height: 'fit-content',
+  display: 'flex',
+  flexDirection:' column'
+};
 
 
 const HowItWorks = () => {
   return (
-    <Container>
+    <div style={styles}>
       <NavbarMain />
       <HeaderHowItWorks />
-
-    </Container>
+      <InstructionSteps />
+  
+    </div>
   )
 };
 
