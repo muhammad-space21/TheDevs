@@ -1,0 +1,6 @@
+export default  {
+  GET_COURSES: 'GET_COURSES',
+  FULFILLED: '_FULFILLED',
+  REJECTED: '_REJECTED',
+  PENDING: '_PENDING',
+};
