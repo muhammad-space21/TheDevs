@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { Field, reduxForm } from 'redux-form'
+
 
 export const Container = styled.div`
   width: 100vw;
@@ -83,7 +85,7 @@ export const InputRow = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   @media screen and (max-width: 550px) {
     width: 90%;
   }

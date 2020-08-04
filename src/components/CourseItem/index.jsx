@@ -16,29 +16,23 @@ import {
  import IconShare from '../../assets/icons/icon-share.png';
  import IconLike from '../../assets/icons/icon-like.png';
 
- import ImageFrontend from '../../assets/images/frontend-img.png';
- import ImageBackend from '../../assets/images/backend-img.jpg';
- import ImageMobile from '../../assets/images/mobile-img.png';
+//  import ImageFrontend from '../../assets/images/frontend-img.png';
+//  import ImageBackend from '../../assets/images/backend-img.jpg';
+//  import ImageMobile from '../../assets/images/mobile-img.png';
  import IconAvatar from '../../assets/icons/avatar.png';
 
-const CourseItem = ({
-  courseImg, 
-  courseName, 
-  duration, 
-  authorName, 
-  authorImg
-  }) => {
+const CourseItem = (courses) => {
   return (
     <Container>
       <ImageWrapper>
-        <img src={ImageBackend} alt="course"/>
+        <img src={courses.image} alt="course"/>
       </ImageWrapper>
       <Footer>
         <CourseTitle>
-          {courseName} <span>development</span> 
+          {courses.title} <span>development</span> 
         </CourseTitle>
         <Duration>
-          Duration: <span>{duration}</span>
+          Duration: <span>{courses.duration}</span>
         </Duration>
         <InfoContainer>
           <AuthorContainer>
@@ -46,7 +40,7 @@ const CourseItem = ({
               <img src={IconAvatar} alt="avatar"/>
             </Avatar>
             <AuthorName>
-              {authorName}
+              {courses.author}
             </AuthorName>
           </AuthorContainer>
           <IconWrapper>

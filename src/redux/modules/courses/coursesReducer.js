@@ -3,9 +3,8 @@ import actionTypes from '../../../constants/index';
 const initialState = {
   loading: false,
   error: false,
-  courses: []
+  courses: {}
 };
-
 
 const map = {
   [`${actionTypes.GET_COURSES}${actionTypes.PENDING}`]: (state) => ({
@@ -15,7 +14,7 @@ const map = {
   [`${actionTypes.GET_COURSES}${actionTypes.FULFILLED}`]: (state, {payload}) => ({
     ...state,
     loading: false,
-    courses: payload.data.data
+    courses: payload.data.data,
   }),
   [`${actionTypes.GET_COURSES}${actionTypes.REJECTED}`]: (state) => ({
     ...state,
