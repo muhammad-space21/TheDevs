@@ -1,7 +1,9 @@
 import React, {useEffect} from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { useParams } from 'react-router-dom';
+import {bindActionCreators} from 'redux';
+
+import * as Actions from '../../redux/modules/courses/coursesAction';
 
 import {
   Container, 
@@ -11,29 +13,21 @@ import {
   HeadingTwo
 } from './styles';
 
-import { getCourses } from '../../redux/modules/courses/coursesAction';
-
 import Spinner from '../../components/Spinner';
 import CourseItem from '../../components/CourseItem';
 
 
-const CoursesContainer = ({
+const CoursesContainer = ({ 
   courses, 
   loading, 
   error, 
-  getCourses
-  }) => {
-  const {id} = useParams();
+  getCourses 
+}) => {
 
-  console.log('courses', courses);
-
-  // adding action
+  // Addding action
   useEffect(() => {
-    if (id) {
-      getCourses(id)
-    }
-  }, [id]);
-
+    getCourses()
+  }, []);
 
   return (
     <Container id="1">
@@ -42,7 +36,7 @@ const CoursesContainer = ({
         <HeadingTwo>High quality<span>matters</span></HeadingTwo>
       </TextWrapper>
       <Row>
-        { 
+        {
           courses.length && !loading && !error ? 
           (courses.map(({id, ...otherProps}) => (
           <CourseItem id={id} {...otherProps} />
@@ -52,8 +46,9 @@ const CoursesContainer = ({
         }
       </Row>
     </Container>
-  )
+  );
 };
+
 
 CoursesContainer.propTypes = {
   courses: PropTypes.objectOf(PropTypes.any),
@@ -75,10 +70,8 @@ const mapStateToProps = (state) => ({
   error: state.coursesReducer.error
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  getCourses: (id) => dispatch(getCourses(id))
-});
-
- 
+function mapDispatchToProps (dispatch) {
+  return bindActionCreators(Actions, dispatch)
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(CoursesContainer);

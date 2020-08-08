@@ -16,9 +16,6 @@ import {
  import IconShare from '../../assets/icons/icon-share.png';
  import IconLike from '../../assets/icons/icon-like.png';
 
-//  import ImageFrontend from '../../assets/images/frontend-img.png';
-//  import ImageBackend from '../../assets/images/backend-img.jpg';
-//  import ImageMobile from '../../assets/images/mobile-img.png';
  import IconAvatar from '../../assets/icons/avatar.png';
 
 const CourseItem = (courses) => {
