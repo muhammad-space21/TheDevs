@@ -17,7 +17,7 @@ import Spinner from '../../components/Spinner';
 import CourseItem from '../../components/CourseItem';
 
 
-const CoursesContainer = ({ 
+const CoursesContainer = ({
   courses, 
   loading, 
   error, 
@@ -39,7 +39,7 @@ const CoursesContainer = ({
         {
           courses.length && !loading && !error ? 
           (courses.map(({id, ...otherProps}) => (
-          <CourseItem id={id} {...otherProps} />
+          <CourseItem key={id} id={id} {...otherProps} />
           ))) : (
           <Spinner />
           )
@@ -51,7 +51,7 @@ const CoursesContainer = ({
 
 
 CoursesContainer.propTypes = {
-  courses: PropTypes.objectOf(PropTypes.any),
+  // courses: PropTypes.objectOf(PropTypes.any),
   loading: PropTypes.bool,
   error: PropTypes.bool,
   getCourses: PropTypes.func
@@ -70,8 +70,11 @@ const mapStateToProps = (state) => ({
   error: state.coursesReducer.error
 });
 
-function mapDispatchToProps (dispatch) {
-  return bindActionCreators(Actions, dispatch)
-};
+const mapDispatchToProps = (dispatch) => (
+  bindActionCreators(Actions, dispatch)
+);
 
-export default connect(mapStateToProps, mapDispatchToProps)(CoursesContainer);
+export default connect(
+  mapStateToProps, 
+  mapDispatchToProps
+)(CoursesContainer);

@@ -9,8 +9,8 @@ export const getCourses = () => (dispatch) => {
   dispatch({
     type: actionTypes.GET_COURSES,
     payload: axios({
-			method: 'GET',
-      url: 'https://test.thedevs.co/en/api/v1/courses',
+      method: 'GET',
+      url: '/courses/', 
     })
   })
 };

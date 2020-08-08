@@ -14,7 +14,7 @@ const PricesContainer = () => {
       </Heading>
       <Row>
         {priceData.map(({id, ...otherProps}) => (
-          <PriceCards id={id} {...otherProps} />
+          <PriceCards key={id} id={id} {...otherProps} />
         ))}
       </Row>
     </Container>
