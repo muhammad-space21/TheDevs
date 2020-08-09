@@ -18,7 +18,6 @@ const HowItWorks = () => {
       <NavbarMain />
       <HeaderHowItWorks />
       <InstructionSteps />
-  
     </div>
   )
 };

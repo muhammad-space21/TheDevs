@@ -13,7 +13,7 @@ const AboutPage = lazy(() => import('./pages/AboutPage'));
 const SignUpPage = lazy(() => import('./pages/SignUpPage'));
 const LoginPage = lazy(() => import('./pages/LoginPage'));
 const HowItWorks = lazy(() => import('./pages/HowItWorks'));
-
+const ArticlePage = lazy(() => import('./pages/ArticlePage'));
 
 const App = () => {
   return (
@@ -28,6 +28,7 @@ const App = () => {
               <Route exact key='r-4' path='/sign-up' component={SignUpPage} />
               <Route exact key='r-5' path='/login' component={LoginPage} />
               <Route exact key='4-6' path='/how-it-works' component={HowItWorks} />
+              <Route exact key='4-7' path='/article' component={ArticlePage} />
             </Suspense>
           </ErrorBoundary>
         </Switch>

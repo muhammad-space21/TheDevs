@@ -10,4 +10,5 @@ export const Container = styled.div`
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
   overflow-x: hidden;
+  font-family: 'Jost', sans-serif;
 `;

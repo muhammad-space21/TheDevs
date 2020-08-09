@@ -47,6 +47,7 @@ export const ImageWrapper = styled.div`
     width: 60%;
     margin-top: 10px;
     margin-bottom: 10px;
+    order: 2;
   }
 `;
 
@@ -72,6 +73,7 @@ export const TextWrapper = styled.div`
     line-height: 22px;
     margin-top: 10px;
     margin-bottom: 10px;
+    order: 1;
   }
 `;
 
