@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 import {
   Container, 
@@ -23,6 +24,13 @@ const PriceCards = ({
   pros3, 
   pros4
   }) => {
+
+  // routeChange
+  const history = useHistory();
+  const handleRouteChange = () => {
+    history.push('/pricing');
+  };
+
   return (
     <Container id="3">
       <Duration> {duration} </Duration>
@@ -35,7 +43,9 @@ const PriceCards = ({
         <span>{pros3}</span>
         <span>{pros4}</span>
       </Pros>
-      <PrimaryButton btnCard>Enroll</PrimaryButton>
+      <PrimaryButton btnCard onClick={handleRouteChange}>
+        Enroll
+      </PrimaryButton>
       <img src={CardsDots} alt="card-dots"/>
     </Container>
   )

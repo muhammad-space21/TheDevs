@@ -3,6 +3,7 @@ import React from 'react';
 import NavbarMain from '../../components/Navbar';
 import HeaderHowItWorks from '../../components/HeaderHowItWorks';
 import InstructionSteps from '../../components/InstructionSteps';
+import Footer from '../../components/Footer';
 
 const styles = {
   width: '100%',
@@ -18,6 +19,7 @@ const HowItWorks = () => {
       <NavbarMain />
       <HeaderHowItWorks />
       <InstructionSteps />
+      <Footer />
     </div>
   )
 };
