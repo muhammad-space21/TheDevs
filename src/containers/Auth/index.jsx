@@ -43,7 +43,7 @@ Auth.defaultProps = {
 };
 
 
-Auth.PropTypes = {
+Auth.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node)
   ]),

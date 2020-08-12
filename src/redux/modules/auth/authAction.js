@@ -15,11 +15,12 @@ export const init = () => (dispatch) => {
       data: {}
     })
   })
-  response.then((res) => {
+  .then((res) => {
     if (res && res.value && res.value.data && res.value.data.key) {
       localStorage.setItem('token', res.value.data.key);
     }
   });
+  console.log('action is working')
 };
 
 

@@ -15,31 +15,30 @@ const LoginPage = lazy(() => import('./pages/LoginPage'));
 const HowItWorks = lazy(() => import('./pages/HowItWorks'));
 const ArticlePage = lazy(() => import('./pages/ArticlePage'));
 const PricingPlanPage = lazy(() => import('./pages/PricingPlanPage'));
-const Auth = lazy(() => import('./container/Auth'));
-
+const Auth = lazy(() => import('./containers/Auth'));
 
 const App = () => {
   return (
-    <Auth>
       <Container>
         <ScrollTop>
           <Switch>
             <ErrorBoundary>
               <Suspense fallback={<Spinner />}>
-                <Route exact key='r-1' path='/' component={Homepage} />
-                <Route exact key='r-2' path='/course' component={CoursePage} />
-                <Route exact key='r-3' path='/about' component={AboutPage} />
-                <Route exact key='r-4' path='/sign-up' component={SignUpPage} />
-                <Route exact key='r-5' path='/login' component={LoginPage} />
-                <Route exact key='r-6' path='/how-it-works' component={HowItWorks} />
-                <Route exact key='r-7' path='/article' component={ArticlePage} />
-                <Route exact key='r-8' path='/pricing' component={PricingPlanPage} />
+                <Auth>
+                  <Route exact key='r-1' path='/' component={Homepage} />
+                  <Route exact key='r-2' path='/course' component={CoursePage} />
+                  <Route exact key='r-3' path='/about' component={AboutPage} />
+                  <Route exact key='r-4' path='/sign-up' component={SignUpPage} />
+                  <Route exact key='r-5' path='/login' component={LoginPage} />
+                  <Route exact key='r-6' path='/how-it-works' component={HowItWorks} />
+                  <Route exact key='r-7' path='/article' component={ArticlePage} />
+                  <Route exact key='r-8' path='/pricing' component={PricingPlanPage} />
+                </Auth>
               </Suspense>
             </ErrorBoundary>
           </Switch>
         </ScrollTop>
       </Container>
-    </Auth>
   );
 };
 
