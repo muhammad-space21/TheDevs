@@ -51,7 +51,7 @@ const CoursesContainer = ({
 
 
 CoursesContainer.propTypes = {
-  // courses: PropTypes.objectOf(PropTypes.any),
+  courses: PropTypes.object,
   loading: PropTypes.bool,
   error: PropTypes.bool,
   getCourses: PropTypes.func

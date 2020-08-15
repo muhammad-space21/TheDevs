@@ -1,11 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { bindActionCreators } from 'redux';
 
 import { Container, Heading, Row } from './styles';
 
-import PriceCards from '../../components/PriceCards';
-import { priceData } from '../../mockData/priceData';
+import * as Actions from '../../redux/modules/prices/pricesActions';
 
-const PricesContainer = () => {
+import PriceCards from '../../components/PriceCards';
+import Spinner from '../../components/Spinner';
+
+const PricesContainer = ({ 
+  loading, 
+  error, 
+  getPrices, 
+  prices 
+}) => {
+  
+  // Adding action
+  // useEffect(() => {
+  //   getPrices();
+  // }, []);
+
   return (
     <Container>
       <Heading>
@@ -13,12 +29,42 @@ const PricesContainer = () => {
         <span> Pricing Plan.</span> 
       </Heading>
       <Row>
-        {priceData.map(({id, ...otherProps}) => (
-          <PriceCards key={id} id={id} {...otherProps} />
-        ))}
+        {/* { prices.length && !loading && !error ? (
+          prices.map(({id, ...otherProps}) => (
+            <PriceCards key={id} id={id} {...otherProps} />
+          ))
+          ): (<Spinner />)
+        } */}
       </Row>
     </Container>
   )
 };
 
-export default PricesContainer;
+PricesContainer.propTypes = {
+  loading: PropTypes.bool,
+  error: PropTypes.bool,
+  prices: PropTypes.object,
+  getPrices: PropTypes.func
+};
+
+PricesContainer.defaultProps = {
+  loading: false,
+  error: false,
+  prices: {},
+  getPrices: () => {}
+};
+
+const mapStateToProps = (state) => ({
+  loading: state.pricesReducer.loading,
+  error: state.pricesReducer.error,
+  prices: state.pricesReducer.prices
+});
+
+const mapDispatchToProps = (dispatch) => (
+  bindActionCreators(Actions, dispatch)
+);
+
+export default connect(
+  mapStateToProps, 
+  mapDispatchToProps
+)(PricesContainer);
