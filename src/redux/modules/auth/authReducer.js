@@ -14,7 +14,7 @@ const map = {
   [`${actionTypes.GET_TOKEN}${actionTypes.FULFILLED}`]: (state, { payload }) => ({
     ...state,
     loading: false,
-    token: payload.data
+    token: payload.data.key
   }),
   [`${actionTypes.GET_TOKEN}${actionTypes.REJECTED}`]: (state) => ({
     ...state,

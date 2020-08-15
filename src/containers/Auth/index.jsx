@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
@@ -15,15 +15,21 @@ const Auth = ({
   init,
   tokenLocalToRedux
 }) => {
-  const localToken = localStorage.getItem('token');
 
-  if (!token && localToken) {
-    tokenLocalToRedux(localToken);
-  };
+  const localToken = localStorage.getItem('token'); 
+  
+  console.log(localToken, 'local-token');
+  
+  useEffect(() => {
+    // if (!token && localToken) {
+    //   tokenLocalToRedux(localToken);
+    // };
 
-  if (!token && !loading && !error && !localToken) {
+    // if (!token && !loading && !error && !localToken) {
+    //   init();
+    // };
     init();
-  };
+  }, []); // not working
 
   return (
     <>
@@ -49,7 +55,7 @@ Auth.propTypes = {
   ]),
   init: PropTypes.func,
   tokenLocalToRedux: PropTypes.func,
-  token: PropTypes.string,
+  // token: PropTypes.string,
   loading: PropTypes.bool,
   error: PropTypes.bool
 };

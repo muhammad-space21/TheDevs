@@ -35,7 +35,7 @@ const CoursesContainer = ({
         <HeadingOne>Courses <span>We offer</span></HeadingOne>
         <HeadingTwo>High quality<span>matters</span></HeadingTwo>
       </TextWrapper>
-      {/* <Row>
+      <Row>
         {
           courses.length && !loading && !error ? 
           (courses.map(({id, ...otherProps}) => (
@@ -44,7 +44,7 @@ const CoursesContainer = ({
           <Spinner />
           )
         }
-      </Row> */}
+      </Row>
     </Container>
   );
 };
