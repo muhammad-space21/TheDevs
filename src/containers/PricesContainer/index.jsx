@@ -10,18 +10,18 @@ import * as Actions from '../../redux/modules/prices/pricesActions';
 import PriceCards from '../../components/PriceCards';
 import Spinner from '../../components/Spinner';
 
-const PricesContainer = ({ 
-  loading, 
-  error, 
+const PricesContainer = ({
   getPrices, 
-  prices 
+  prices, 
+  loading, 
+  error 
 }) => {
-  
-  // Adding action
-  // useEffect(() => {
-  //   getPrices();
-  // }, []);
 
+  //  Adding Action
+  useEffect(() => {
+    getPrices();
+  }, []);
+  
   return (
     <Container>
       <Heading>
@@ -29,12 +29,13 @@ const PricesContainer = ({
         <span> Pricing Plan.</span> 
       </Heading>
       <Row>
-        {/* { prices.length && !loading && !error ? (
+        {
+          prices.length && !loading && !error ? (
           prices.map(({id, ...otherProps}) => (
             <PriceCards key={id} id={id} {...otherProps} />
           ))
           ): (<Spinner />)
-        } */}
+        }
       </Row>
     </Container>
   )
