@@ -6,12 +6,12 @@ import { pricingData } from '../../mockData/pricingData';
 
 import PricingServiceCardsItem from '../../components/PricingServiceCardsItem';
 
-const PricingServiceCardsContainer = () => {
+const PricingServiceCardsContainer = (singlePrice) => {
   return (
     <Container>
       <Row>
         {
-          pricingData.map(({id, ...otherProps}) => (
+          singlePrice.service_cards.map(({id, ...otherProps}) => (
             <PricingServiceCardsItem id={id} {...otherProps} />
           ))
         }

@@ -8,27 +8,18 @@ import {
   TextWrapper 
 } from './styles';
 
-import InstructorImg from '../../assets/images/instructor-daler.jpg';
-
-
-const InstructorInfo = () => {
+const InstructorInfo = (author) => {
   return (
     <Container>
       <AvatarContainer>
         <span>Your Instructor</span>
         <Avatar>
-          <img src={InstructorImg} alt="instructor"/>
+          <img src={author.image} alt="instructor"/>
         </Avatar>
-        <InstructorName>Daler Zakirov</InstructorName>
+      <InstructorName>{author.name}</InstructorName>
       </AvatarContainer>
       <TextWrapper>
-        Hi! My name is Mosh Hamedani. 
-        I'm a software engineer with almost two decades of experience. 
-        I've taught over nine million people how to code and how to 
-        become professional software engineers through my online 
-        courses and YouTube channel.
-
-        I believe coding should be fun and accessible to everyone.
+       {author.info}
       </TextWrapper>
     </Container>
   )

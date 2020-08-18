@@ -9,14 +9,13 @@ import {
 
 import PrimaryButton from '../PrimaryButton';
 
-const HeaderCoursePage = () => {
+const HeaderCoursePage = (singleCourse) => {
   return (
     <Container>
       <TextWrapper>
-        <Heading>The Ultimate Frontend Development Course</Heading>
+        <Heading>The Ultimate {singleCourse.title} Course</Heading>
             <SecondaryTitle>
-              Everything you need to master frontend development
-              and build professional-quality websites
+              {singleCourse.description}
             </SecondaryTitle>
       </TextWrapper>
       <PrimaryButton btnHeaderLong>Enroll in Course</PrimaryButton>

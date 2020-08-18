@@ -6,31 +6,30 @@ import {
   Footer,
   TechName,
   TechTitle,
-  Duration
+  // Duration
  } from './styles';
 
 
 const TechItem = ({
-  techImg, 
-  techName, 
-  duration, 
-  title
+  title, 
+  image, 
+  description
   }) => {
   return (
     <Container>
       <ImageWrapper>
-        <img src={techImg} alt="technology"/>
+        <img src={image} alt="technology"/>
       </ImageWrapper>
       <Footer>
         <TechName>
-          {techName}
+          {title}
         </TechName>
         <TechTitle>
-          {title}
+          {description}
         </TechTitle>
-        <Duration>
+        {/* <Duration>
           Duration: <span>{duration}</span>
-        </Duration>    
+        </Duration>     */}
       </Footer>
     </Container>
   )

@@ -1,7 +1,7 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 
-import { 
+import {
   Container, 
   ImageWrapper, 
   Column, 
@@ -11,13 +11,13 @@ import {
 import PrimaryButton from '../PrimaryButton';
 import ImageIllustration from '../../assets/images/header-webdeveloper-png.png';
 
-const CallToActionSectionTwo = () => {
+const CallToActionSectionTwo = (title) => {
+  const {title} = useParams();
   // route change
   const history = useHistory();
   const handleRouteChange = () => {
-      history.push('./article');
+      history.push(`/article/${title}`);
   };
-
 
   return (
     <Container>
@@ -27,7 +27,7 @@ const CallToActionSectionTwo = () => {
       <Column>
         <Heading>
           Why to study 
-          <span> frontend development </span>  
+            <span>{title}</span>  
           in 2020, and is it worth it ?
         </Heading>
         <PrimaryButton

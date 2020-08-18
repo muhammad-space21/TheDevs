@@ -31,7 +31,7 @@ const App = () => {
                   <Route exact key='r-4' path='/sign-up' component={SignUpPage} />
                   <Route exact key='r-5' path='/login' component={LoginPage} />
                   <Route exact key='r-6' path='/how-it-works' component={HowItWorks} />
-                  <Route exact key='r-7' path='/article' component={ArticlePage} />
+                  <Route exact key='r-7' path='/article/:title' component={ArticlePage} />
                   <Route exact key='r-8' path='/pricing/:id' component={PricingPlanPage} />
                 </Auth>
               </Suspense>

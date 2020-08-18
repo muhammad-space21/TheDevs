@@ -1,5 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
+import { useParams} from 'react-router-dom';
+import { connect } from 'react-redux';
 
+import { getSingleCourse } from '../../redux/modules/singleCourse/singleCourseAction';
+
+// comp.
 import NavbarMain from '../../components/Navbar';
 import HeaderCoursePage from '../../components/HeaderCoursePage';
 import CoursesTechsContainer from '../../containers/CoursesTechsContainer';
@@ -13,6 +19,7 @@ import MoneyBackPolicy from '../../components/MoneyBackPolicy';
 import SalaryLabel from '../../components/SalaryLabel';
 import CallToActionSection from '../../components/CallToActionSection';
 import Footer from '../../components/Footer';
+import Spinner from '../../components/Spinner';
 
 
 const styles = {
@@ -24,24 +31,71 @@ const styles = {
 };
 
 
-const CoursePage = () => {
+const CoursePage = ({
+  loading, 
+  error, 
+  getSingleCourse, 
+  singleCourse 
+  }) => {
+
+  const {id} = useParams();
+
+  // Adding action
+  useEffect(() => {
+    getSingleCourse(id)
+  }, [id]);
+
   return (
     <div style={styles}>
-      <NavbarMain />
-      <HeaderCoursePage />
-      <CoursesTechsContainer />
-      <CallToActionSectionTwo />
-      <WhatYouLearnSection />
-      <PreRequisities />
-      <JoinITCommunitySection />
-      <InstructorInfo />
-      <FAQ />
-      <MoneyBackPolicy />
-      <SalaryLabel />
-      <CallToActionSection />
-      <Footer />
+      {
+        !error && !loading && singleCourse.length ? (
+        <>
+          <NavbarMain />
+          <HeaderCoursePage {...props} />
+          <CoursesTechsContainer {...props} />
+          <CallToActionSectionTwo {...props} />
+          <WhatYouLearnSection {...props} />
+          <PreRequisities />
+          <JoinITCommunitySection {...props} />
+          <InstructorInfo {...props} />
+          <FAQ {...props} />
+          <MoneyBackPolicy />
+          {/* <SalaryLabel {...props} /> */}
+          <CallToActionSection {...props} />
+          <Footer />
+        </>
+        )  : (<Spinner />)
+      }
     </div>
   )
 };
 
-export default CoursePage;
+CoursePage.propTypes = {
+  loading: PropTypes.bool,
+  error: PropTypes.bool,
+  singleCourse: PropTypes.object,
+  getSingleCourse: PropTypes.func
+};
+
+CoursePage.defaultProps = {
+  loading: false,
+  error: false,
+  singleCourse: {},
+  getSingleCourse: () => {}
+};
+
+
+const mapStateToProps = (state) => ({
+  loading: state.singleCourseReducer.loading,
+  error: state.singleCourseReducer.error,
+  singleCourse: state.singleCourseReducer.singleCourse
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  getSingleCourse: (id) => dispatch(getSingleCourse(id))
+});
+
+export default connect(
+  mapStateToProps, 
+  mapDispatchToProps
+)(CoursePage);

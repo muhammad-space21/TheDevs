@@ -3,16 +3,16 @@ import React from 'react';
 import { ServiceCard, IconWrapper, TextWrapper } from './styles';
 
 
-const PricingServiceCardsItem = ({icon, title, subtitle}) => {
+const PricingServiceCardsItem = (service_cards) => {
   return (
     <ServiceCard>
       <IconWrapper>
-        <img src={icon} alt="icon" />
+        <img src={service_cards.image} alt="icon" />
       </IconWrapper>
       <TextWrapper>
-          {title}
+          {service_cards.title}
         <span>
-          {subtitle}
+          {service_cards.subtitle}
         </span>
       </TextWrapper>
     </ServiceCard>
