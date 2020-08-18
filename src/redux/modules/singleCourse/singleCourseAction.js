@@ -1,15 +1,18 @@
 import axios from 'axios';
 
 import actionTypes from '../../../constants/actionTypes';
+
 import { getHeaders } from '../../../utils/index';
 
-export const getPrices = () => (dispatch, getState) => {
+
+export const getSingleCourse = (id) => (dispatch, getState) => {
   dispatch({
-    type: actionTypes.GET_PRICES,
+    type: actionTypes.GET_SINGLE_COURSE,
     payload: axios({
       method: 'GET',
-      url: '/subscription-types/',
+      url: `/courses/${id}`,
       headers: getHeaders(getState)
     })
-  });
+  })
 };
+

@@ -1,9 +1,9 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 
 import {
   Container, 
-  Duration, 
+  // Duration, 
   Price, 
   Hr, 
   CourseName, 
@@ -15,35 +15,28 @@ import PrimaryButton from '../PrimaryButton';
 import CardsDots from '../../assets/images/card-dots.png';
 
 
-const PriceCards = ({
-  courseName, 
-  duration, 
-  price, 
-  pros1, 
-  pros2, 
-  pros3, 
-  pros4
-  }) => {
+const PriceCards = (prices) => {
 
-  // routeChange
+  const {id} = useParams();
   const history = useHistory();
-  const handleRouteChange = () => {
-    history.push('/pricing');
+  
+  // routeChange
+  const routeChange = () => {
+    history.push(`/prices/${id}`)
   };
 
   return (
     <Container id="3">
-      <Duration> {duration} </Duration>
-        <Price><span>{price}</span> /month</Price>
+      {/* <Duration> {} </Duration> */}
+        <Price><span>{prices.price}</span> /month</Price>
       <Hr />
-        <CourseName>{courseName}</CourseName>
+        <CourseName>{prices.title}</CourseName>
       <Pros>
-        <span>{pros1}</span>
-        <span>{pros2}</span>
-        <span>{pros3}</span>
-        <span>{pros4}</span>
+       {
+          prices.map(({id, idx}) => (<span key={id}>{prices.options}</span>))
+       }
       </Pros>
-      <PrimaryButton btnCard onClick={handleRouteChange}>
+      <PrimaryButton btnCard onClick={routeChange}>
         Enroll
       </PrimaryButton>
       <img src={CardsDots} alt="card-dots"/>

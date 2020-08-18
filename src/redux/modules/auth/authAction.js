@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import actionTypes from '../../../constants/index';
+import actionTypes from '../../../constants/actionTypes';
 
 
 export const tokenLocalToRedux = (token) => (dispatch) => {

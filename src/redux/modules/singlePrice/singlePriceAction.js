@@ -3,13 +3,13 @@ import axios from 'axios';
 import actionTypes from '../../../constants/actionTypes';
 import { getHeaders } from '../../../utils/index';
 
-export const getPrices = () => (dispatch, getState) => {
+export const getSinglePrice = (id) => (dispatch, getState) => {
   dispatch({
-    type: actionTypes.GET_PRICES,
+    type: actionTypes.GET_SINGLE_PRICE,
     payload: axios({
       method: 'GET',
-      url: '/subscription-types/',
+      url: `/subscription-types/${id}`,
       headers: getHeaders(getState)
     })
-  });
+  })
 };

@@ -1,6 +1,7 @@
 import React from 'react';
+import { useParams, useHistory } from 'react-router-dom';
 
-import { 
+import {
   Container,
   ImageWrapper,
   Footer,
@@ -19,10 +20,18 @@ import {
  import IconAvatar from '../../assets/icons/avatar.png';
 
 const CourseItem = (courses) => {
+  const {id} = useParams();
+  const history = useHistory();
+
+  // routeChange
+  const routeChange = () => {
+    history.push(`/courses/${id}`)
+  };
+
   return (
-    <Container>
+    <Container onClick={routeChange}>
       <ImageWrapper>
-        <img src={courses.image} alt="course"/>
+        <img src={courses.image} alt="course" />
       </ImageWrapper>
       <Footer>
         <CourseTitle>

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import actionTypes from '../../../constants/index';
+import actionTypes from '../../../constants/actionTypes';
 import { getHeaders } from '../../../utils/index';
 
 export const getCourses = () => (dispatch, getState) => {
