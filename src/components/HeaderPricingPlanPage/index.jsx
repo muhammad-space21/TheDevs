@@ -1,11 +1,10 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import { Container, Col1, Col2, Heading } from './styles';
 
-import ImageHeader from '../../assets/icons/golden-price.png';
 
-
-const HeaderPricingPlan = (singlePrice) => (
+const HeaderPricingPlan = ({ singlePrice }) => (
   <Container>
     <Col1>
       <Heading> What our <span>{singlePrice.title}</span> includes ?</Heading>
@@ -16,4 +15,8 @@ const HeaderPricingPlan = (singlePrice) => (
   </Container>
 );
 
-export default HeaderPricingPlan;
+const mapStateToProps = (state) => ({
+  singlePrice: state.singlePriceReducer.singlePrice
+});
+
+export default connect(mapStateToProps, null)(HeaderPricingPlan);

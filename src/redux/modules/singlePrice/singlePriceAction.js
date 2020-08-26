@@ -6,10 +6,10 @@ import { getHeaders } from '../../../utils/index';
 export const getSinglePrice = (id) => (dispatch, getState) => {
   dispatch({
     type: actionTypes.GET_SINGLE_PRICE,
-    // payload: axios({
-    //   method: 'GET',
-    //   url: `/subscription-types/${id}`,
-    //   headers: getHeaders(getState)
-    // })
+    payload: axios({
+      method: 'GET',
+      url: `/subscription-types/${id}`,
+      headers: getHeaders(getState)
+    })
   })
 };

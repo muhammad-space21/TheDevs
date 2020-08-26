@@ -30,7 +30,7 @@ const PricesContainer = ({
       </Heading>
       <Row>
         {
-          prices.length && !loading && !error ? (
+        !loading && !error && prices.length  ? (
           prices.map(({id, ...otherProps}) => (
             <PriceCards key={id} id={id} {...otherProps} />
           ))

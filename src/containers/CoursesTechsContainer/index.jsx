@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import { Container, Heading, Row } from './styles';
@@ -20,6 +21,18 @@ const CoursesTechsContainer = ({singleCourse, loading, error}) => (
     </Row>
   </Container>
 );
+
+CoursesTechsContainer.propTypes = {
+  // singleCourse: PropTypes.object,
+  loading: PropTypes.bool,
+  error: PropTypes.bool
+};
+
+CoursesTechsContainer.defaultPropTypes = {
+  singleCourse: {},
+  loading: false,
+  error: false
+};
 
 const mapStateToProps = (state) => ({
   singleCourse: state.singleCourseReducer.singleCourse,

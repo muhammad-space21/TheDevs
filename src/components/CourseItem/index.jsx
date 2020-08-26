@@ -22,7 +22,7 @@ import {
 const CourseItem = (courses) => {
   const history = useHistory();
   const {id} = courses;
-  console.log('id', id) // working
+  console.log('id', id)
 
   // routeChange
   const routeChange = () => {

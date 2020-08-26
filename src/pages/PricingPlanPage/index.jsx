@@ -38,26 +38,28 @@ const PricingPlanPage = ({
   const {id} = useParams();
 
   // Adding Action
-  useEffect((id) => {
+  useEffect(() => {
     getSinglePrice(id);
   }, [id]);
 
   return (
     <Container>
       {
-        !error && !loading && singlePrice.length ? (
+        !error && !loading && singlePrice ? (
           <>
             <Navbar />
-            <HeaderPricingPlanPage {...props} />
-            <PricingServiceCardsContainer {...props} />
+            <HeaderPricingPlanPage />
+            <PricingServiceCardsContainer />
               <NoticeBoard>
                 {
-                  singlePrice.map(({id, idx}) => (
-                    <TextWrapper id={singlePrice.notices}>
-                      <img src={IconHash} alt="icon-hash" />
-                      <span>{singlePrice.notices}</span>
-                    </TextWrapper>
-                  ))
+                  !error && !loading && singlePrice ? (
+                    singlePrice.map(({id, idx}) => (
+                      <TextWrapper key={id}>
+                        <img src={IconHash} alt="icon-hash" />
+                        <span>{singlePrice.notices}</span>
+                      </TextWrapper>
+                    ))
+                  ) : (<Spinner />)
                 }
               </NoticeBoard>
               <ImageCenter>
