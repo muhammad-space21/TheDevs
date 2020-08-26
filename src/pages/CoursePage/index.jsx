@@ -35,7 +35,7 @@ const CoursePage = ({
   loading, 
   error, 
   getSingleCourse, 
-  singleCourse 
+  singleCourse
   }) => {
 
   const {id} = useParams();
@@ -45,26 +45,27 @@ const CoursePage = ({
     getSingleCourse(id)
   }, [id]);
 
+
   return (
     <div style={styles}>
       {
-        !error && !loading && singleCourse.length ? (
-        <>
-          <NavbarMain />
-          <HeaderCoursePage {...props} />
-          <CoursesTechsContainer {...props} />
-          <CallToActionSectionTwo {...props} />
-          <WhatYouLearnSection {...props} />
-          <PreRequisities />
-          <JoinITCommunitySection {...props} />
-          <InstructorInfo {...props} />
-          <FAQ {...props} />
-          <MoneyBackPolicy />
-          {/* <SalaryLabel {...props} /> */}
-          <CallToActionSection {...props} />
-          <Footer />
-        </>
-        )  : (<Spinner />)
+        !error && !loading && singleCourse ? (
+          <>
+            <NavbarMain />
+            <HeaderCoursePage />
+            <CoursesTechsContainer />
+            <CallToActionSectionTwo />
+            <WhatYouLearnSection />
+            <PreRequisities />
+            <JoinITCommunitySection />
+            {/* <InstructorInfo singleCourse={singleCourse} {...otherProps} /> */}
+            <FAQ />
+            <MoneyBackPolicy />
+            {/* <SalaryLabel singleCourse={singleCourse} {...otherProps} /> */}
+            <CallToActionSection />
+            <Footer />
+          </>
+        ) : (<Spinner />)
       }
     </div>
   )

@@ -1,6 +1,7 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-import { 
+import {
   Container, 
   Heading, 
   Question, 
@@ -8,24 +9,33 @@ import {
 } from './styles';
 
 import IconFAQ from '../../assets/icons/question.png';
+import Spinner from '../../components/Spinner';
 
-const FAQ = (faqs) => (
+const FAQ = ({singleCourse, loading, error}) => (
   <Container>
     <Heading>
       <img src={IconFAQ} alt="icon" />
       Frequently Asked Questions
     </Heading>
     {
-      faqs.map(({id, idx}) => (
-        <>
-          <Question key={id}>{faqs.question}</Question>
-            <Answer key={id}> 
-              {faqs.answer}
-            </Answer>
-         </> 
-      ))
+      !error && !loading && singleCourse.faqs ? (
+        singleCourse.faqs.map(({id, question}) => (
+          <>
+            <Question key={id}>{question}</Question>
+              <Answer key={id}> 
+                {singleCourse.faqs.answer}
+              </Answer>
+          </> 
+        ))
+      ) : (<Spinner />)
     }
   </Container>
 );
 
-export default FAQ;
+const mapStateToProps = (state) => ({
+  singleCourse: state.singleCourseReducer.singleCourse,
+  loading: state.singleCourseReducer.loading,
+  error: state.singleCourseReducer.error
+});
+
+export default connect(mapStateToProps, null)(FAQ);

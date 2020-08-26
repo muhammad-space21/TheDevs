@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { useHistory, useParams } from 'react-router-dom';
 
 import {
@@ -11,7 +12,7 @@ import {
 import PrimaryButton from '../PrimaryButton';
 import ImageIllustration from '../../assets/images/header-webdeveloper-png.png';
 
-const CallToActionSectionTwo = (title) => {
+const CallToActionSectionTwo = ({singleCourse}) => {
   const {title} = useParams();
   // route change
   const history = useHistory();
@@ -27,7 +28,7 @@ const CallToActionSectionTwo = (title) => {
       <Column>
         <Heading>
           Why to study 
-            <span>{title}</span>  
+            <span> {singleCourse.name} </span>  
           in 2020, and is it worth it ?
         </Heading>
         <PrimaryButton
@@ -41,4 +42,8 @@ const CallToActionSectionTwo = (title) => {
   )
 };
 
-export default CallToActionSectionTwo;
+const mapStateToProps = state => ({
+  singleCourse: state.singleCourseReducer.singleCourse
+});
+
+export default connect(mapStateToProps, null)(CallToActionSectionTwo);

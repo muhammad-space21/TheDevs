@@ -14,7 +14,7 @@ const map = {
   [`${actionTypes.GET_PRICES}${actionTypes.FULFILLED}`]: (state, {payload}) => ({
     ...state,
     loading: false,
-    prices: payload.data
+    prices: payload.data.results
   }),
   [`${actionTypes.GET_PRICES}${actionTypes.REJECTED}`]: (state) => ({
     ...state,

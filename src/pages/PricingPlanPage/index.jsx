@@ -31,7 +31,8 @@ const PricingPlanPage = ({
   loading,
   error,
   singlePrice,
-  getSinglePrice
+  getSinglePrice,
+  props
 }) => {
 
   const {id} = useParams();
@@ -75,7 +76,7 @@ const PricingPlanPage = ({
   )
 };
 
-PricingPlanPage.PropTypes = {
+PricingPlanPage.propTypes = {
   loading: PropTypes.bool,
   error: PropTypes.bool,
   // singlePrice: PropTypes.object,

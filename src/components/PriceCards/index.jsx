@@ -16,8 +16,7 @@ import CardsDots from '../../assets/images/card-dots.png';
 
 
 const PriceCards = (prices) => {
-
-  const {id} = useParams();
+  const {id} = prices;
   const history = useHistory();
   
   // routeChange

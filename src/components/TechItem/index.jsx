@@ -6,14 +6,15 @@ import {
   Footer,
   TechName,
   TechTitle,
-  // Duration
+  Duration
  } from './styles';
 
 
 const TechItem = ({
-  title, 
+  name, 
   image, 
-  description
+  subtitle,
+  duration
   }) => {
   return (
     <Container>
@@ -22,14 +23,14 @@ const TechItem = ({
       </ImageWrapper>
       <Footer>
         <TechName>
-          {title}
+          {name}
         </TechName>
         <TechTitle>
-          {description}
+          {subtitle}
         </TechTitle>
-        {/* <Duration>
+        <Duration>
           Duration: <span>{duration}</span>
-        </Duration>     */}
+        </Duration>    
       </Footer>
     </Container>
   )

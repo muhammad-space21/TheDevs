@@ -24,6 +24,8 @@ const CoursesContainer = ({
   getCourses 
 }) => {
 
+  // id is being successfully passed
+  
   // Addding action
   useEffect(() => {
     getCourses()

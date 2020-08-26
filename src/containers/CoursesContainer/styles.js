@@ -12,9 +12,6 @@ export const Container = styled.div`
   @media screen and (max-width: 1200px) {
     padding: 30px;
   }
-  @media screen and (max-width: 600px) {
-    padding: 20px;
-  }
 `;
 
 export const Row = styled.div`

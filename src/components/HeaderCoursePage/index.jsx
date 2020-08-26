@@ -1,6 +1,7 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-import { 
+import {
   Container, 
   TextWrapper, 
   SecondaryTitle, 
@@ -9,13 +10,13 @@ import {
 
 import PrimaryButton from '../PrimaryButton';
 
-const HeaderCoursePage = (singleCourse) => {
+const HeaderCoursePage = ({singleCourse}) => {
   return (
     <Container>
       <TextWrapper>
-        <Heading>The Ultimate {singleCourse.title} Course</Heading>
+        <Heading>{singleCourse.title}</Heading>
             <SecondaryTitle>
-              {singleCourse.description}
+              {singleCourse.subtitle}
             </SecondaryTitle>
       </TextWrapper>
       <PrimaryButton btnHeaderLong>Enroll in Course</PrimaryButton>
@@ -23,4 +24,10 @@ const HeaderCoursePage = (singleCourse) => {
   );
 };
 
-export default HeaderCoursePage;
+const mapStateToProps = (state) => ({
+  singleCourse: state.singleCourseReducer.singleCourse
+});
+
+export default connect(mapStateToProps, null)(HeaderCoursePage);
+
+// export default HeaderCoursePage;

@@ -93,7 +93,7 @@ export const Duration = styled.div`
   align-items: center;
   justify-content: space-between;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   margin-left: 10px;
   margin-top: 20px;

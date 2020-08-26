@@ -14,7 +14,7 @@ const map = {
   [`${actionTypes.GET_COURSES}${actionTypes.FULFILLED}`]: (state, {payload}) => ({
     ...state,
     loading: false,
-    courses: payload.data,
+    courses: payload.data.results,
   }),
   [`${actionTypes.GET_COURSES}${actionTypes.REJECTED}`]: (state) => ({
     ...state,

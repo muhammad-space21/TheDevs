@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 import {
   Container,
@@ -20,8 +20,9 @@ import {
  import IconAvatar from '../../assets/icons/avatar.png';
 
 const CourseItem = (courses) => {
-  const {id} = useParams();
   const history = useHistory();
+  const {id} = courses;
+  console.log('id', id) // working
 
   // routeChange
   const routeChange = () => {
@@ -35,7 +36,8 @@ const CourseItem = (courses) => {
       </ImageWrapper>
       <Footer>
         <CourseTitle>
-          {courses.title} <span>development</span> 
+          {courses.name} 
+          {/* <span>development</span>  */}
         </CourseTitle>
         <Duration>
           Duration: <span>{courses.duration}</span>
