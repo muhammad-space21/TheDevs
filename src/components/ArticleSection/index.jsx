@@ -9,7 +9,7 @@ import {
   ImageWrapper2
 } from './styles';
 
-import ImageOne from '../../assets/images/img-comp1.png';
+import ImageOne from '../../assets/images/macbook.png';
 import ImageTwo from '../../assets/images/img-comp2.png';
 
 export const ArticleSection = () => {

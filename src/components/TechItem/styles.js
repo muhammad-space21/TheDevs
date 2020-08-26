@@ -7,6 +7,7 @@ export const Container = styled.div`
   flex-direction: column;
   margin-bottom: 50px;
   cursor: pointer;
+  transition: 0.5s;
   @media screen and (max-width: 991px) {
     width: 40%;
     margin-bottom: 40px;
@@ -20,17 +21,22 @@ export const Container = styled.div`
   @media screen and (max-width: 550px) {
     width: 95%;
   }
+  &:hover {
+    box-shadow: 10px 10px 20px #A6ABBD;
+    margin-top: -10px;
+  }
 `;
 
 export const ImageWrapper = styled.div`
   width: 100%;
-  height: 35vh;
+  height: 30vh;
   display: flex;
   justify-content: center;
   align-items: center;
   img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
   }
   @media screen and (max-width: 1100px) {
     height: 30vh;
@@ -39,19 +45,22 @@ export const ImageWrapper = styled.div`
     height: 28vh;
   }
   @media screen and (max-width: 769px) {
-    height: 25vh;
+    height: 20vh;
   }
 `;
 
 export const Footer = styled.div`
   width: 100%;
-  height: fit-content;
+  height: 30vh;
   background-color: white;
   display: flex;
   flex-direction: column;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 10px;
+  @media screen and (max-width: 769px) {
+    height: 22vh;
+  }
 `;
 
 export const TechName = styled.div`
@@ -95,8 +104,7 @@ export const Duration = styled.div`
   font-size: 16px;
   font-weight: 500;
   font-style: normal;
-  margin-left: 10px;
-  margin-top: 20px;
+  margin-top: auto;
   span {
     font-size: 16px;
     font-weight: 600;

@@ -1,16 +1,19 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import { Container, Heading } from './styles';
 
 
-const SalaryLabel = () => (
+const SalaryLabel = ({singleCourse }) => (
   <Container>
     <Heading>
-      The salary of React Native developers ranges from <span>  $80K to $190K  </span> in the USA.
-      That alone should persuade you that learning React Native is a great investment for your future.
+      {singleCourse.notes}
     </Heading>
   </Container>
 );
 
+const mapStateToProps = state => ({
+  singleCourse: state.singleCourseReducer.singleCourse
+});
 
-export default SalaryLabel;
+export default connect(mapStateToProps, null)(SalaryLabel);

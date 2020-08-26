@@ -40,7 +40,7 @@ export const ImageWrapper1 = styled.div`
   background-position: center;
   /* border: 2px solid red; */
   img {
-    width: 65%;
+    width: 50%;
     height: auto;
     @media screen and (max-width: 768px) {
       width: 75%;

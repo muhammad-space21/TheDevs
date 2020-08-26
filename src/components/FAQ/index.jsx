@@ -5,7 +5,8 @@ import {
   Container, 
   Heading, 
   Question, 
-  Answer 
+  Answer,
+  TextWrapper
 } from './styles';
 
 import IconFAQ from '../../assets/icons/question.png';
@@ -19,13 +20,11 @@ const FAQ = ({singleCourse, loading, error}) => (
     </Heading>
     {
       !error && !loading && singleCourse.faqs ? (
-        singleCourse.faqs.map(({id, question}) => (
-          <>
-            <Question key={id}>{question}</Question>
-              <Answer key={id}> 
-                {singleCourse.faqs.answer}
-              </Answer>
-          </> 
+        singleCourse.faqs.map(({id, question, answer}) => (
+          <TextWrapper key={id}>
+            <Question>{question}</Question>
+            <Answer>{answer}</Answer>
+          </TextWrapper> 
         ))
       ) : (<Spinner />)
     }

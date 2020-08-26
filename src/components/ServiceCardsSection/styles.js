@@ -59,7 +59,7 @@ export const Row = styled.div`
 
 export const ServiceCard = styled.div`
   width: 30%;
-  height: fit-content;
+  height: 65vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -76,6 +76,7 @@ export const ServiceCard = styled.div`
     width: 40%;
   }
   @media screen and (max-width: 700px) {
+    height: 30vh;
     width: 47%;
   }
 `;
@@ -109,6 +110,7 @@ export const TextWrapper = styled.div`
   align-items: center;
   justify-content: center;
   font-size: 20px;
+  line-height: 22px;
   font-weight: 500;
   color: white;
   margin-top: 30px;
@@ -131,5 +133,6 @@ export const TextWrapper = styled.div`
     margin-top: 10px;
     margin-bottom: 20px;
     font-size: 14px;
+    line-height: 16px;
   }
 `;

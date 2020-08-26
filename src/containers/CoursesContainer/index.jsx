@@ -53,7 +53,7 @@ const CoursesContainer = ({
 
 
 CoursesContainer.propTypes = {
-  courses: PropTypes.object,
+  // courses: PropTypes.object,
   loading: PropTypes.bool,
   error: PropTypes.bool,
   getCourses: PropTypes.func

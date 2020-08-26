@@ -44,7 +44,7 @@ const PricesContainer = ({
 PricesContainer.propTypes = {
   loading: PropTypes.bool,
   error: PropTypes.bool,
-  prices: PropTypes.object,
+  // prices: PropTypes.object,
   getPrices: PropTypes.func
 };
 

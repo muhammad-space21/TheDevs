@@ -22,6 +22,22 @@ export const Container = styled.div`
   }
 `;
 
+export const TextWrapper = styled.div`
+  width: 60%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: 991px) {
+    width: 80%;
+  }
+  @media screen and (max-width: 768px) {
+    width: 90%;
+  }
+  @media screen and (max-width: 550px) {
+    width: 100%;
+  }
+`;
+
 export const Heading = styled.div`
   width: 60%;
   height: fit-content;
@@ -58,39 +74,29 @@ export const Heading = styled.div`
 `;
 
 export const Question = styled.div`
-  width: 60%; 
+  width: 100%; 
   font-size: 22px;
   font-weight: 500;
   color: black;
   margin-bottom: 15px;
   margin-top: 20px;
-  @media screen and (max-width: 991px) {
-    width: 80%;
-  }
   @media screen and (max-width: 768px) {
-    width: 90%;
     font-size: 20px;
   }
   @media screen and (max-width: 550px) {
     font-size: 18px;
-    width: 100%;
   }
 `;
 
 export const Answer = styled.div`
-  width: 60%; 
+  width: 100%; 
   font-size: 19px;
   font-weight: 400;
   color: black;
-  @media screen and (max-width: 991px) {
-    width: 80%;
-  }
   @media screen and (max-width: 768px) {
-    width: 90%;
     font-size: 17px;
   }
   @media screen and (max-width: 550px) {
-    width: 100%;
     font-size: 16px;
   }
 `;

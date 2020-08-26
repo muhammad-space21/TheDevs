@@ -43,9 +43,9 @@ const WhatYouLearnSection = ({singleCourse, loading, error}) => {
           {
             !loading && !error && singleCourse.expectations ? (
               singleCourse.expectations.map(({id, subtitle}) => (
-                <BulletPoint>
+                <BulletPoint key={id}>
                   <img src={IconBullet} alt="icon" />
-                  <span key={id}>{subtitle}</span>
+                  <span>{subtitle}</span>
                 </BulletPoint>
               ))
             ) : (<Spinner />)

@@ -30,7 +30,7 @@ const ServiceCardsSection = () => {
             <img src={IconCertified} alt="icon"/>
           </IconWrapper>
           <TextWrapper>
-            Lorem Ipsum 
+            Best Quality 
             <span>
               Sorem spsum dolor sit amsectetur 
               adipisclit, seddo eiusmod 
@@ -43,7 +43,7 @@ const ServiceCardsSection = () => {
             <img src={IconControl} alt="icon"/>
           </IconWrapper>
           <TextWrapper>
-            Lorem Ipsum 
+            Comfortable platforms
             <span>
               Sorem spsum dolor sit amsectetur 
               adipisclit, seddo eiusmod 
@@ -56,7 +56,7 @@ const ServiceCardsSection = () => {
             <img src={IconWebCoding} alt="icon"/>
           </IconWrapper>
           <TextWrapper>
-            Lorem Ipsum 
+            Debuging and code review assistance
             <span>
               Sorem spsum dolor sit amsectetur 
               adipisclit, seddo eiusmod 
@@ -69,7 +69,7 @@ const ServiceCardsSection = () => {
             <img src={IconWork} alt="icon"/>
           </IconWrapper>
           <TextWrapper>
-            Lorem Ipsum 
+            Portfolio building assistance
             <span>
               Sorem spsum dolor sit amsectetur 
               adipisclit, seddo eiusmod 
@@ -82,7 +82,7 @@ const ServiceCardsSection = () => {
             <img src={IconDiscussion} alt="icon"/>
           </IconWrapper>
           <TextWrapper>
-            Lorem Ipsum 
+            Mentoring assistance and communication
             <span>
               Sorem spsum dolor sit amsectetur 
               adipisclit, seddo eiusmod 
@@ -95,7 +95,7 @@ const ServiceCardsSection = () => {
             <img src={IconAgenda} alt="icon"/>
           </IconWrapper>
           <TextWrapper>
-            Lorem Ipsum 
+            Affordable and worthwhile price
             <span>
               Sorem spsum dolor sit amsectetur 
               adipisclit, seddo eiusmod 

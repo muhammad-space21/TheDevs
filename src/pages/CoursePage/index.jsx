@@ -61,7 +61,7 @@ const CoursePage = ({
             {/* <InstructorInfo singleCourse={singleCourse} {...otherProps} /> */}
             <FAQ />
             <MoneyBackPolicy />
-            {/* <SalaryLabel singleCourse={singleCourse} {...otherProps} /> */}
+            <SalaryLabel />
             <CallToActionSection />
             <Footer />
           </>

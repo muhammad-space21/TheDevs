@@ -5,6 +5,8 @@ export const Container = styled.div`
   height: fit-content;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
+  transition: 0.5s;
   @media screen and (max-width: 991px) {
     width: 40%;
     margin-bottom: 30px;
@@ -18,6 +20,10 @@ export const Container = styled.div`
   @media screen and (max-width: 550px) {
     width: 95%;
   }
+  &:hover {
+    box-shadow: 10px 10px 20px #A6ABBD;
+    margin-top: -10px;
+  }
 `;
 
 export const ImageWrapper = styled.div`
@@ -29,6 +35,7 @@ export const ImageWrapper = styled.div`
   img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
   }
   @media screen and (max-width: 1100px) {
     height: 30vh;
