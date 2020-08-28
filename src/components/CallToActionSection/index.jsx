@@ -12,7 +12,7 @@ import {
   Img4
 } from './styles';
 
-import PrimaryButton from '../PrimaryButton';
+import SecondaryButton from '../SecondaryButton';
 
 import ImageCircle1 from '../../assets/images/circle1.png';
 import ImageCircle2 from '../../assets/images/circle2.png';
@@ -32,7 +32,7 @@ const CallToActionSection = () => {
           Join <span> our courses </span> as soon as <br/>possible, 
           places are limited. 
         </Heading>
-        <PrimaryButton btnCircle>ENROLL</PrimaryButton>
+        <SecondaryButton />
       </Row>
       <IllustrationWrapper2>
         <Img3><img src={ImageCircle3} alt="circle3"/></Img3>

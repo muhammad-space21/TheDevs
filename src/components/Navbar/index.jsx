@@ -42,7 +42,7 @@ export const NavbarMain = () => {
               <NavLinkHide to="/">Backend development</NavLinkHide>
               <NavLinkHide to="/">Mobile development</NavLinkHide>
             <NavLinkCustom to="#3">Prices</NavLinkCustom>
-            <ButtonPrimary btnEnrollNavbar>enroll to the course</ButtonPrimary>
+            <ButtonPrimary btnEnrollNavbar><span>enroll to the course</span></ButtonPrimary>
           </NavStyled>
         </NavbarCollapse>
     </NavbarStyled>

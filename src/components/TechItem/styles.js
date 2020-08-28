@@ -59,7 +59,7 @@ export const Footer = styled.div`
   padding-right: 20px;
   padding-bottom: 10px;
   @media screen and (max-width: 769px) {
-    height: 22vh;
+    height: 25vh;
   }
 `;
 

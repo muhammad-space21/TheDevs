@@ -40,12 +40,34 @@ export const BtnEnrollNavbar = css`
   font-weight: 600;
   text-transform: uppercase;
   text-align: center;
+  position: relative;
+  transition: all .35s;
+  cursor: pointer;
     &:hover {
-      cursor: pointer;
+      opacity: 1;
+    }
+    &:hover:after {
+      width: 100%;
     }
     &:focus {
       border: none;
       outline: none;
+    }
+    &:after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: #7F00FF;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #E100FF, #7F00FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      transition: all .35s;
+    }
+    span {
+      position: relative;
+      z-index: 2;
     }
 `;
 
@@ -61,6 +83,7 @@ export const BtnCircle = css`
   font-weight: 600;
   text-align: center;
   box-shadow: 3px 3px 6px #1EE5CF50;
+  transition: 0.5s;
     &:hover {
       cursor: pointer;
     }
@@ -81,8 +104,10 @@ export const FormBtn = css`
   font-weight: 600;
   text-align: center;
   box-shadow: 3px 3px 6px #1EE5CF50;
+  transition: 0.5s;
     &:hover {
       cursor: pointer;
+      box-shadow: none;
     }
     &:focus {
       border: none;
@@ -107,8 +132,10 @@ export const BtnCard = css`
   text-align: center;
   box-shadow: 3px 3px 6px #1EE5CF50;
   z-index: 500;
+  transition: 0.5s;
     &:hover {
       cursor: pointer;
+      box-shadow: none;
     }
     &:focus {
       border: none;
@@ -127,8 +154,10 @@ export const BtnHeaderLong = css`
   font-weight: 700;
   text-align: center;
   box-shadow: 3px 3px 6px #1EE5CF50;
+  transition: 0.5s;
     &:hover {
       cursor: pointer;
+      box-shadow: none;
     }
     &:focus {
       border: none;
@@ -153,6 +182,7 @@ export const ButtonCircleRed = css`
   font-weight: 500;
   color: white;
   border-radius: 25px;
+  transition: 0.5s;
   &:hover {
       cursor: pointer;
     }
