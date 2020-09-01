@@ -23,8 +23,6 @@ const CoursesContainer = ({
   error, 
   getCourses 
 }) => {
-
-  // id is being successfully passed
   
   // Addding action
   useEffect(() => {
@@ -39,7 +37,7 @@ const CoursesContainer = ({
       </TextWrapper>
       <Row>
         {
-          courses.length && !loading && !error ? 
+          courses.length && !loading && !error ?
           (courses.map(({id, ...otherProps}) => (
           <CourseItem key={id} id={id} {...otherProps} />
           ))) : (

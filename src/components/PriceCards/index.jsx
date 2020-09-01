@@ -16,8 +16,8 @@ import CardsDots from '../../assets/images/card-dots.png';
 
 
 const PriceCards = (prices) => {
-  const {id} = prices;
   const history = useHistory();
+  const {id} = prices;
   
   // routeChange
   const routeChange = () => {
@@ -27,13 +27,13 @@ const PriceCards = (prices) => {
   return (
     <Container id="3">
       {/* <Duration> {} </Duration> */}
-        <Price><span>{prices.price}</span> /month</Price>
+        <Price>$ <span>{prices.price}</span> /month</Price>
       <Hr />
         <CourseName>{prices.title}</CourseName>
       <Pros>
-       {
+       {/* {
           prices.map(({id, idx}) => (<span key={id}>{prices.options}</span>))
-       }
+       } */}
       </Pros>
       <PrimaryButton btnCard onClick={routeChange}>
         Enroll

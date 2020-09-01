@@ -8,9 +8,9 @@ export const getSingleCourse = (id) => (dispatch, getState) => {
   dispatch({
     type: actionTypes.GET_SINGLE_COURSE,
     payload: axios({
-          method: 'GET',
-          url: `http://api.thedevs.co/en/api/v1/courses/${id}/`,
-          headers: getHeaders(getState)
-       })   
+      method: 'GET',
+      url: `/courses/${id}/`,
+      headers: getHeaders(getState)
+    })   
   })
 };

@@ -8,7 +8,7 @@ export const getCourses = () => (dispatch, getState) => {
     type: actionTypes.GET_COURSES,
     payload: axios({
       method: 'GET',
-      url: 'http://api.thedevs.co/en/api/v1/courses/', 
+      url: '/courses/', 
       headers: getHeaders(getState)
     })
   })

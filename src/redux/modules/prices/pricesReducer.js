@@ -1,10 +1,11 @@
 import actionTypes from '../../../constants/actionTypes';
 
-const initialState = {
+const defaultState = {
   loading: false,
   error: false,
   prices: {}
 };
+
 
 const map = {
   [`${actionTypes.GET_PRICES}${actionTypes.PENDING}`]: (state) => ({
@@ -23,6 +24,6 @@ const map = {
   }) 
 };
 
-export default function pricesReducer(state=initialState, action) {
+export default function pricesReducer(state=defaultState, action) {
   return (map[action.type] && map[action.type](state, action)) || state;
 };

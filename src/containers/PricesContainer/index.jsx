@@ -22,6 +22,8 @@ const PricesContainer = ({
     getPrices();
   }, []);
   
+  console.log('prices', prices);
+  
   return (
     <Container>
       <Heading>
@@ -30,11 +32,11 @@ const PricesContainer = ({
       </Heading>
       <Row>
         {
-        !loading && !error && prices.length  ? (
-          prices.map(({id, ...otherProps}) => (
-            <PriceCards key={id} id={id} {...otherProps} />
-          ))
-          ): (<Spinner />)
+          !loading && !error && prices.length ? (
+            prices.map(({id, ...otherProps}) => (
+              <PriceCards key={id} id={id} {...otherProps} />
+            ))
+          ) : (<Spinner />)
         }
       </Row>
     </Container>
@@ -42,23 +44,23 @@ const PricesContainer = ({
 };
 
 PricesContainer.propTypes = {
+  // prices: PropTypes.object,
   loading: PropTypes.bool,
   error: PropTypes.bool,
-  // prices: PropTypes.object,
   getPrices: PropTypes.func
 };
 
 PricesContainer.defaultProps = {
+  prices: {},
   loading: false,
   error: false,
-  prices: {},
   getPrices: () => {}
 };
 
 const mapStateToProps = (state) => ({
+  prices: state.pricesReducer.prices,
   loading: state.pricesReducer.loading,
-  error: state.pricesReducer.error,
-  prices: state.pricesReducer.prices
+  error: state.pricesReducer.error
 });
 
 const mapDispatchToProps = (dispatch) => (
