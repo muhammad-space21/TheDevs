@@ -17,16 +17,18 @@ import {
  import IconShare from '../../assets/icons/icon-share.png';
  import IconLike from '../../assets/icons/icon-like.png';
 
- import IconAvatar from '../../assets/icons/avatar.png';
-
 const CourseItem = (courses) => {
   const history = useHistory();
   const {id} = courses;
+  const {authors} = courses;
 
   // routeChange
   const routeChange = () => {
     history.push(`/courses/${id}`)
   };
+
+    const [days, hours] = courses.duration.split(' ');
+    let weeks_count = Math.floor(days / 7);
 
   return (
     <Container onClick={routeChange}>
@@ -36,20 +38,23 @@ const CourseItem = (courses) => {
       <Footer>
         <CourseTitle>
           {courses.name} 
-          {/* <span>development</span>  */}
         </CourseTitle>
         <Duration>
-          Duration: <span>{courses.duration}</span>
+          Duration: <span>{weeks_count} weeks</span>
         </Duration>
         <InfoContainer>
-          <AuthorContainer>
-            <Avatar>
-              <img src={IconAvatar} alt="avatar"/>
-            </Avatar>
-            <AuthorName>
-              {courses.author}
-            </AuthorName>
-          </AuthorContainer>
+          {
+            authors.map(({id, image}) => (
+            <AuthorContainer>
+              <Avatar key={id}>
+                <img src={image} alt="avatar"/>
+              </Avatar>
+              <AuthorName key={authors.name}>
+                {authors.name + authors.lastname}
+              </AuthorName>
+            </AuthorContainer>
+            ))
+          }
           <IconWrapper>
             <img src={IconShare} alt="icon-share"/>
             <img src={IconLike} alt="icon-like"/>

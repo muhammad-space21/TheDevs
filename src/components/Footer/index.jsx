@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { 
+import {
   Container, 
   Row, 
   Brand, 
@@ -32,7 +32,7 @@ const Footer = () => {
           <SubRow> 
               <SubCol>
                 <Heading>Service Links</Heading>
-                <Links to='our-porfolio'>Our Portfolio</Links>
+                <Links to='#'>Our Portfolio</Links>
                 <Hashlink to='#3'>Pricing</Hashlink>
                 <Hashlink to='#1'>Courses</Hashlink>
               </SubCol>
@@ -45,8 +45,8 @@ const Footer = () => {
           </SubRow>
           <SubCol2>
             <Heading>Contacts</Heading>
-            <Tel href="tel:998909091016">+998 90 909 10 16</Tel>
-            <Links to='#'>example@gmail.com</Links>
+            <Tel href="tel:998909091016">+998 99 369 68 41</Tel>
+            <Links to='#'>zokirov.d@list.ru</Links>
           </SubCol2>
         </Col1>
         <ImageWrapper>

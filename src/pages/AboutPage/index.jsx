@@ -67,7 +67,7 @@ const AboutPage = () => {
           </Text>
         </IconWrapper>
       </Row>
-      <SalaryLabel />
+      {/* <SalaryLabel /> */}
       <Footer />
     </Container>
   )

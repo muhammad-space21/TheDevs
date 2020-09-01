@@ -130,8 +130,9 @@ export const Avatar = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   img {
-    width: 80%;
+    width: 100%;
     height: auto;
   }
 `;

@@ -16,6 +16,10 @@ const TechItem = ({
   subtitle,
   duration
   }) => {
+
+  const [days, hours] = duration.split(' ');
+  let weeks_count = Math.floor(days / 7);
+
   return (
     <Container>
       <ImageWrapper>
@@ -29,7 +33,7 @@ const TechItem = ({
           {subtitle}
         </TechTitle>
         <Duration>
-          Duration: <span>{duration}</span>
+          Duration: <span>{weeks_count} weeks</span>
         </Duration>    
       </Footer>
     </Container>
