@@ -7,15 +7,12 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #F4F7F6;
   padding: 50px;
-  padding-top: 100px;
   @media screen and (max-width: 1200px) {
     padding: 30px;
   }
   @media screen and (max-width: 600px) {
     padding: 20px;
-    padding-top: 50px;
   }
 `;
 
@@ -27,4 +24,8 @@ export const Row = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
+  margin-top: 100px;
+  @media screen and (max-width: 700px) {
+    margin-top: 50px;
+  }
 `;

@@ -1,8 +1,34 @@
 import styled from 'styled-components';
 
+export const Heading = styled.div`
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 500;
+  color: black;
+  text-align: center;
+  span {
+    font-size: 20px;
+    font-weight: 500;
+    color: #2669FF;
+    font-style: italic;
+    @media screen and (max-width: 550px) {
+      font-size: 17px;
+      line-height: 22px;
+    }
+  }
+  @media screen and (max-width: 550px) {
+    font-size: 17px;
+    line-height: 22px;
+    padding: 0;
+  }
+`;
+
 export const ServiceCard = styled.div`
   width: 30%;
-  height: fit-content;
+  height: 65vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,7 +45,9 @@ export const ServiceCard = styled.div`
     width: 40%;
   }
   @media screen and (max-width: 700px) {
+    height: 30vh;
     width: 47%;
+    border-radius: 12px;
   }
 `;
 
@@ -52,6 +80,7 @@ export const TextWrapper = styled.div`
   align-items: center;
   justify-content: center;
   font-size: 20px;
+  line-height: 22px;
   font-weight: 500;
   color: white;
   margin-top: 30px;
@@ -74,5 +103,6 @@ export const TextWrapper = styled.div`
     margin-top: 10px;
     margin-bottom: 20px;
     font-size: 14px;
+    line-height: 16px;
   }
 `;

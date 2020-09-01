@@ -78,19 +78,6 @@ export const Container = styled.div`
   }
 `;
 
-
-export const Duration = styled.div`
-  width: 100%;
-  height: fit-content;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 17px;
-  font-weight: 700;
-  color: #7054FF;
-  margin-bottom: 30px;
-`;
-
 export const Price = styled.div`
   width: 100%;
   height: fit-content;
@@ -136,6 +123,7 @@ export const Pros = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
+  text-align: center;
   span {
     font-size: 14px;
     font-weight: 500;

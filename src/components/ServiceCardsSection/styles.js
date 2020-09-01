@@ -78,6 +78,7 @@ export const ServiceCard = styled.div`
   @media screen and (max-width: 700px) {
     height: 30vh;
     width: 47%;
+    border-radius: 12px;
   }
 `;
 

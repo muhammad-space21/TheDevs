@@ -7,7 +7,7 @@ import {
   Container, 
   ImageCenter, 
   BtnBackWrapper, 
-  NoticeBoard, 
+  NoticeBoard,
   TextWrapper 
 } from './styles';
 
@@ -31,11 +31,11 @@ const PricingPlanPage = ({
   loading,
   error,
   singlePrice,
-  getSinglePrice,
-  props
+  getSinglePrice
 }) => {
 
   const {id} = useParams();
+  console.log('id in pricing plan page', id)
 
   // Adding Action
   useEffect(() => {
@@ -52,7 +52,7 @@ const PricingPlanPage = ({
             <PricingServiceCardsContainer />
               <NoticeBoard>
                 {
-                  !error && !loading && singlePrice ? (
+                  !error && !loading && singlePrice.length ? (
                     singlePrice.map(({id, idx}) => (
                       <TextWrapper key={id}>
                         <img src={IconHash} alt="icon-hash" />
@@ -79,23 +79,23 @@ const PricingPlanPage = ({
 };
 
 PricingPlanPage.propTypes = {
+  singlePrice: PropTypes.object,
   loading: PropTypes.bool,
   error: PropTypes.bool,
-  // singlePrice: PropTypes.object,
   getSinglePrice: PropTypes.func
 };
 
 PricingPlanPage.defaultProps = {
+  singlePrice: {},
   loading: false,
   error: false,
-  singlePrice: {},
   getSinglePrice: () => {}
 };
 
 const mapStateToProps = (state) => ({
-  loading: state.singlePriceRedcuer.loading,
-  error: state.singlePriceRedcuer.error,
-  singlePrice: state.singlePriceRedcuer.singlePrice
+  singlePrice: state.singlePriceReducer.singlePrice,
+  loading: state.singlePriceReducer.loading,
+  error: state.singlePriceReducer.error
 });
 
 const mapDispatchToProps = (dispatch) => ({

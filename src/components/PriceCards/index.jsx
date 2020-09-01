@@ -3,7 +3,6 @@ import { useHistory } from 'react-router-dom';
 
 import {
   Container, 
-  // Duration, 
   Price, 
   Hr, 
   CourseName, 
@@ -15,10 +14,9 @@ import PrimaryButton from '../PrimaryButton';
 import CardsDots from '../../assets/images/card-dots.png';
 
 
-const PriceCards = (prices) => {
+const PriceCards = ({id, service_cards, price, title}) => {
   const history = useHistory();
-  const {id} = prices;
-  
+
   // routeChange
   const routeChange = () => {
     history.push(`/prices/${id}`)
@@ -26,14 +24,15 @@ const PriceCards = (prices) => {
 
   return (
     <Container id="3">
-      {/* <Duration> {} </Duration> */}
-        <Price>$ <span>{prices.price}</span> /month</Price>
+        <Price>$ <span>{price}</span> /month</Price>
       <Hr />
-        <CourseName>{prices.title}</CourseName>
+        <CourseName>{title}</CourseName>
       <Pros>
-       {/* {
-          prices.map(({id, idx}) => (<span key={id}>{prices.options}</span>))
-       } */}
+        {
+          service_cards.map(({id, title}) => (
+            <span key={id}>{title}</span>
+          ))
+        }
       </Pros>
       <PrimaryButton btnCard onClick={routeChange}>
         Enroll
@@ -42,5 +41,6 @@ const PriceCards = (prices) => {
     </Container>
   )
 };
+
 
 export default PriceCards;

@@ -8,7 +8,7 @@ export const getSinglePrice = (id) => (dispatch, getState) => {
     type: actionTypes.GET_SINGLE_PRICE,
     payload: axios({
       method: 'GET',
-      url: `/subscription-types/${id}`,
+      url: `/subscription-types/${id}/`,
       headers: getHeaders(getState)
     })
   })

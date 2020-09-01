@@ -7,14 +7,19 @@ import { Container, Row } from './styles';
 import PricingServiceCardsItem from '../../components/PricingServiceCardsItem';
 import Spinner from '../../components/Spinner';
 
-const PricingServiceCardsContainer = ({ singlePrice, error, loading }) => {
+const PricingServiceCardsContainer = ({
+  singlePrice,
+  error,
+  loading
+}) => {
+  const {service_cards} = singlePrice;
   return (
     <Container>
       <Row>
         {
-          !error && !loading && singlePrice ? (
-            singlePrice.service_cards.map(({id, ...otherProps}) => (
-              <PricingServiceCardsItem id={id} {...otherProps} />
+          !error && !loading && service_cards ? (
+            service_cards.map(({id, ...otherProps}) => (
+              <PricingServiceCardsItem key={id} id={id} {...otherProps} />
             ))
           ) : (<Spinner />)
         }
