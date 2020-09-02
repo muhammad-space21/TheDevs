@@ -24,7 +24,6 @@ export const AvatarContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* border: 2px solid red; */
   span {
     font-size: 30px;
     font-weight: 600;

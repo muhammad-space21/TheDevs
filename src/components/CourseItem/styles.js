@@ -123,17 +123,21 @@ export const AuthorContainer = styled.div`
 `;
 
 export const Avatar = styled.div`
-  width: 32px;
-  height: 32px;
-  border-radius: 32px;
-  border: 1.5px solid #2669FF;
+  width: 35px;
+  height: 35px;
+  border-radius: 35px;
+  border: 1.8px solid #2669FF;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  transition: 0.5s;
   img {
     width: 100%;
     height: auto;
+  }
+  &:hover {
+    border: 1.8px solid #08D0BD;
   }
 `;
 

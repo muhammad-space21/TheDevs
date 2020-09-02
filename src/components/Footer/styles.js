@@ -47,7 +47,7 @@ export const Brand = styled(Link)`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   font-size: 20px;
   color: #1EE5CF;
   font-weight: 600;
@@ -67,6 +67,31 @@ export const Brand = styled(Link)`
   &:hover {
     text-decoration: none;
     color: #1EE5CF;
+  }
+  @media screen and (max-width: 550px) {
+    flex-wrap: wrap;
+  }
+`;
+
+export const SocialMedia = styled.div`
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 30px;
+    height: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  @media screen and (max-width: 550px) {
+    width: 300px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
   }
 `;
 

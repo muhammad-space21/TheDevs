@@ -1,28 +1,46 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import { 
   Container, 
   AvatarContainer, 
-  Avatar, 
+  Avatar,
   InstructorName, 
   TextWrapper 
 } from './styles';
 
-const InstructorInfo = (author) => {
+import Spinner from '../Spinner';
+
+const InstructorInfo = ({singleCourse, loading, error}) => {
+
   return (
-    <Container>
-      <AvatarContainer>
-        <span>Your Instructor</span>
-        <Avatar>
-          <img src={author.image} alt="instructor"/>
-        </Avatar>
-      <InstructorName>{author.name}</InstructorName>
-      </AvatarContainer>
-      <TextWrapper>
-       {author.info}
-      </TextWrapper>
-    </Container>
+    <>
+        {
+          !loading && !error && singleCourse.authors ? (
+            singleCourse.authors.map(({id, image, name, information, lastname}) => (
+              <Container key={id}>
+                <AvatarContainer>
+                <span>Your Instructor</span>
+                  <Avatar>
+                    <img src={image} alt="instructor"/>
+                  </Avatar>
+                  <InstructorName>{name +' '+lastname}</InstructorName>
+                </AvatarContainer>
+                <TextWrapper>
+                  {information}
+                </TextWrapper>
+              </Container>
+            ))
+          ) : (<Spinner />)
+        }
+    </>
   )
 };
 
-export default InstructorInfo;
+const mapStateToProps = state => ({
+  loading: state.singleCourseReducer.loading,
+  singleCourse: state.singleCourseReducer.singleCourse,
+  error: state.singleCourseReducer.error
+});
+
+export default connect(mapStateToProps, null)(InstructorInfo);

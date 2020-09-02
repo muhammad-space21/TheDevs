@@ -17,8 +17,16 @@ import {
   H6,
   H7,
   Hashlink,
-  Tel
+  Tel,
+  SocialMedia
 } from './styles';
+
+import IconInstagram from '../../assets/icons/instagram.svg';
+import IconFacebook from '../../assets/icons/facebook.svg';
+import IconTelegram from '../../assets/icons/telegram.svg';
+import IconLinkedin from '../../assets/icons/linkedin.svg';
+import IconYoutube from '../../assets/icons/youtube.svg';
+import IconTwitter from '../../assets/icons/twitter.svg';
 
 import ImageFooter from '../../assets/images/footer.png';
 
@@ -26,7 +34,17 @@ import ImageFooter from '../../assets/images/footer.png';
 const Footer = () => {
   return (
     <Container>
-      <Brand to="/">The <span>Devs</span></Brand>
+      <Brand to="/">
+        <span>The Devs</span>
+        <SocialMedia>
+          <img src={IconInstagram} alt=""/>
+          <img src={IconFacebook} alt=""/>
+          <img src={IconTelegram} alt=""/>
+          <img src={IconLinkedin} alt=""/>
+          <img src={IconYoutube} alt=""/>
+          <img src={IconTwitter} alt=""/>
+        </SocialMedia>
+      </Brand>
       <Row>
         <Col1>
           <SubRow> 

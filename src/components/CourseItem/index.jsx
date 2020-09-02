@@ -44,13 +44,13 @@ const CourseItem = (courses) => {
         </Duration>
         <InfoContainer>
           {
-            authors.map(({id, image}) => (
+            authors.map(({id, image, name, lastname}) => (
             <AuthorContainer>
               <Avatar key={id}>
                 <img src={image} alt="avatar"/>
               </Avatar>
-              <AuthorName key={authors.name}>
-                {authors.name + authors.lastname}
+              <AuthorName key={name}>
+                {name +' '+ lastname}
               </AuthorName>
             </AuthorContainer>
             ))

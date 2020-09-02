@@ -11,7 +11,7 @@ const PreRequisities = () => (
       <span>No prior knowledge needed</span>
     </Heading>
     <H1>
-      All you need is <span> proper english </span> ,beginner-level familiarity of <span> computer-operations </span>.
+      All you need is proper english, beginner-level familiarity of computer-operations.
     </H1>
     <H1>
       You don’t need to know anything about programming or design – everything is covered in the course.

@@ -48,15 +48,18 @@ export const H1 = styled.div`
   margin-top: 15px;
   font-weight: 400;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   span {
+    font-size: 18px;
     color: #FC4062;
     font-weight: 500;
+    line-height: 20px;
     padding: 3px;
   }
   @media screen and (max-width: 768px) {
+    width: 100%;
     font-size: 17px;
   }
-
 `;

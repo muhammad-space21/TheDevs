@@ -58,7 +58,7 @@ const CoursePage = ({
             <WhatYouLearnSection />
             <PreRequisities />
             <JoinITCommunitySection />
-            {/* <InstructorInfo singleCourse={singleCourse} {...otherProps} /> */}
+            <InstructorInfo />
             <FAQ />
             <MoneyBackPolicy />
             <SalaryLabel />
