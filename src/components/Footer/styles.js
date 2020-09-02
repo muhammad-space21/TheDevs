@@ -11,7 +11,6 @@ export const Container = styled.div`
   opacity: 1;
   display: flex;
   flex-direction: column;
-  /* border: 2px solid black; */
   padding-left: 50px;
   padding-right: 50px;
   @media screen and (max-width: 550px) {
@@ -28,7 +27,6 @@ export const Row = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 30px;
-  /* border: 2px solid red; */
 `;
 
 export const Row2 = styled.div`
@@ -55,7 +53,6 @@ export const Brand = styled(Link)`
   font-weight: 600;
   cursor: pointer;
   padding-top: 30px;
-  /* border: 2px solid black; */
   span {
     color: white;
     font-size: 20px;
@@ -81,7 +78,6 @@ export const Col1 = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* border: 2px solid pink; */
   @media screen and (max-width: 1100px) {
     width: 60%;
   }
@@ -107,8 +103,6 @@ export const SubRow = styled.div`
   height: fit-content;
   display: flex;
   flex-direction: row;
-  /* border: 2px solid yellow; */
-  /* padding-left: 30px; */
   align-items: center;
   justify-content: space-around;
   margin-top: 50px;
@@ -119,7 +113,6 @@ export const SubCol = styled.div`
   height: fit-content;
   display: flex;
   flex-direction: column;
-  /* border: 2px solid red; */
 `;
 
 export const SubCol2 = styled.div`
@@ -127,7 +120,6 @@ export const SubCol2 = styled.div`
   height: fit-content;
   display: flex;
   flex-direction: column;
-  /* border: 2px solid red; */
   align-self: flex-start;
   margin-top: 50px;
   @media screen and (max-width: 991px) {
@@ -136,14 +128,14 @@ export const SubCol2 = styled.div`
 `;
 
 export const Heading = styled.span`
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 19px;
+  font-weight: 500;
   letter-spacing: 0px;
   color: #F5F8FA;
   opacity: 1;
   margin-bottom: 10px;
   @media screen and (max-width: 550px) {
-    font-size: 16px;
+    font-size: 17px;
   }
 `;
 
@@ -153,8 +145,9 @@ export const Links = styled(Link)`
   color: #F5F8FA;
   cursor: pointer;
   margin-bottom: 5px;
+  transition: 0.5s;
   &:hover {
-    color: #F5F8FA;
+    color: #FFD52E;
     text-decoration: none;
   }
   @media screen and (max-width: 550px) {
@@ -168,8 +161,9 @@ export const Hashlink = styled(HashLink)`
   color: #F5F8FA;
   cursor: pointer;
   margin-bottom: 5px;
+  transition: 0.5s;
   &:hover {
-    color: #F5F8FA;
+    color: #FFD52E;
     text-decoration: none;
   }
   @media screen and (max-width: 550px) {
@@ -183,8 +177,9 @@ export const Tel = styled.a`
   color: #F5F8FA;
   cursor: pointer;
   margin-bottom: 5px;
+  transition: 0.5s;
   &:hover {
-    color: #F5F8FA;
+    color: #FFD52E;
     text-decoration: none;
   }
   @media screen and (max-width: 550px) {
@@ -198,7 +193,6 @@ export const ImageWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 2px solid black; */
   @media screen and (max-width: 1100px) {
     width: 40%;
     img {
@@ -229,9 +223,10 @@ export const H6 = styled(Link)`
   margin-top: 20px;
   margin-bottom: 20px;
   cursor: pointer;
+  transition: 0.5s;
   &:hover {
+    color: #FFD52E;
     text-decoration: none;
-    color:  #F5F8FA;
   }
 `;
 

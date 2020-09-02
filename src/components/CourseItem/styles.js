@@ -155,6 +155,10 @@ export const IconWrapper = styled.div`
     height: auto;
     margin-left: 20px;
     cursor: pointer;
+    transition: 0.5s;
+    &:hover {
+      filter: grayscale(100%);
+    }
   }
 `;
 

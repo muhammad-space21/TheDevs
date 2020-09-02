@@ -14,8 +14,8 @@ import {
   IconWrapper
  } from './styles';
 
- import IconShare from '../../assets/icons/icon-share.png';
- import IconLike from '../../assets/icons/icon-like.png';
+ import IconShare from '../../assets/icons/icon-share.svg';
+ import IconLike from '../../assets/icons/icon-like.svg';
 
 const CourseItem = (courses) => {
   const history = useHistory();

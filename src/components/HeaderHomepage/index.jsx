@@ -9,7 +9,7 @@ const HeaderHomepage = () => {
     <Container>
       <TextWrapper>
         Master <span>Web development </span>  
-        & <span>Mobile development </span>in 6 month
+        & <span>Mobile development </span>in 6 months
         and boost your career.
       </TextWrapper>
       <ImageWrapper>

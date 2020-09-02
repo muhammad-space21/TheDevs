@@ -24,7 +24,6 @@ export const Heading = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: 10px;
-  /* border: 2px solid red; */
   @media screen and (max-width: 768px) {
    width: 90%;
   }
@@ -51,7 +50,11 @@ export const H1 = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  /* border: 2px solid red; */
+  span {
+    color: #FC4062;
+    font-weight: 500;
+    padding: 3px;
+  }
   @media screen and (max-width: 768px) {
     font-size: 17px;
   }

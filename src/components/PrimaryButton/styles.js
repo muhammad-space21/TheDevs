@@ -86,6 +86,8 @@ export const BtnCircle = css`
   transition: 0.5s;
     &:hover {
       cursor: pointer;
+      opacity: 0.5;
+      box-shadow: none;
     }
     &:focus {
       border: none;
@@ -107,6 +109,7 @@ export const FormBtn = css`
   transition: 0.5s;
     &:hover {
       cursor: pointer;
+      opacity: 0.5;
       box-shadow: none;
     }
     &:focus {
@@ -135,6 +138,7 @@ export const BtnCard = css`
   transition: 0.5s;
     &:hover {
       cursor: pointer;
+      opacity: 0.5;
       box-shadow: none;
     }
     &:focus {
@@ -157,6 +161,7 @@ export const BtnHeaderLong = css`
   transition: 0.5s;
     &:hover {
       cursor: pointer;
+      opacity: 0.5;
       box-shadow: none;
     }
     &:focus {
@@ -183,16 +188,16 @@ export const ButtonCircleRed = css`
   color: white;
   border-radius: 25px;
   transition: 0.5s;
-  &:hover {
+    &:hover {
       cursor: pointer;
     }
     &:focus {
       border: none;
       outline: none;
     }
-  img {
-    width: 30px;
-    height: auto;
-    margin-right: 10px;
-  }
+    img {
+      width: 30px;
+      height: auto;
+      margin-right: 10px;
+    }
 `;

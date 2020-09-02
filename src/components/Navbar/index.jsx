@@ -33,14 +33,14 @@ export const NavbarMain = () => {
             <li>
               <NavLinkCustom className='nav-item' to="#1">Courses</NavLinkCustom>
               <ul className="sub-menu">
-                <NavLinkStyledDropdown to="/course">Frontend development</NavLinkStyledDropdown>
-                <NavLinkStyledDropdown to="/">Backend development</NavLinkStyledDropdown>
-                <NavLinkStyledDropdown to="/">Mobile development</NavLinkStyledDropdown>
+                <NavLinkStyledDropdown to="/courses/1">Frontend development</NavLinkStyledDropdown>
+                <NavLinkStyledDropdown to="/courses/2">Backend development</NavLinkStyledDropdown>
+                <NavLinkStyledDropdown to="/courses/3">Mobile development</NavLinkStyledDropdown>
               </ul>
             </li>
-              <NavLinkHide to="/course">Frontend development</NavLinkHide>
-              <NavLinkHide to="/">Backend development</NavLinkHide>
-              <NavLinkHide to="/">Mobile development</NavLinkHide>
+              <NavLinkHide to="/courses/1">Frontend development</NavLinkHide>
+              <NavLinkHide to="/courses/2">Backend development</NavLinkHide>
+              <NavLinkHide to="/courses/3">Mobile development</NavLinkHide>
             <NavLinkCustom to="#3">Prices</NavLinkCustom>
             <ButtonPrimary btnEnrollNavbar><span>enroll to the course</span></ButtonPrimary>
           </NavStyled>
