@@ -2,7 +2,6 @@ import axios from 'axios';
 
 import actionTypes from '../../../constants/actionTypes';
 
-
 export const tokenLocalToRedux = (token) => (dispatch) => {
   dispatch({
     type: actionTypes.WRITE_TOKEN,
@@ -16,7 +15,7 @@ export const init = () => (dispatch) => {
     type: actionTypes.GET_TOKEN,
     payload: axios({
       method: 'POST',
-      url: 'http://api.thedevs.co/en/api/v1/dj-rest-auth/login/',
+      url: `http://api.thedevs.co/en/api/v1/dj-rest-auth/login/`,
       data: {
         username: "e-address@bk.ru",
         password: "abubakr"
@@ -28,5 +27,4 @@ export const init = () => (dispatch) => {
       localStorage.setItem('token', res.value.data.key);
     }
   });
-  console.log('action is working')
 };
