@@ -15,7 +15,7 @@ export const init = () => (dispatch) => {
     type: actionTypes.GET_TOKEN,
     payload: axios({
       method: 'POST',
-      url: `http://api.thedevs.co/en/api/v1/dj-rest-auth/login/`,
+      url: `https://api.thedevs.co/en/api/v1/dj-rest-auth/login/`,
       data: {
         username: "e-address@bk.ru",
         password: "abubakr"
