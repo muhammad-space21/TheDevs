@@ -44,10 +44,10 @@ const PricesContainer = ({
 };
 
 PricesContainer.propTypes = {
-  // prices: PropTypes.object,
-  loading: PropTypes.bool,
-  error: PropTypes.bool,
-  getPrices: PropTypes.func
+  // prices: PropTypes.object.isRequired,
+  loading: PropTypes.bool.isRequired,
+  getPrices: PropTypes.func.isRequired,
+  error: PropTypes.bool
 };
 
 PricesContainer.defaultProps = {

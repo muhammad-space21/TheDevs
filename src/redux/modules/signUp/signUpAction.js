@@ -9,7 +9,7 @@ export const signUp = (data) => (dispatch, getState) => {
     type: actionTypes.SIGN_UP,
     payload: axios({
       method: 'POST',
-      url: '',
+      url: 'http://api.thedevs.co/en/api/v1/dj-rest-auth/registration/',
       data,
       headers: getHeaders(getState)
     })

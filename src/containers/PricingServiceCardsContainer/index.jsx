@@ -29,8 +29,8 @@ const PricingServiceCardsContainer = ({
 };
 
 PricingServiceCardsContainer.propTypes = {
-  // singlePrice: PropTypes.object,
-  loading: PropTypes.bool,
+  // singlePrice: PropTypes.object.isRequired,
+  loading: PropTypes.bool.isRequired,
   error: PropTypes.bool
 };
 

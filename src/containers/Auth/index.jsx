@@ -52,11 +52,11 @@ Auth.defaultProps = {
 Auth.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node)
-  ]),
-  init: PropTypes.func,
-  tokenLocalToRedux: PropTypes.func,
-  // token: PropTypes.string,
-  loading: PropTypes.bool,
+  ]).isRequired,
+  init: PropTypes.func.isRequired,
+  tokenLocalToRedux: PropTypes.func.isRequired,
+  // token: PropTypes.string.isRequired,
+  loading: PropTypes.bool.isRequired,
   error: PropTypes.bool
 };
 

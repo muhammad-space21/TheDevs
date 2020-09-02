@@ -51,10 +51,10 @@ const CoursesContainer = ({
 
 
 CoursesContainer.propTypes = {
-  // courses: PropTypes.object,
-  loading: PropTypes.bool,
-  error: PropTypes.bool,
-  getCourses: PropTypes.func
+  // courses: PropTypes.object.isRequired,
+  loading: PropTypes.bool.isRequired,
+  getCourses: PropTypes.func.isRequired,
+  error: PropTypes.bool
 };
 
 CoursesContainer.defaultProps = {
