@@ -8,6 +8,7 @@ import ArticleSection from '../../components/ArticleSection';
 import PricesContainer from '../../containers/PricesContainer';
 import CallToActionSection from '../../components/CallToActionSection';
 import Footer from '../../components/Footer';
+// import LeadModalContainer from '../../containers/LeadModalContainer';
 
 const styles = {
   width: '100vw',
@@ -27,6 +28,7 @@ const Homepage = () => {
       <ArticleSection />
       <PricesContainer />
       <CallToActionSection />
+      {/* <LeadModalContainer /> */}
       <Footer />
     </div>
   );

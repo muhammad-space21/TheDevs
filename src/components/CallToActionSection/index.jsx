@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import {
   Container, 
@@ -13,7 +13,9 @@ import {
 } from './styles';
 
 import SecondaryButton from '../SecondaryButton';
+import LeadModalContainer from '../../containers/LeadModalContainer';
 
+// img.
 import ImageCircle1 from '../../assets/images/circle1.png';
 import ImageCircle2 from '../../assets/images/circle2.png';
 import ImageCircle3 from '../../assets/images/circle3.png';
@@ -21,6 +23,8 @@ import ImageCircle4 from '../../assets/images/circle4.png';
 
 
 const CallToActionSection = () => {
+  const [modalShow, setModalShow] = useState(false);
+
   return (
     <Container>
       <IllustrationWrapper1>
@@ -32,12 +36,13 @@ const CallToActionSection = () => {
           Join <span> our courses </span> as soon as <br/>possible, 
           places are limited. 
         </Heading>
-        <SecondaryButton />
+        <SecondaryButton onClick={() => setModalShow(true)} />
       </Row>
       <IllustrationWrapper2>
         <Img3><img src={ImageCircle3} alt="circle3"/></Img3>
         <Img4><img src={ImageCircle4} alt="circle4"/></Img4>
       </IllustrationWrapper2>
+      <LeadModalContainer />
     </Container>
   )
 };

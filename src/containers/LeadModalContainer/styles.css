@@ -1,0 +1,10 @@
+/* .ant-btn {
+  display: none;
+}; */
+
+.ant-modal-footer {
+  display: none;
+  /* background: transparent linear-gradient(119deg, #009FFF 0%, #EC2F4B 100%) 0% 0% no-repeat padding-box;
+  opacity: 1;
+  border-top: none; */
+};
