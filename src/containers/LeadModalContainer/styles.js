@@ -167,3 +167,18 @@ export const Select = styled.select`
     font-size: 14px;
   }
 `;
+
+export const CloseIcon = styled.div`
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-top: -10px;
+  cursor: pointer;
+  img {
+    width: 20px;
+    height: auto;
+  }
+`;

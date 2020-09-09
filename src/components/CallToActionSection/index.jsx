@@ -12,14 +12,16 @@ import {
   Img4
 } from './styles';
 
-import SecondaryButton from '../SecondaryButton';
-import LeadModalContainer from '../../containers/LeadModalContainer';
-
 // img.
 import ImageCircle1 from '../../assets/images/circle1.png';
 import ImageCircle2 from '../../assets/images/circle2.png';
 import ImageCircle3 from '../../assets/images/circle3.png';
 import ImageCircle4 from '../../assets/images/circle4.png';
+
+// import SecondaryButton from '../SecondaryButton';
+
+import PrimaryButton from '../PrimaryButton';
+import LeadModalContainer from '../../containers/LeadModalContainer';
 
 
 const CallToActionSection = () => {
@@ -36,17 +38,19 @@ const CallToActionSection = () => {
           Join <span> our courses </span> as soon as <br/>possible,
           places are limited.
         </Heading>
-        <SecondaryButton onClick={() => setShowModal(true)} />
+        <PrimaryButton btnCircle onClick={() => setShowModal(true)}>
+          Enroll
+        </PrimaryButton>
+        {
+          showModal && (
+            <LeadModalContainer callback={() => setShowModal(false)} open={showModal} />
+          )
+        }
       </Row>
       <IllustrationWrapper2>
         <Img3><img src={ImageCircle3} alt="circle3"/></Img3>
         <Img4><img src={ImageCircle4} alt="circle4"/></Img4>
       </IllustrationWrapper2>
-      {
-        showModal ? (
-          <LeadModalContainer open={showModal} />
-        ) : (null)
-      }    
     </Container>
   )
 };

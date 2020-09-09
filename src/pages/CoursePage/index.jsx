@@ -17,7 +17,7 @@ import InstructorInfo from '../../components/InstructorInfo';
 import FAQ from '../../components/FAQ';
 import MoneyBackPolicy from '../../components/MoneyBackPolicy';
 import SalaryLabel from '../../components/SalaryLabel';
-import CallToActionSection from '../../components/CallToActionSection';
+// import CallToActionSection from '../../components/CallToActionSection';
 import Footer from '../../components/Footer';
 import Spinner from '../../components/Spinner';
 
@@ -62,7 +62,7 @@ const CoursePage = ({
             <FAQ />
             <MoneyBackPolicy />
             <SalaryLabel />
-            <CallToActionSection />
+            {/* <CallToActionSection /> */}
             <Footer />
           </>
         ) : (<Spinner />)

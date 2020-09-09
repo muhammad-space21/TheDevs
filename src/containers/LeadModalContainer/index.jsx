@@ -1,4 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+
 import { Modal } from 'antd';
 
 import {
@@ -8,9 +11,12 @@ import {
   Input,
   InputTel,
   Form,
-  Select
+  Select,
+  CloseIcon
  } from './styles';
  import './styles.css';
+
+ import { sendLeadModal } from '../../redux/modules/leadModal/leadModalAction';
 
  //com.
  import PrimaryButton from '../../components/PrimaryButton';
@@ -39,33 +45,53 @@ const closeIconStyle = {
   height: 'auto'
 };
 
-const LeadModalContainer = ({open}) => {
+const LeadModalContainer = ({open, callback}) => {
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    let name = e.target.name.value;
+    let phone_number = e.target.phone_number.value;
+    let email = e.target.email.value;
+    let course = e.target.course.value;
+
+    const data = {
+      name,
+      phone_number,
+      email,
+      course
+    };
+    console.log(data, 'data')
+    sendLeadModal(data);
+  };
+
   return (
     <>
       <Modal
         centered
         visible={open}
         bodyStyle={customBodyStyle}
-        closeIcon = {<img style={closeIconStyle} src={IconClose} alt="..." />}
-        // onOk={() => setModalShow(false)}
-        // onCancel={() => setModalShow(false)}
+        closable={false}
       >
-        <Form>
+        <Form onSubmit={handleSubmit}>
+          <CloseIcon onClick={() => callback()}>
+            <img style={closeIconStyle} src={IconClose} alt="..." />
+          </CloseIcon>
           <Heading>Fill in an application</Heading>
           <InputRow>
             <InputIcon><img src={IconEdit} alt="icon"/></InputIcon>
             <Input
               type="text" 
-              name="Name" 
+              name="name" 
               placeholder="Name" 
               maxLength={20}
             />
           </InputRow>
           <InputRow>
             <InputIcon><img src={IconPhone} alt="icon"/></InputIcon>
-            <InputTel 
+            <InputTel
               type="tel" 
-              name="phone" 
+              name="phone_number" 
               placeholder="Phone number" 
               mask={['(', /9/, /9/, /8/, ')', ' ', /\d/, /\d/, ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, '-', /\d/, /\d/]}
             />
@@ -84,7 +110,7 @@ const LeadModalContainer = ({open}) => {
               type="select" 
               name="course" 
             >
-              <option value="" disabled selected hidden>Choose the Course...</option>
+              <option selected disabled defaultValue='default'>Choose the Course...</option>
               <option value="1">Frontend development</option>
               <option value="2">Backend development</option>
               <option value="3">UI/UX design</option>
@@ -101,4 +127,31 @@ const LeadModalContainer = ({open}) => {
   )
 };
 
-export default LeadModalContainer;
+LeadModalContainer.propTypes = {
+  loading: PropTypes.bool.isRequired,
+  error: PropTypes.bool.isRequired,
+  success: PropTypes.bool.isRequired,
+  sendLeadModal: PropTypes.func.isRequired
+};
+
+LeadModalContainer.defaultProps = {
+  loading: false,
+  error: false,
+  success: false,
+  sendLeadModal: () => {}
+};
+
+const mapStateToProps = (state) => ({
+  loading: state.leadModalReducer.loading,
+  error: state.leadModalReducer.error,
+  success: state.leadModalReducer.success
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  sendLeadModal: (data) => dispatch(sendLeadModal(data))
+});
+
+export default connect(
+  mapStateToProps, 
+  mapDispatchToProps
+)(LeadModalContainer);

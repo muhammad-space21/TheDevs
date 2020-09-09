@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 
 import {
@@ -8,9 +8,12 @@ import {
   Heading
 } from './styles';
 
+import LeadModalCotainer from '../../containers/LeadModalContainer';
 import PrimaryButton from '../PrimaryButton';
 
 const HeaderCoursePage = ({singleCourse}) => {
+  const [showModal, setModalShow] = useState(false);
+
   return (
     <Container>
       <TextWrapper>
@@ -19,7 +22,14 @@ const HeaderCoursePage = ({singleCourse}) => {
               {singleCourse.subtitle}
             </SecondaryTitle>
       </TextWrapper>
-      <PrimaryButton btnHeaderLong>Enroll in Course</PrimaryButton>
+      <PrimaryButton btnHeaderLong onClick={() => setModalShow(true)}>
+        Enroll in Course
+      </PrimaryButton>
+      {
+        showModal && (
+          <LeadModalCotainer open={showModal} callback={() => setModalShow(false)} />
+        )
+      }
     </Container>
   );
 };
@@ -29,5 +39,3 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps, null)(HeaderCoursePage);
-
-// export default HeaderCoursePage;

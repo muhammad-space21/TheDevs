@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import {
   NavbarStyled, 
@@ -13,10 +13,13 @@ import {
 
 import './styles.scss';
 
-import ButtonPrimary from '../../components/PrimaryButton';
+import LeadModalContainer from '../../containers/LeadModalContainer';
+import ButtonPrimary from '../PrimaryButton';
 import IconMenu from '../../assets/icons/menu-mobile.png';
 
 export const NavbarMain = () => {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <NavbarStyled bg='default' variant='default' expand="lg">
       <NavbarBrand href="/"> 
@@ -42,9 +45,19 @@ export const NavbarMain = () => {
               <NavLinkHide to="/courses/2">Backend development</NavLinkHide>
               <NavLinkHide to="/courses/3">Mobile development</NavLinkHide>
             <NavLinkCustom to="#3">Prices</NavLinkCustom>
-            <ButtonPrimary btnEnrollNavbar><span>enroll to the course</span></ButtonPrimary>
+            <ButtonPrimary 
+              onClick={() => setShowModal(true)} 
+              btnEnrollNavbar
+            >
+              <span>enroll to the course</span>
+            </ButtonPrimary>
           </NavStyled>
         </NavbarCollapse>
+        {
+          showModal && (
+            <LeadModalContainer callback={() => setShowModal(false)} open={showModal} />
+          )
+        }
     </NavbarStyled>
   );
 };

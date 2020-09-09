@@ -1,20 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Container, Heading } from './styles';
 
 import PrimaryButton from '../PrimaryButton';
+import LeadModalContainer from '../../containers/LeadModalContainer';
 
 import IconCart from '../../assets/icons/cart.png';
 
 
 const JoinITCommunitySection = () => {
+  const [modalShow, setModalShow] = useState(false);
+
   return (
     <Container>
       <Heading>Join the large community of happy programmers!</Heading>
-      <PrimaryButton btnCircleRed>
+      <PrimaryButton onClick={() => setModalShow(true)} btnCircleRed>
         <img src={IconCart} alt="icon"/>
         Enroll to course
       </PrimaryButton>
+      {
+        modalShow && (
+          <LeadModalContainer open={modalShow} callback={() => setModalShow(false)} />
+        )
+      }
     </Container>
   )
 };
