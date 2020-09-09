@@ -6,6 +6,8 @@ import pricesReducer from '../modules/prices/pricesReducer';
 import singleCourseReducer from '../modules/singleCourse/singleCourseReducer';
 import singlePriceReducer from '../modules/singlePrice/singlePriceReducer';
 import signUpReducer from '../modules/signUp/signUpReducer';
+import leadModalReducer from '../modules/leadModal/leadModalReducer';
+
 
 const reducer = combineReducers({
   coursesReducer,
@@ -13,7 +15,8 @@ const reducer = combineReducers({
   pricesReducer,
   singleCourseReducer,
   singlePriceReducer,
-  signUpReducer
+  signUpReducer,
+  leadModalReducer
 });
 
 export default reducer;

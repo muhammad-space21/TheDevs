@@ -23,7 +23,7 @@ import ImageCircle4 from '../../assets/images/circle4.png';
 
 
 const CallToActionSection = () => {
-  const [modalShow, setModalShow] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   return (
     <Container>
@@ -33,16 +33,20 @@ const CallToActionSection = () => {
       </IllustrationWrapper1>
       <Row>
         <Heading>
-          Join <span> our courses </span> as soon as <br/>possible, 
-          places are limited. 
+          Join <span> our courses </span> as soon as <br/>possible,
+          places are limited.
         </Heading>
-        <SecondaryButton onClick={() => setModalShow(true)} />
+        <SecondaryButton onClick={() => setShowModal(true)} />
       </Row>
       <IllustrationWrapper2>
         <Img3><img src={ImageCircle3} alt="circle3"/></Img3>
         <Img4><img src={ImageCircle4} alt="circle4"/></Img4>
       </IllustrationWrapper2>
-      <LeadModalContainer />
+      {
+        showModal ? (
+          <LeadModalContainer open={showModal} />
+        ) : (null)
+      }    
     </Container>
   )
 };

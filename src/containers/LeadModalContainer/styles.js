@@ -21,7 +21,7 @@ export const Form = styled.form`
 export const Heading = styled.div`
   font-size: 25px;
   font-weight: 500;
-  color: white;
+  color: black;
   margin-bottom: 30px;
   @media screen and (max-width: 550px) {
     font-size: 20px;

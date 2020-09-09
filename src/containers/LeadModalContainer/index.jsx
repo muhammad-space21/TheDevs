@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Modal, Button } from 'antd';
+import { Modal } from 'antd';
 
 import {
   Heading,
@@ -29,7 +29,7 @@ const customBodyStyle = {
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
-  background: 'transparent linear-gradient(119deg, #009FFF 0%, #EC2F4B 100%) 0% 0% no-repeat padding-box',
+  background: '#E5E5E5',
   opacity: '1',
   borderBottom: 'none',
 };
@@ -39,31 +39,16 @@ const closeIconStyle = {
   height: 'auto'
 };
 
-const LeadModalContainer = () => {
-  // const [modalShow, setModalShow] = useState(false);
-
-  // onSubmmit close func
-  const submitClose = () => {
-    let success = true;
-    if (success === true) {
-      setTimeout(() => {
-        // setModalShow(false);
-      }, 2000);
-    }
-  };
-
+const LeadModalContainer = ({open}) => {
   return (
     <>
-      {/* <Button type="primary" onClick={() => setModalShow(true)}>
-        Vertically centered modal dialog
-      </Button> */}
       <Modal
         centered
-        // visible={modalShow}
-        // onOk={() => setModalShow(false)}
-        // onCancel={() => setModalShow(false)}
+        visible={open}
         bodyStyle={customBodyStyle}
         closeIcon = {<img style={closeIconStyle} src={IconClose} alt="..." />}
+        // onOk={() => setModalShow(false)}
+        // onCancel={() => setModalShow(false)}
       >
         <Form>
           <Heading>Fill in an application</Heading>
@@ -106,7 +91,7 @@ const LeadModalContainer = () => {
             </Select>
           </InputRow>
           <InputRow>
-            <PrimaryButton onClick={submitClose} formBtn>
+            <PrimaryButton formBtn>
               Submit
             </PrimaryButton>
           </InputRow>
