@@ -4,13 +4,13 @@ import actionTypes from '../../../constants/actionTypes';
 
 import { getHeaders } from '../../../utils/index';
 
-export const sendLeadModal = (data) => (dispatch, getState) => {
+export const sendLeadModal = (bodyFormData) => (dispatch, getState) => {
   dispatch({
     type: actionTypes.SEND_LEAD_MODAL,
     payload: axios({
       method: 'POST',
       url: 'http://api.thedevs.co/ru/api/v1/leads/',
-      data,
+      body: bodyFormData,
       headers: getHeaders(getState)
     })
   })

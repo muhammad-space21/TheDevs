@@ -38,12 +38,12 @@ export const NavbarMain = () => {
               <ul className="sub-menu">
                 <NavLinkStyledDropdown to="/courses/1">Frontend development</NavLinkStyledDropdown>
                 <NavLinkStyledDropdown to="/courses/2">Backend development</NavLinkStyledDropdown>
-                <NavLinkStyledDropdown to="/courses/3">Mobile development</NavLinkStyledDropdown>
+                <NavLinkStyledDropdown to="/courses/3">UI/UX Design</NavLinkStyledDropdown>
               </ul>
             </li>
               <NavLinkHide to="/courses/1">Frontend development</NavLinkHide>
               <NavLinkHide to="/courses/2">Backend development</NavLinkHide>
-              <NavLinkHide to="/courses/3">Mobile development</NavLinkHide>
+              <NavLinkHide to="/courses/3">UI/UX Design</NavLinkHide>
             <NavLinkCustom to="#3">Prices</NavLinkCustom>
             <ButtonPrimary 
               onClick={() => setShowModal(true)} 

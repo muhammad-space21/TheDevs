@@ -28,6 +28,7 @@ import {
  import IconSelect from '../../assets/icons/select.svg';
  import IconClose from '../../assets/icons/close.svg';
 
+//Custom Styles
 const customBodyStyle = {
   width: '100%',
   height: '500px',
@@ -40,16 +41,17 @@ const customBodyStyle = {
   borderBottom: 'none',
 };
 
-const closeIconStyle = {
-  width: '20px',
-  height: 'auto'
-};
-
-const LeadModalContainer = ({open, callback}) => {
+const LeadModalContainer = ({
+  open, 
+  callback, 
+  error, 
+  loading, 
+  success,
+  sendLeadModal
+}) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     let name = e.target.name.value;
     let phone_number = e.target.phone_number.value;
     let email = e.target.email.value;
@@ -61,8 +63,11 @@ const LeadModalContainer = ({open, callback}) => {
       email,
       course
     };
-    console.log(data, 'data')
-    sendLeadModal(data);
+
+    var bodyFormData = new FormData();
+    Object.entries(data).forEach(([key, value]) => { bodyFormData.append(key, value) });
+    sendLeadModal(bodyFormData);
+    console.log(bodyFormData, 'bodyFormData');
   };
 
   return (
@@ -75,11 +80,11 @@ const LeadModalContainer = ({open, callback}) => {
       >
         <Form onSubmit={handleSubmit}>
           <CloseIcon onClick={() => callback()}>
-            <img style={closeIconStyle} src={IconClose} alt="..." />
+            <img src={IconClose} alt="..." />
           </CloseIcon>
           <Heading>Fill in an application</Heading>
           <InputRow>
-            <InputIcon><img src={IconEdit} alt="icon"/></InputIcon>
+            <InputIcon><img src={IconEdit} alt="icon" /></InputIcon>
             <Input
               type="text" 
               name="name" 
@@ -88,16 +93,16 @@ const LeadModalContainer = ({open, callback}) => {
             />
           </InputRow>
           <InputRow>
-            <InputIcon><img src={IconPhone} alt="icon"/></InputIcon>
-            <InputTel
+            <InputIcon><img src={IconPhone} alt="icon" /></InputIcon>
+             <InputTel
               type="tel" 
               name="phone_number" 
-              placeholder="Phone number" 
+              placeholder="Phone number"
               mask={['(', /9/, /9/, /8/, ')', ' ', /\d/, /\d/, ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, '-', /\d/, /\d/]}
             />
           </InputRow>
           <InputRow>
-            <InputIcon><img src={IconEmail} alt="icon"/></InputIcon>
+            <InputIcon><img src={IconEmail} alt="icon" /></InputIcon>
             <Input 
               type="email" 
               name="email" 
@@ -105,12 +110,12 @@ const LeadModalContainer = ({open, callback}) => {
             />
           </InputRow>
           <InputRow>
-            <InputIcon><img src={IconSelect} alt="icon"/></InputIcon>
+            <InputIcon><img src={IconSelect} alt="icon" /></InputIcon>
             <Select 
               type="select" 
               name="course" 
             >
-              <option selected disabled defaultValue='default'>Choose the Course...</option>
+              <option disabled defaultValue='default'>Choose the Course...</option>
               <option value="1">Frontend development</option>
               <option value="2">Backend development</option>
               <option value="3">UI/UX design</option>
@@ -118,7 +123,9 @@ const LeadModalContainer = ({open, callback}) => {
           </InputRow>
           <InputRow>
             <PrimaryButton formBtn>
-              Submit
+              {
+                !error && loading ? (<SpinnerSmall />) : ('Submit')
+              }
             </PrimaryButton>
           </InputRow>
         </Form>
@@ -148,7 +155,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  sendLeadModal: (data) => dispatch(sendLeadModal(data))
+  sendLeadModal: (bodyFormData) => dispatch(sendLeadModal(bodyFormData))
 });
 
 export default connect(

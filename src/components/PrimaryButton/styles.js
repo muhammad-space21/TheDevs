@@ -2,8 +2,8 @@ import styled, { css } from 'styled-components';
 
 const getBtnStyle = props => {
   if (props.btnEnrollNavbar) {
-    return BtnEnrollNavbar;
-   } else if (props.btnCircle) {
+      return BtnEnrollNavbar;
+    } else if (props.btnCircle) {
       return BtnCircle;
     } else if (props.btnHeaderLong) {
       return BtnHeaderLong;
@@ -60,8 +60,8 @@ export const BtnEnrollNavbar = css`
       left: 0;
       width: 0;
       height: 100%;
-      background: #7F00FF;  /* fallback for old browsers */
-      background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);  /* Chrome 10-25, Safari 5.1-6 */
+      background: #7F00FF; /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #E100FF, #7F00FF); /* Chrome 10-25, Safari 5.1-6 */
       background: linear-gradient(to right, #E100FF, #7F00FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
       transition: all .35s;
     }
@@ -188,8 +188,9 @@ export const ButtonCircleRed = css`
   color: white;
   border-radius: 25px;
   transition: 0.5s;
-    &:hover {
+  &:hover {
       cursor: pointer;
+      opacity: 0.5;
     }
     &:focus {
       border: none;

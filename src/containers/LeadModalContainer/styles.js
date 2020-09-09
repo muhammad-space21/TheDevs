@@ -177,6 +177,9 @@ export const CloseIcon = styled.div`
   margin-left: auto;
   margin-top: -10px;
   cursor: pointer;
+  @media screen and (max-width: 550px) {
+    margin-top: -40px;
+  }
   img {
     width: 20px;
     height: auto;
