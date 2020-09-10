@@ -45,11 +45,11 @@ const CourseItem = (courses) => {
         <InfoContainer>
           {
             authors.map(({id, image, name, lastname}) => (
-            <AuthorContainer>
-              <Avatar key={id}>
+            <AuthorContainer  key={id}>
+              <Avatar>
                 <img src={image} alt="avatar"/>
               </Avatar>
-              <AuthorName key={name}>
+              <AuthorName>
                 {name +' '+ lastname}
               </AuthorName>
             </AuthorContainer>

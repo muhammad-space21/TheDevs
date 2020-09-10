@@ -2,7 +2,7 @@ import axios from 'axios';
 
 import actionTypes from '../../../constants/actionTypes';
 
-import { getHeaders } from '../../../utils/index';
+import { getHeadersForm } from '../../../utils/index';
 
 export const sendLeadModal = (bodyFormData) => (dispatch, getState) => {
   dispatch({
@@ -11,7 +11,8 @@ export const sendLeadModal = (bodyFormData) => (dispatch, getState) => {
       method: 'POST',
       url: 'http://api.thedevs.co/ru/api/v1/leads/',
       body: bodyFormData,
-      headers: getHeaders(getState)
-    })
+      headers: getHeadersForm(getState)
+      
+      })
   })
 };

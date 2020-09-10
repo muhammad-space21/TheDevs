@@ -21,6 +21,7 @@ import {
  //com.
  import PrimaryButton from '../../components/PrimaryButton';
  import SpinnerSmall from '../../components/SpinnerSmall';
+ import LeadModalAlertSuccess from '../../components/LeadModalAlertSuccess';
  // img.
  import IconEdit from '../../assets/icons/edit-1.png';
  import IconPhone from '../../assets/icons/phone-1.png';
@@ -46,7 +47,7 @@ const LeadModalContainer = ({
   callback, 
   error, 
   loading, 
-  success,
+  // success,
   sendLeadModal
 }) => {
 
@@ -58,17 +59,21 @@ const LeadModalContainer = ({
     let course = e.target.course.value;
 
     const data = {
-      name,
-      phone_number,
-      email,
-      course
+      "name": name,
+      "phone_number": phone_number,
+      "email": email,
+      "course": course,
     };
+
+    console.log(data, 'data');
 
     var bodyFormData = new FormData();
     Object.entries(data).forEach(([key, value]) => { bodyFormData.append(key, value) });
     sendLeadModal(bodyFormData);
     console.log(bodyFormData, 'bodyFormData');
   };
+
+  const success = true;
 
   return (
     <>
@@ -78,57 +83,66 @@ const LeadModalContainer = ({
         bodyStyle={customBodyStyle}
         closable={false}
       >
-        <Form onSubmit={handleSubmit}>
-          <CloseIcon onClick={() => callback()}>
-            <img src={IconClose} alt="..." />
-          </CloseIcon>
-          <Heading>Fill in an application</Heading>
-          <InputRow>
-            <InputIcon><img src={IconEdit} alt="icon" /></InputIcon>
-            <Input
-              type="text" 
-              name="name" 
-              placeholder="Name" 
-              maxLength={20}
-            />
-          </InputRow>
-          <InputRow>
-            <InputIcon><img src={IconPhone} alt="icon" /></InputIcon>
-             <InputTel
-              type="tel" 
-              name="phone_number" 
-              placeholder="Phone number"
-              mask={['(', /9/, /9/, /8/, ')', ' ', /\d/, /\d/, ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, '-', /\d/, /\d/]}
-            />
-          </InputRow>
-          <InputRow>
-            <InputIcon><img src={IconEmail} alt="icon" /></InputIcon>
-            <Input 
-              type="email" 
-              name="email" 
-              placeholder="Email address" 
-            />
-          </InputRow>
-          <InputRow>
-            <InputIcon><img src={IconSelect} alt="icon" /></InputIcon>
-            <Select 
-              type="select" 
-              name="course" 
-            >
-              <option disabled defaultValue='default'>Choose the Course...</option>
-              <option value="1">Frontend development</option>
-              <option value="2">Backend development</option>
-              <option value="3">UI/UX design</option>
-            </Select>
-          </InputRow>
-          <InputRow>
-            <PrimaryButton formBtn>
-              {
-                !error && loading ? (<SpinnerSmall />) : ('Submit')
-              }
-            </PrimaryButton>
-          </InputRow>
-        </Form>
+        {
+          success ? (<LeadModalAlertSuccess closeCallback={() => callback()} />) : (
+            <Form onSubmit={handleSubmit}>
+              <CloseIcon onClick={() => callback()}>
+                <img src={IconClose} alt="..." />
+              </CloseIcon>
+              <Heading>Fill in an application</Heading>
+              <InputRow>
+                <InputIcon><img src={IconEdit} alt="icon" /></InputIcon>
+                <Input
+                  type="text" 
+                  name="name" 
+                  placeholder="Name" 
+                  maxLength={20}
+                />
+              </InputRow>
+              <InputRow>
+                <InputIcon><img src={IconPhone} alt="icon" /></InputIcon>
+                <Input
+                  type="tel" 
+                  name="phone_number" 
+                  placeholder="Phone number"
+                />
+                {/* <InputTel
+                  type="tel" 
+                  name="phone_number" 
+                  placeholder="Phone number"
+                  mask={['(', /9/, /9/, /8/, ')', ' ', /\d/, /\d/, ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, '-', /\d/, /\d/]}
+                /> */}
+              </InputRow>
+              <InputRow>
+                <InputIcon><img src={IconEmail} alt="icon" /></InputIcon>
+                <Input 
+                  type="email" 
+                  name="email" 
+                  placeholder="Email address" 
+                />
+              </InputRow>
+              <InputRow>
+                <InputIcon><img src={IconSelect} alt="icon" /></InputIcon>
+                <Select 
+                  type="select" 
+                  name="course" 
+                >
+                  <option disabled defaultValue='default'>Choose the Course...</option>
+                  <option value="1">Frontend development</option>
+                  <option value="2">Backend development</option>
+                  <option value="3">UI/UX design</option>
+                </Select>
+              </InputRow>
+              <InputRow>
+                <PrimaryButton formBtn>
+                  {
+                    !error && loading ? (<SpinnerSmall />) : ('Submit')
+                  }
+                </PrimaryButton>
+              </InputRow>
+            </Form>
+          )
+        }
       </Modal>
     </>
   )
