@@ -58,22 +58,27 @@ const LeadModalContainer = ({
     let email = e.target.email.value;
     let course = e.target.course.value;
 
-    const data = {
-      "name": name,
-      "phone_number": phone_number,
-      "email": email,
-      "course": course,
-    };
+    // const data = {
+    //   "name": name,
+    //   "phone_number": phone_number,
+    //   "email": email,
+    //   "course": course,
+    // };
 
-    console.log(data, 'data');
+    // console.log(data, 'data');
 
     var bodyFormData = new FormData();
-    Object.entries(data).forEach(([key, value]) => { bodyFormData.append(key, value) });
+    bodyFormData.append("name", name);
+    bodyFormData.append("phone_number", phone_number);
+    bodyFormData.append("email", email);
+    bodyFormData.append("course", course);
+
+    // Object.entries(data).forEach(([key, value]) => { bodyFormData.append(key, value) });
     sendLeadModal(bodyFormData);
     console.log(bodyFormData, 'bodyFormData');
   };
 
-  const success = true;
+  const success = false;
 
   return (
     <>

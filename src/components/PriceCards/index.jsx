@@ -29,9 +29,11 @@ const PriceCards = ({id, service_cards, price, title}) => {
         <CourseName>{title}</CourseName>
       <Pros>
         {
-          service_cards.primary === true ? (service_cards.map(({id, title}) => (
-            <span key={id}>{title}</span>
-          ))) : null
+          service_cards
+          .sort((a, b) => a.access_level - b.access_level)
+          .map(({id, title, primary}) => (
+            primary ? (<span key={id}>{title}</span>) : null
+          ))
         }
       </Pros>
       <PrimaryButton btnCard onClick={routeChange}>

@@ -169,16 +169,22 @@ export const Select = styled.select`
 `;
 
 export const CloseIcon = styled.div`
-  width: fit-content;
-  height: fit-content;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-left: auto;
+  margin-right: -10px;
   margin-top: -10px;
   cursor: pointer;
+  transition: 0.5s;
   @media screen and (max-width: 550px) {
     margin-top: -40px;
+  }
+  &:hover {
+    background-color: #1EE5CF70;
   }
   img {
     width: 20px;

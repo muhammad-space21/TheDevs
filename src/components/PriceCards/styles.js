@@ -3,11 +3,11 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 25%;
-  height: fit-content;
+  height: 75vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   border-radius: 13px;
   cursor: pointer;
   background-color: #F4F7F6;
@@ -31,6 +31,7 @@ export const Container = styled.div`
   }
   @media screen and (max-width: 450px) {
     width: 80%;
+    height: 60vh;
   }
   img {
     width: 125px;
@@ -109,7 +110,7 @@ export const CourseName = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 600;
   color: #7054FF;
   margin-bottom: 10px;
