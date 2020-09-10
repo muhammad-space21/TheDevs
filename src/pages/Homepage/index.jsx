@@ -8,7 +8,7 @@ import ArticleSection from '../../components/ArticleSection';
 import PricesContainer from '../../containers/PricesContainer';
 import CallToActionSection from '../../components/CallToActionSection';
 import Footer from '../../components/Footer';
-// import LeadModalContainer from '../../containers/LeadModalContainer';
+import AboutUsVideoSection from '../../components/AboutUsVideoSection';
 
 const styles = {
   width: '100vw',
@@ -24,11 +24,11 @@ const Homepage = () => {
       <NavbarMain />
       <HeaderHomepage />
       <CoursesContainer />
+      <AboutUsVideoSection />
       <ServiceCardsSection />
       <ArticleSection />
       <PricesContainer />
       <CallToActionSection />
-      {/* <LeadModalContainer /> */}
       <Footer />
     </div>
   );

@@ -29,7 +29,7 @@ const PriceCards = ({id, service_cards, price, title}) => {
         <CourseName>{title}</CourseName>
       <Pros>
         {
-          service_cards.map(({id, title}) => (
+          service_cards.primary && service_cards.map(({id, title}) => (
             <span key={id}>{title}</span>
           ))
         }

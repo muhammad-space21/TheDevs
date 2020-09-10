@@ -27,17 +27,17 @@ export const Heading = styled.div`
   color: black;
   text-align: center;
   span {
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 22px;
+    font-weight: 700;
     color: #2669FF;
     font-style: italic;
     @media screen and (max-width: 550px) {
-      font-size: 17px;
+      font-size: 20px;
       line-height: 22px;
     }
   }
   @media screen and (max-width: 550px) {
-    font-size: 17px;
+    font-size: 18px;
     line-height: 22px;
     padding: 0;
   }

@@ -30,7 +30,7 @@ const ServiceCardsSection = () => {
             <img src={IconCertified} alt="icon"/>
           </IconWrapper>
           <TextWrapper>
-            Best Quality 
+            Best Quality
             <span>
               Sorem spsum dolor sit amsectetur 
               adipisclit, seddo eiusmod 

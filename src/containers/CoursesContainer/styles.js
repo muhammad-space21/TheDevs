@@ -33,50 +33,59 @@ export const TextWrapper = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  @media screen and (max-width: 550px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const HeadingOne = styled.div`
   width: fit-content;
   height: fit-content;
-  font-size: 18px;
+  font-size: 22px;
   font-style: italic;
   font-weight: 600;
-  color: black;
+  color:  #FFD52E;
   span {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
     font-style: normal;
     margin-left: 10px;
+    color: black;
     @media screen and (max-width: 550px) {
-      font-size: 14px;
+      font-size: 18px;
       margin-left: 6px;
     }
   }
   @media screen and (max-width: 550px) {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 500;
+    margin-bottom: 10px;
   }
 `;
 
 export const HeadingTwo = styled.div`
   width: fit-content;
   height: fit-content;
-  font-size: 18px;
+  font-size: 22px;
   font-style: italic;
   font-weight: 600;
-  color: black;
+  color:  #FFD52E;
   span {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
     font-style: normal;
     margin-left: 10px;
+    color: black;
     @media screen and (max-width: 550px) {
-      font-size: 14px;
+      font-size: 18px;
       margin-left: 6px;
     }
   }
   @media screen and (max-width: 550px) {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 500;
   }
 `;
