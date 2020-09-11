@@ -12,7 +12,6 @@ export const sendLeadModal = (bodyFormData) => (dispatch, getState) => {
       url: 'http://api.thedevs.co/ru/api/v1/leads/',
       body: bodyFormData,
       headers: getHeadersForm(getState)
-      
       })
   })
 };

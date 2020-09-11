@@ -93,8 +93,17 @@ export const Price = styled.div`
   span {
     font-size: 22px;
     font-weight: 700;
+    color: #FC4062;
+    margin-right: 8px;
+  }
+  h1 {
+    font-size: 22px;
+    font-weight: 600;
     color: black;
     margin-right: 8px;
+    margin-left: 8px;
+    margin-top: 10px;
+    text-decoration: line-through;
   }
 `;
 

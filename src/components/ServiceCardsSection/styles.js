@@ -59,7 +59,7 @@ export const Row = styled.div`
 
 export const ServiceCard = styled.div`
   width: 30%;
-  height: 65vh;
+  height: 68vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -76,7 +76,7 @@ export const ServiceCard = styled.div`
     width: 40%;
   }
   @media screen and (max-width: 700px) {
-    height: 30vh;
+    height: 33vh;
     width: 47%;
     border-radius: 12px;
   }

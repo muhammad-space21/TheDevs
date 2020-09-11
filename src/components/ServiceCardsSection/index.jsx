@@ -32,9 +32,8 @@ const ServiceCardsSection = () => {
           <TextWrapper>
             Best Quality
             <span>
-              Sorem spsum dolor sit amsectetur 
-              adipisclit, seddo eiusmod 
-              tempor incididunt ut laborea.
+             We provide the best quality of the 
+             trainings to help you master the IT skills
             </span>
           </TextWrapper>
         </ServiceCard>
@@ -45,9 +44,9 @@ const ServiceCardsSection = () => {
           <TextWrapper>
             Comfortable platforms
             <span>
-              Sorem spsum dolor sit amsectetur 
-              adipisclit, seddo eiusmod 
-              tempor incididunt ut laborea.
+              Our lessons are recorded for further usage in 
+              our telegram bot, to make it comfortable for you
+              to use anytime you want
             </span>
           </TextWrapper>
         </ServiceCard>
@@ -58,9 +57,9 @@ const ServiceCardsSection = () => {
           <TextWrapper>
             Debuging and code review assistance
             <span>
-              Sorem spsum dolor sit amsectetur 
-              adipisclit, seddo eiusmod 
-              tempor incididunt ut laborea.
+              Our instructors will help you with code 
+              review and debugging as they are the most 
+              important aspects of programming
             </span>
           </TextWrapper>
         </ServiceCard>
@@ -71,9 +70,9 @@ const ServiceCardsSection = () => {
           <TextWrapper>
             Portfolio building assistance
             <span>
-              Sorem spsum dolor sit amsectetur 
-              adipisclit, seddo eiusmod 
-              tempor incididunt ut laborea.
+              We will help you to make your
+              professional portfolio to get
+              a job in industry as soon as possible
             </span>
           </TextWrapper>
         </ServiceCard>
@@ -84,9 +83,10 @@ const ServiceCardsSection = () => {
           <TextWrapper>
             Mentoring assistance and communication
             <span>
-              Sorem spsum dolor sit amsectetur 
-              adipisclit, seddo eiusmod 
-              tempor incididunt ut laborea.
+              Our instructors will be mentoring you
+              24/7 and you can enjoy the communication
+              with them and your coursemates in our Discord 
+              platform
             </span>
           </TextWrapper>
         </ServiceCard>
@@ -97,9 +97,8 @@ const ServiceCardsSection = () => {
           <TextWrapper>
             Affordable and worthwhile price
             <span>
-              Sorem spsum dolor sit amsectetur 
-              adipisclit, seddo eiusmod 
-              tempor incididunt ut laborea.
+              We will help you to be an IT guy in really 
+              short period for less amount of money spent
             </span>
           </TextWrapper>
         </ServiceCard>

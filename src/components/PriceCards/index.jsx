@@ -6,7 +6,8 @@ import {
   Price, 
   Hr, 
   CourseName, 
-  Pros
+  Pros,
+  PrevPrice
 } from './styles';
 
 import PrimaryButton from '../PrimaryButton';
@@ -14,7 +15,7 @@ import PrimaryButton from '../PrimaryButton';
 import CardsDots from '../../assets/images/card-dots.png';
 
 
-const PriceCards = ({id, service_cards, price, title}) => {
+const PriceCards = ({id, service_cards, price, title, previous_price}) => {
   const history = useHistory();
 
   // routeChange
@@ -24,7 +25,7 @@ const PriceCards = ({id, service_cards, price, title}) => {
 
   return (
     <Container id="3">
-        <Price>$ <span>{price}</span> /month</Price>
+      <Price>$ <h1>{previous_price}</h1> <span>{price}</span> /month</Price>
       <Hr />
         <CourseName>{title}</CourseName>
       <Pros>

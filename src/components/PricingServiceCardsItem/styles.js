@@ -32,7 +32,6 @@ export const ServiceCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   background-color: #2669FF;
   border-radius: 15px;
   cursor: pointer;
@@ -45,9 +44,10 @@ export const ServiceCard = styled.div`
     width: 40%;
   }
   @media screen and (max-width: 700px) {
-    height: 30vh;
+    height: 33vh;
     width: 47%;
     border-radius: 12px;
+    justify-content: center;
   }
 `;
 
@@ -58,7 +58,7 @@ export const IconWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 50px; 
+  margin-top: 50px;
   background-color: white;
   img {
     width: 50%;
@@ -84,7 +84,6 @@ export const TextWrapper = styled.div`
   font-weight: 500;
   color: white;
   margin-top: 30px;
-  margin-bottom: 50px;
   text-align: center;
   span {
     font-size: 15px;
@@ -100,7 +99,7 @@ export const TextWrapper = styled.div`
   }
   @media screen and (max-width: 700px) {
     width: 90%;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 20px;
     font-size: 14px;
     line-height: 16px;

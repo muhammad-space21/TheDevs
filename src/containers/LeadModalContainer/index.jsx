@@ -66,6 +66,8 @@ const LeadModalContainer = ({
     // };
 
     // console.log(data, 'data');
+    
+    // Object.entries(data).forEach(([key, value]) => { bodyFormData.append(key, value) });
 
     var bodyFormData = new FormData();
     bodyFormData.append("name", name);
@@ -73,7 +75,6 @@ const LeadModalContainer = ({
     bodyFormData.append("email", email);
     bodyFormData.append("course", course);
 
-    // Object.entries(data).forEach(([key, value]) => { bodyFormData.append(key, value) });
     sendLeadModal(bodyFormData);
     console.log(bodyFormData, 'bodyFormData');
   };
@@ -89,7 +90,9 @@ const LeadModalContainer = ({
         closable={false}
       >
         {
-          success ? (<LeadModalAlertSuccess closeCallback={() => callback()} />) : (
+          success ? (
+            <LeadModalAlertSuccess closeCallback={() => callback()} />
+            ) : (
             <Form onSubmit={handleSubmit}>
               <CloseIcon onClick={() => callback()}>
                 <img src={IconClose} alt="..." />
