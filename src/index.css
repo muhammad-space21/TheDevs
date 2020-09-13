@@ -3,3 +3,7 @@ input, select, option {
   -moz-appearance: none;
   appearance: none;
 };
+
+body {
+  font-size: 100%;
+}

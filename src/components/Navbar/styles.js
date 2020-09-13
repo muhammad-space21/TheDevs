@@ -192,7 +192,7 @@ export const NavbarBrand = styled(Navbar.Brand)`
     height: 30px;
     width: auto;
     @media screen and (max-width: 550px) {
-      height: 20px;
+      height: 25px;
     }
   }
 `;
