@@ -27,10 +27,13 @@ const AboutPage = () => {
       <HeaderAboutPage />
       <TextWrapper>
         <span>TheDevs </span>,
-        we’ve seen again and again how the seemingly simple act of creating 
-        can be a force for growth, change, and discovery in people’s lives. 
-        We want to inspire and multiply the kind of creative exploration 
-        that furthers expression, learning and application.
+        Undoubtedly, Information Technology is becomming the dream proffession 
+        day by day. And many people seek high quality and effective courses to
+        master IT skills. In theDevs you will gain adequate knowledge to boost your
+        IT skills and creativity. We care about our students and their future.
+        With theDevs you will have an opportunity to get employed in IT industry upon
+        completion of the course with the solid, outstanding portfolio of yours which
+        we also help you build. 
       </TextWrapper>
       <HR />
       <TextWrapper>
@@ -38,7 +41,7 @@ const AboutPage = () => {
         is an online learning platform for  those  seeking to do
         successful career in web development, mobile development or design, and more. 
         On <span>TheDevs </span>, members come together to find inspiration and 
-        take the next step in their creative journey.
+        take the next step in their IT and creative journey.
       </TextWrapper>
       <Heading>At <span>TheDevs,</span>  We Guarantee:</Heading>
       <Row>

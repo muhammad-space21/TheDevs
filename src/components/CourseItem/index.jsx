@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { useHistory } from 'react-router-dom';
 
 import { fadeIn } from 'react-animations';
@@ -15,13 +15,15 @@ import {
   AuthorContainer,
   AuthorName,
   Avatar,
-  IconWrapper
+  IconWrapper,
+  IconComponent
  } from './styles';
 
  import IconShare from '../../assets/icons/icon-share.svg';
  import IconLike from '../../assets/icons/icon-like.svg';
 
 const CourseItem = (courses) => {
+  const [increment, setIncrement] = useState(0);
   const history = useHistory();
   const {id} = courses;
   const {authors} = courses;
@@ -31,12 +33,19 @@ const CourseItem = (courses) => {
     history.push(`/courses/${id}`)
   };
 
-    const [days, hours] = courses.duration.split(' ');
-    let weeks_count = Math.floor(days / 7);
+  // Duration amount count in weeks
+  const [days, hours] = courses.duration.split(' ');
+  let weeks_count = Math.floor(days / 7);
+
+  // handleIncrement
+  const handleIncrement = () => {
+    setIncrement(increment + 1)
+  };
+
 
   return (
-    <Container onClick={routeChange}>
-      <ImageWrapper>
+    <Container>
+      <ImageWrapper onClick={routeChange}>
         <img src={courses.image} alt="course" />
       </ImageWrapper>
       <Footer>
@@ -61,7 +70,10 @@ const CourseItem = (courses) => {
           }
           <IconWrapper>
             <img src={IconShare} alt="icon-share"/>
-            <img src={IconLike} alt="icon-like"/>
+            <IconComponent>
+              <span>{increment}</span>
+              <img src={IconLike} onClick={handleIncrement} alt="icon-like"/>
+            </IconComponent>
           </IconWrapper>
         </InfoContainer>
       </Footer>

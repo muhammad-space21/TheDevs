@@ -166,3 +166,26 @@ export const IconWrapper = styled.div`
   }
 `;
 
+export const IconComponent = styled.div`
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  img {
+    width: 25px;
+    height: auto;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover {
+      filter: grayscale(100%);
+    }
+  }
+  span {
+    font-size: 15px;
+    color: grey;
+    margin-left: 8px;
+    margin-right: -5px;
+  }
+`;
+
