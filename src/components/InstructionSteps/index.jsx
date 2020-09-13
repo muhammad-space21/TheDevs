@@ -36,7 +36,7 @@ const InstructionSteps = () => (
     <Component>
       <NumberWrapperBlue>2</NumberWrapperBlue>
       <TextWrapper>
-        Sign up and register to the course,
+        Send an application,
           by clicking Enroll Button.
       </TextWrapper>
       <ImageWrapper><img src={ImgEnroll} alt="illustration"/></ImageWrapper>
@@ -54,7 +54,7 @@ const InstructionSteps = () => (
       <TextWrapper>
         Contact with TheDevs, and
         get access to our telegram 
-        bot and slack platforms.
+        bot and discord platforms.
       </TextWrapper>
       <ImageWrapper><img src={ImgPlatforms} alt="illustration"/></ImageWrapper>
     </Component>

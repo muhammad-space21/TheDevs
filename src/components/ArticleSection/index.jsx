@@ -18,11 +18,8 @@ export const ArticleSection = () => {
       <Row>
         <TextWrapper1>
           <span>
-            Sorem spsum dolor sit amsectetur 
-            tempor incididunt ut laborea.
-            Sorem spsum dolor sit amsectetur 
-            adipisclit, seddo eiusmod 
-            tempor incididunt ut laborea.  
+            Start creating stunning web
+            and mobile applications with theDevs.
           </span>
         </TextWrapper1>
         <ImageWrapper1>
@@ -35,11 +32,8 @@ export const ArticleSection = () => {
         </ImageWrapper2>
         <TextWrapper2>
           <span>
-            Sorem spsum dolor sit amsectetur 
-            tempor incididunt ut laborea.
-            Sorem spsum dolor sit amsectetur 
-            adipisclit, seddo eiusmod 
-            tempor incididunt ut laborea.  
+            Design user-friendly and mobile-first 
+            web and mobile applications with theDevs.
           </span>
         </TextWrapper2>
       </Row>

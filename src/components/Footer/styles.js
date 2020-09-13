@@ -53,16 +53,9 @@ export const Brand = styled.div`
   font-weight: 600;
   cursor: pointer;
   padding-top: 30px;
-  span {
-    color: white;
-    font-size: 20px;
-    font-weight: 600;
-    margin-left: 5px;
-    text-transform: uppercase;
-    &:hover {
-      text-decoration: none;
-      color: white;
-    }
+  img {
+    height: 30px;
+    width: auto;
   }
   &:hover {
     text-decoration: none;

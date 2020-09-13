@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 import {
   Container, 
@@ -28,21 +28,24 @@ import IconTelegram from '../../assets/icons/telegram.svg';
 import IconYoutube from '../../assets/icons/youtube.svg';
 
 import ImageFooter from '../../assets/images/footer.png';
+import LogoBrand from '../../assets/icons/logo-white.png';
 
 
 const Footer = () => {
   return (
     <Container>
       <Brand>
-        <span>The Devs</span>
+      <Link to="/">
+        <img src={LogoBrand} alt="..." />
+      </Link>
         <SocialMedia>
           <a href="http://fb.me/edu.thedevs.co">
             <img src={IconFacebook} alt="facebook" />
           </a>
-          <a href="">
+          <a href="http://instagram.com/edu.thedevs.co">
             <img src={IconInstagram} alt="instagram" />
           </a>
-          <a href="">
+          <a href="http://t.me/eduthedevsco">
             <img src={IconTelegram} alt="telegram" />
           </a>
           <a href="">

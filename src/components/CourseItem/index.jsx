@@ -1,6 +1,10 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 
+import { fadeIn } from 'react-animations';
+import styled, { keyframes } from 'styled-components';
+import { bounce } from 'react-animations';
+
 import {
   Container,
   ImageWrapper,

@@ -15,7 +15,9 @@ import './styles.scss';
 
 import LeadModalContainer from '../../containers/LeadModalContainer';
 import ButtonPrimary from '../PrimaryButton';
+
 import IconMenu from '../../assets/icons/menu-mobile.png';
+import LogoBrand from '../../assets/icons/logo.png';
 
 export const NavbarMain = () => {
   const [showModal, setShowModal] = useState(false);
@@ -23,10 +25,10 @@ export const NavbarMain = () => {
   return (
     <NavbarStyled bg='default' variant='default' expand="lg">
       <NavbarBrand href="/"> 
-        The <span>Devs</span>
+        <img src={LogoBrand} alt="logo" />
       </NavbarBrand>
       <NavbarToggle aria-controls="responsive-navbar-nav">
-        <img src={IconMenu} alt="menu"/>
+        <img src={IconMenu} alt="menu" />
       </NavbarToggle>
         <NavbarCollapse id="responsive-navbar-nav">
           <NavStyled className="ml-auto">

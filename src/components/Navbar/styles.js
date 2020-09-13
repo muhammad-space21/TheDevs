@@ -188,16 +188,10 @@ export const NavbarBrand = styled(Navbar.Brand)`
   color: black;
   font-weight: 600;
   cursor: pointer;
-    span {
-      color: #1EE5CF;
-      font-size: 20px;
-      font-weight: 600;
-      margin-left: 5px;
-      text-transform: uppercase;
-    }
-    &:hover {
-      color: black;
-    }
+  img {
+    height: 30px;
+    width: auto;
+  }
 `;
 
 export const NavbarToggle = styled(Navbar.Toggle)`

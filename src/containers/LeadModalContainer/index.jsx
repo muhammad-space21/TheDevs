@@ -1,6 +1,4 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
-// import { connect } from 'react-redux';
 
 import { Modal } from 'antd';
 
@@ -16,7 +14,6 @@ import {
  } from './styles';
  import './styles.css';
 
-//  import { sendLeadModal } from '../../redux/modules/leadModal/leadModalAction';
 import { useForm } from '../../hooks/useForm';
 
  //com.
@@ -90,11 +87,14 @@ const LeadModalContainer = ({ open, callback }) => {
                   placeholder="Phone number"
                   onChange={handleChange}
                   value={inputs.phone_number}
+                  maxLength={13}
                 />
                 {/* <InputTel
                   type="tel" 
                   name="phone_number" 
                   placeholder="Phone number"
+                  onChange={handleChange}
+                  value={inputs.phone_number}
                   mask={['(', /9/, /9/, /8/, ')', ' ', /\d/, /\d/, ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, '-', /\d/, /\d/]}
                 /> */}
               </InputRow>
@@ -136,34 +136,5 @@ const LeadModalContainer = ({ open, callback }) => {
     </>
   )
 };
-
-// LeadModalContainer.propTypes = {
-//   loading: PropTypes.bool.isRequired,
-//   error: PropTypes.bool.isRequired,
-//   success: PropTypes.bool.isRequired,
-//   sendLeadModal: PropTypes.func.isRequired
-// };
-
-// LeadModalContainer.defaultProps = {
-//   loading: false,
-//   error: false,
-//   success: false,
-//   sendLeadModal: () => {}
-// };
-
-// const mapStateToProps = (state) => ({
-//   loading: state.leadModalReducer.loading,
-//   error: state.leadModalReducer.error,
-//   success: state.leadModalReducer.success
-// });
-
-// const mapDispatchToProps = (dispatch) => ({
-//   sendLeadModal: (bodyFormData) => dispatch(sendLeadModal(bodyFormData))
-// });
-
-// export default connect(
-//   mapStateToProps, 
-//   mapDispatchToProps
-// )(LeadModalContainer);
 
 export default LeadModalContainer;
