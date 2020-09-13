@@ -74,7 +74,7 @@ export const SocialMedia = styled.div`
   align-items: center;
   justify-content: center;
   img {
-    width: 30px;
+    width: 35px;
     height: auto;
     margin-left: 10px;
     margin-right: 10px;

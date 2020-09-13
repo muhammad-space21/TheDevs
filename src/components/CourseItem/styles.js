@@ -120,6 +120,8 @@ export const AuthorContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  align-items: center;
+  justify-content: space-evenly;
 `;
 
 export const Avatar = styled.div`
@@ -145,6 +147,10 @@ export const AuthorName = styled.span`
   font-size: 14px;
   font-weight: 600;
   margin-left: 10px;
+  @media screen and (max-width: 550px) {
+    font-size: 12px;
+    margin-right: -10px;
+  }
 `;
 
 export const IconWrapper = styled.div`
@@ -171,10 +177,12 @@ export const IconComponent = styled.div`
   height: fit-content;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   img {
     width: 25px;
     height: auto;
-    margin-left: 20px;
+    margin-left: 10px;
     cursor: pointer;
     transition: 0.5s;
     &:hover {
@@ -184,8 +192,7 @@ export const IconComponent = styled.div`
   span {
     font-size: 15px;
     color: grey;
-    margin-left: 8px;
-    margin-right: -5px;
+    margin-left: 15px;
   }
 `;
 

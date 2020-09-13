@@ -191,6 +191,9 @@ export const NavbarBrand = styled(Navbar.Brand)`
   img {
     height: 30px;
     width: auto;
+    @media screen and (max-width: 550px) {
+      height: 20px;
+    }
   }
 `;
 

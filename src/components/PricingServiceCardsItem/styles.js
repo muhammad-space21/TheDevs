@@ -44,7 +44,7 @@ export const ServiceCard = styled.div`
     width: 40%;
   }
   @media screen and (max-width: 700px) {
-    height: 33vh;
+    height: 38vh;
     width: 47%;
     border-radius: 12px;
     justify-content: center;

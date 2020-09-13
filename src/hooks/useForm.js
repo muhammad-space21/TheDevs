@@ -27,7 +27,7 @@ export const useForm = () => {
 
     const config = {
       method: 'POST',
-      url: 'http://api.thedevs.co/ru/api/v1/leads/',
+      url: 'https://api.thedevs.co/ru/api/v1/leads/',
       headers: {
         Authorization: `Token e328299157e6d0b9b929026ce97d1f9e0e56a08e`,
         'Content-Type': 'multipart/form-data'

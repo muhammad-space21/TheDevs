@@ -38,7 +38,7 @@ const PriceCards = ({id, service_cards, price, title, previous_price}) => {
         }
       </Pros>
       <PrimaryButton btnCard onClick={routeChange}>
-        Enroll
+        Read More
       </PrimaryButton>
       <img src={CardsDots} alt="card-dots"/>
     </Container>
