@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 import {
   Container, 
@@ -24,9 +25,7 @@ import {
 import IconInstagram from '../../assets/icons/instagram.svg';
 import IconFacebook from '../../assets/icons/facebook.svg';
 import IconTelegram from '../../assets/icons/telegram.svg';
-import IconLinkedin from '../../assets/icons/linkedin.svg';
 import IconYoutube from '../../assets/icons/youtube.svg';
-import IconTwitter from '../../assets/icons/twitter.svg';
 
 import ImageFooter from '../../assets/images/footer.png';
 
@@ -34,15 +33,21 @@ import ImageFooter from '../../assets/images/footer.png';
 const Footer = () => {
   return (
     <Container>
-      <Brand to="/">
+      <Brand>
         <span>The Devs</span>
         <SocialMedia>
-          <img src={IconInstagram} alt=""/>
-          <img src={IconFacebook} alt=""/>
-          <img src={IconTelegram} alt=""/>
-          <img src={IconLinkedin} alt=""/>
-          <img src={IconYoutube} alt=""/>
-          <img src={IconTwitter} alt=""/>
+          <a href="http://fb.me/edu.thedevs.co">
+            <img src={IconFacebook} alt="facebook" />
+          </a>
+          <a href="">
+            <img src={IconInstagram} alt="instagram" />
+          </a>
+          <a href="">
+            <img src={IconTelegram} alt="telegram" />
+          </a>
+          <a href="">
+            <img src={IconYoutube} alt="youtube" />          
+          </a>
         </SocialMedia>
       </Brand>
       <Row>

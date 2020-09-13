@@ -1,6 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+// import PropTypes from 'prop-types';
+// import { connect } from 'react-redux';
 
 import { Modal } from 'antd';
 
@@ -16,7 +16,8 @@ import {
  } from './styles';
  import './styles.css';
 
- import { sendLeadModal } from '../../redux/modules/leadModal/leadModalAction';
+//  import { sendLeadModal } from '../../redux/modules/leadModal/leadModalAction';
+import { useForm } from '../../hooks/useForm';
 
  //com.
  import PrimaryButton from '../../components/PrimaryButton';
@@ -42,44 +43,16 @@ const customBodyStyle = {
   borderBottom: 'none',
 };
 
-const LeadModalContainer = ({
-  open, 
-  callback, 
-  error, 
-  loading, 
-  // success,
-  sendLeadModal
-}) => {
+const LeadModalContainer = ({ open, callback }) => {
+  const {
+    error,
+    success,
+    loading,
+    inputs,
+    handleSubmit,
+    handleChange
+  } = useForm();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    let name = e.target.name.value;
-    let phone_number = e.target.phone_number.value;
-    let email = e.target.email.value;
-    let course = e.target.course.value;
-
-    // const data = {
-    //   "name": name,
-    //   "phone_number": phone_number,
-    //   "email": email,
-    //   "course": course,
-    // };
-
-    // console.log(data, 'data');
-    
-    // Object.entries(data).forEach(([key, value]) => { bodyFormData.append(key, value) });
-
-    var bodyFormData = new FormData();
-    bodyFormData.append("name", name);
-    bodyFormData.append("phone_number", phone_number);
-    bodyFormData.append("email", email);
-    bodyFormData.append("course", course);
-
-    sendLeadModal(bodyFormData);
-    console.log(bodyFormData, 'bodyFormData');
-  };
-
-  const success = false;
 
   return (
     <>
@@ -105,6 +78,8 @@ const LeadModalContainer = ({
                   name="name" 
                   placeholder="Name" 
                   maxLength={20}
+                  onChange={handleChange}
+                  value={inputs.name}
                 />
               </InputRow>
               <InputRow>
@@ -113,6 +88,8 @@ const LeadModalContainer = ({
                   type="tel" 
                   name="phone_number" 
                   placeholder="Phone number"
+                  onChange={handleChange}
+                  value={inputs.phone_number}
                 />
                 {/* <InputTel
                   type="tel" 
@@ -127,6 +104,8 @@ const LeadModalContainer = ({
                   type="email" 
                   name="email" 
                   placeholder="Email address" 
+                  onChange={handleChange}
+                  value={inputs.email}
                 />
               </InputRow>
               <InputRow>
@@ -134,6 +113,8 @@ const LeadModalContainer = ({
                 <Select 
                   type="select" 
                   name="course" 
+                  onChange={handleChange}
+                  value={inputs.course}
                 >
                   <option disabled defaultValue='default'>Choose the Course...</option>
                   <option value="1">Frontend development</option>
@@ -156,31 +137,33 @@ const LeadModalContainer = ({
   )
 };
 
-LeadModalContainer.propTypes = {
-  loading: PropTypes.bool.isRequired,
-  error: PropTypes.bool.isRequired,
-  success: PropTypes.bool.isRequired,
-  sendLeadModal: PropTypes.func.isRequired
-};
+// LeadModalContainer.propTypes = {
+//   loading: PropTypes.bool.isRequired,
+//   error: PropTypes.bool.isRequired,
+//   success: PropTypes.bool.isRequired,
+//   sendLeadModal: PropTypes.func.isRequired
+// };
 
-LeadModalContainer.defaultProps = {
-  loading: false,
-  error: false,
-  success: false,
-  sendLeadModal: () => {}
-};
+// LeadModalContainer.defaultProps = {
+//   loading: false,
+//   error: false,
+//   success: false,
+//   sendLeadModal: () => {}
+// };
 
-const mapStateToProps = (state) => ({
-  loading: state.leadModalReducer.loading,
-  error: state.leadModalReducer.error,
-  success: state.leadModalReducer.success
-});
+// const mapStateToProps = (state) => ({
+//   loading: state.leadModalReducer.loading,
+//   error: state.leadModalReducer.error,
+//   success: state.leadModalReducer.success
+// });
 
-const mapDispatchToProps = (dispatch) => ({
-  sendLeadModal: (bodyFormData) => dispatch(sendLeadModal(bodyFormData))
-});
+// const mapDispatchToProps = (dispatch) => ({
+//   sendLeadModal: (bodyFormData) => dispatch(sendLeadModal(bodyFormData))
+// });
 
-export default connect(
-  mapStateToProps, 
-  mapDispatchToProps
-)(LeadModalContainer);
+// export default connect(
+//   mapStateToProps, 
+//   mapDispatchToProps
+// )(LeadModalContainer);
+
+export default LeadModalContainer;

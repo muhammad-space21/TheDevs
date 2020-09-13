@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import VideoMaskImage from '../../assets/images/video-mask.svg';
+
 export const Container = styled.div`
   width: 110%;
   height: 110%;
@@ -33,6 +35,7 @@ export const VideoContainer = styled.video`
   width: 100%;
   height: 300px;
   margin-bottom: 20px;
+  -webkit-mask-box-image: url(${VideoMaskImage});
 `;
 
 export const BtnWrapper = styled.div`
