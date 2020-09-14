@@ -8,9 +8,8 @@ export const Container = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  background: #7F00FF;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #E100FF, #7F00FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
   opacity: 1;
   margin-top: 100px;
   @media screen and (max-width: 550px) {
@@ -25,14 +24,13 @@ export const TextWrapper = styled.div`
   text-align: center;
   font-size: 31px;
   letter-spacing: 0px;
-  color: #FFFFFF;
+  color: black;
   margin-left: -50px;
-  /* border: 2px solid red; */
     span {
       text-align: center;
       font-size: 31px;
       letter-spacing: 0px;
-      color: #1EE5CF;
+      color: black;
       font-weight: 700;
       @media screen and (max-width: 991px) {
         font-size: 25px;
@@ -60,7 +58,6 @@ export const ImageWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 2px solid red; */
     img {
       width: 100%;
       height: 100%;

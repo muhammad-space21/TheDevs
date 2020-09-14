@@ -1,28 +1,28 @@
 import React from 'react';
-import YouTube from 'react-youtube';
+import ReactPlayer from 'react-player';
 
-import { Container, Heading } from './styles';
+import { 
+  Container, 
+  Heading
+} from './styles';
+
+import './styles.css';
 
 const AboutUsVideoSection = () => {
-
-  const opts = {
-    height: '500',
-    width: '850',
-    playerVars: {
-      // https://developers.google.com/youtube/player_parameters
-      autoplay: 1,
-    },
-  };
-
-  const onReady = (e) => {
-    // access to player in all event handlers via event.target
-    e.target.pauseVideo();
-  };
-
   return (
     <Container>
       <Heading> About<span>TheDevs</span> </Heading>
-      <YouTube videoId="2g811Eo7K8U" opts={opts} onReady={onReady} />
+      <>
+        <div className='player-wrapper'>
+          <ReactPlayer
+            className='react-player'
+            url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
+            width='100%'
+            height='100%'
+            controls={true}
+          />
+        </div>
+      </>
     </Container>
   )
 };

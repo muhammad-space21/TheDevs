@@ -38,7 +38,6 @@ export const ImageWrapper1 = styled.div`
   background-image: url(${ImageBackground1});
   background-size: cover;
   background-position: center;
-  /* border: 2px solid red; */
   img {
     width: 50%;
     height: auto;
@@ -74,13 +73,12 @@ export const ImageWrapper2 = styled.div`
   background-image: url(${ImageBackground2});
   background-size: cover;
   background-position: center;
-  /* border: 2px solid red; */
   padding-left: 50px;
   img {
     width: 65%;
     height: auto;
     @media screen and (max-width: 768px) {
-      width: 75%;
+      width: 85%;
     }
   }
   @media screen and (max-width: 1200px) {
@@ -112,11 +110,10 @@ export const TextWrapper1 = styled.div`
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  /* border: 2px solid black; */
   z-index: 888;
   span {
-    font-size: 18px;
-    line-height: 25px;
+    font-size: 23px;
+    line-height: 28px;
     font-weight: 400;
     margin-right: -150px;
     padding-left: 100px;
@@ -155,11 +152,10 @@ export const TextWrapper2 = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  /* border: 2px solid black; */
   z-index: 888;
   span {
-    font-size: 18px;
-    line-height: 25px;
+    font-size: 23px;
+    line-height: 28px;
     font-weight: 400;
     margin-left: -150px;
     padding-right: 100px;
