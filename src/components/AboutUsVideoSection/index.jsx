@@ -1,5 +1,4 @@
 import React from 'react';
-// import ReactPlayer from 'react-player';
 import YouTube from 'react-youtube';
 
 import {
@@ -29,7 +28,12 @@ const AboutUsVideoSection = () => {
     <Container>
       <Heading>About<span>TheDevs</span></Heading>
       <div className='player-wrapper'>
-        <YouTube className="react-player" videoId="0fv4D9t3tCI" opts={opts} onReady={onReady} />
+        <YouTube 
+          className="react-player" 
+          videoId="0fv4D9t3tCI" 
+          opts={opts} 
+          onReady={onReady} 
+        />
       </div>
     </Container>
   )
