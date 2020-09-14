@@ -8,7 +8,10 @@ import {
 
 import './styles.css';
 
+import Spinner from '../Spinner';
+
 const AboutUsVideoSection = () => {
+
   return (
     <Container>
       <Heading>About<span>TheDevs</span></Heading>
@@ -18,7 +21,6 @@ const AboutUsVideoSection = () => {
           url='http://www.youtube.com/watch?v=0fv4D9t3tCI'
           width='100%'
           height='100%'
-          origin='http://localhost:3000'
         />
       </div>
     </Container>
