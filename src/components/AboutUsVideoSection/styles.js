@@ -35,3 +35,8 @@ export const Heading = styled.div`
     font-size: 25px;
   }
 `;
+
+export const Video = styled.video`
+  width: 100%;
+  height: 100%;
+`;

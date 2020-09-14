@@ -1,40 +1,24 @@
 import React from 'react';
-import YouTube from 'react-youtube';
 
 import {
   Container,
-  Heading
+  Heading,
+  Video
 } from './styles';
 
 import './styles.css';
 
+import PromoVideo  from '../../assets/videos/promo_video.mp4';
+import ImagePoster from '../../assets/images/poster.jpg';
+
 const AboutUsVideoSection = () => {
-  const opts = {
-    height: '100%',
-    width: '100%',
-    playerVars: {
-      // https://developers.google.com/youtube/player_parameters
-      autoplay: 1,
-      rel: 0
-    },
-  };
-
-  const onReady = (event) => {
-    // access to player in all event handlers via event.target
-    event.target.pauseVideo();
-  }
-
   return (
     <Container>
       <Heading>About<span>TheDevs</span></Heading>
-      <div className='player-wrapper'>
-        <YouTube 
-          className="react-player" 
-          videoId="0fv4D9t3tCI" 
-          opts={opts} 
-          onReady={onReady} 
-        />
-      </div>
+        <Video controls poster={ImagePoster} controlsList="nodownload">
+          <source src={PromoVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </Video>
     </Container>
   )
 };
