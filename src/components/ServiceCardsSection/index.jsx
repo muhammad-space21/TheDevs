@@ -1,6 +1,4 @@
-import React, { useRef } from 'react';
-import { useIntersection } from 'react-use';
-import gsap from 'gsap';
+import React from 'react';
 
 import {
   Container,
@@ -21,49 +19,14 @@ import {
 
 
 const ServiceCardsSection = () => {
-  // Ref for our element
-  const sectionRef = useRef(null);
-  // All the ref to be observed
-  const intersection = useIntersection(sectionRef, {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.3
-  });
-
-  // Animation for fading in
-  const fadeIn = element => {
-    gsap.to(element, 1, {
-      opacity: 1,
-      y: -60,
-      ease: "power4.out",
-      stagger: {
-        amount: 0.4
-      }
-    })
-  };
-
-  // Animation for fading out
-  const fadeOut = element => {
-    gsap.to(element, 1, {
-      opacity: 0,
-      y: -20,
-      ease: "power4.out"
-    })
-  };
-
-  // Checking to see when the viewport is visible to the user.
-  intersection && intersection.intersectionRatio < 0.3
-  ? fadeOut(".fadeIn")
-  : fadeIn(".fadeIn");
-
 
   return (
-    <Container ref={sectionRef} id="2">
+    <Container id="2">
       <Heading> 
         Make <span> profitable career </span> 
         as a developer <br/> faster than ever
       </Heading>
-      <Row className="fadeIn">
+      <Row>
         <ServiceCard>
           <IconWrapper>
             <img src={IconCertified} alt="icon"/>
