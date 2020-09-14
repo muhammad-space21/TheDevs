@@ -23,7 +23,7 @@ const CoursesTechsContainer = ({singleCourse, loading, error}) => (
 );
 
 CoursesTechsContainer.propTypes = {
-  // singleCourse: PropTypes.object.isRequired,
+  singleCourse: PropTypes.object.isRequired,
   loading: PropTypes.bool.isRequired,
   error: PropTypes.bool
 };

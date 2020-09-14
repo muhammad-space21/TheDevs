@@ -1,9 +1,7 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
-import { fadeIn } from 'react-animations';
-import styled, { keyframes } from 'styled-components';
-import { bounce } from 'react-animations';
+import { BounceInUpAnimationLong } from '../../utils/animations';
 
 import {
   Container,
@@ -21,6 +19,7 @@ import {
 
  import IconShare from '../../assets/icons/icon-share.svg';
  import IconLike from '../../assets/icons/icon-like.svg';
+
 
 const CourseItem = (courses) => {
   const [increment, setIncrement] = useState(0);
@@ -45,38 +44,40 @@ const CourseItem = (courses) => {
 
   return (
     <Container>
-      <ImageWrapper onClick={routeChange}>
-        <img src={courses.image} alt="course" />
-      </ImageWrapper>
-      <Footer>
-        <CourseTitle>
-          {courses.name} 
-        </CourseTitle>
-        <Duration>
-          Duration: <span>{weeks_count} weeks</span>
-        </Duration>
-        <InfoContainer>
-          {
-            authors.map(({id, image, name, lastname}) => (
-            <AuthorContainer  key={id}>
-              <Avatar>
-                <img src={image} alt="avatar"/>
-              </Avatar>
-              <AuthorName>
-                {name +' '+ lastname}
-              </AuthorName>
-            </AuthorContainer>
-            ))
-          }
-          <IconWrapper>
-            <img src={IconShare} alt="icon-share"/>
-            <IconComponent>
-              <span>{increment}</span>
-              <img src={IconLike} onClick={handleIncrement} alt="icon-like"/>
-            </IconComponent>
-          </IconWrapper>
-        </InfoContainer>
-      </Footer>
+      <BounceInUpAnimationLong>
+        <ImageWrapper onClick={routeChange}>
+          <img src={courses.image} alt="course" />
+        </ImageWrapper>
+        <Footer>
+          <CourseTitle>
+            {courses.name} 
+          </CourseTitle>
+          <Duration>
+            Duration: <span>{weeks_count} weeks</span>
+          </Duration>
+          <InfoContainer>
+            {
+              authors.map(({id, image, name, lastname}) => (
+              <AuthorContainer  key={id}>
+                <Avatar>
+                  <img src={image} alt="avatar"/>
+                </Avatar>
+                <AuthorName>
+                  {name +' '+ lastname}
+                </AuthorName>
+              </AuthorContainer>
+              ))
+            }
+            <IconWrapper>
+              <img src={IconShare} alt="icon-share"/>
+              <IconComponent>
+                <span>{increment}</span>
+                <img src={IconLike} onClick={handleIncrement} alt="icon-like"/>
+              </IconComponent>
+            </IconWrapper>
+          </InfoContainer>
+        </Footer>
+      </BounceInUpAnimationLong>
     </Container>
   )
 };

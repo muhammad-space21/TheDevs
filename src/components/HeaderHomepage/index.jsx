@@ -2,18 +2,26 @@ import React from 'react';
 
 import { Container, TextWrapper, ImageWrapper } from './styles';
 
+import { BounceInUpAnimation, BounceInRightAnimation } from '../../utils/animations';
+
 import ImageHeader from '../../assets/images/header.png';
+
+
 
 const HeaderHomepage = () => {
   return (
     <Container>
-      <TextWrapper>
-        Master <span>Web development </span>  
-        & <span>Mobile development </span>in 6 months
-        and boost your career.
-      </TextWrapper>
+        <TextWrapper>
+          <BounceInUpAnimation>
+            Master <span>Web development </span>  
+            & <span>Mobile development </span>in 6 months
+            and boost your career.
+          </BounceInUpAnimation>
+        </TextWrapper>
       <ImageWrapper>
-        <img src={ImageHeader} alt="header"/>
+        <BounceInRightAnimation>
+          <img src={ImageHeader} alt="header"/>
+        </BounceInRightAnimation>
       </ImageWrapper>
     </Container>
   );

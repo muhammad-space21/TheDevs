@@ -63,12 +63,7 @@ export const Footer = styled.div`
   }
 `;
 
-export const TechName = styled.div`
-  width: 100%;
-  height: fit-content;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+export const TechName = styled.h1`
   font-size: 16px;
   font-weight: 600;
   color: black;

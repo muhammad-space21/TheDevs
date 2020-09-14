@@ -15,8 +15,9 @@ const TechItem = ({
   image, 
   subtitle,
   duration
-  }) => {
+}) => {
 
+  // calculate duration
   const [days, hours] = duration.split(' ');
   let weeks_count = Math.floor(days / 7);
 
