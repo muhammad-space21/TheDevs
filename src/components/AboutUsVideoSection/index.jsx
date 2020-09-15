@@ -15,7 +15,7 @@ const AboutUsVideoSection = () => {
   return (
     <Container>
       <Heading>About<span>TheDevs</span></Heading>
-        <Video controls poster={ImagePoster} controlsList="nodownload">
+        <Video controls="true" poster={ImagePoster} controlsList="nodownload">
           <source src={PromoVideo} type="video/mp4" />
           Your browser does not support the video tag.
         </Video>
