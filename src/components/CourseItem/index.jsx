@@ -49,16 +49,16 @@ const CourseItem = (courses) => {
           <img src={courses.image} alt="course" />
         </ImageWrapper>
         <Footer>
-          <CourseTitle>
+          <CourseTitle onClick={routeChange}>
             {courses.name} 
           </CourseTitle>
-          <Duration>
+          <Duration onClick={routeChange}>
             Duration: <span>{weeks_count} weeks</span>
           </Duration>
           <InfoContainer>
             {
               authors.map(({id, image, name, lastname}) => (
-              <AuthorContainer  key={id}>
+              <AuthorContainer key={id} onClick={routeChange}>
                 <Avatar>
                   <img src={image} alt="avatar"/>
                 </Avatar>

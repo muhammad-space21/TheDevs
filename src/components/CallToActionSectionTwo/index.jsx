@@ -34,6 +34,7 @@ const CallToActionSectionTwo = ({singleCourse}) => {
         <PrimaryButton
           btnCircle 
           onClick={handleRouteChange}
+          disabled
         >
           Read more
         </PrimaryButton>

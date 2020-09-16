@@ -72,7 +72,7 @@ const Footer = () => {
           <SubCol2>
             <Heading>Contacts</Heading>
             <Tel href="tel:998909091016">+998 99 369 68 41</Tel>
-            <Links to='#'>zokirov.d@list.ru</Links>
+            <Links to='#'>info@edu.thedevs.co</Links>
           </SubCol2>
         </Col1>
         <ImageWrapper>
@@ -83,8 +83,8 @@ const Footer = () => {
       <Row2>
         <H7>© Copyright 2020 The Devs. All Rights Reserved.</H7>
         <TextWrapper>
-          <H6 to="/terms-and-service">Terms of Service</H6>
-          <H6 to="/privacy-policy">Privacy Policy</H6>
+          <H6 to="#">Terms of Service</H6>
+          <H6 to="#">Privacy Policy</H6>
         </TextWrapper>
       </Row2>
     </Container>

@@ -47,35 +47,6 @@ export const Container = styled.div`
       margin-left: 60px;
     }
   }
-  &:hover {
-    img {
-      margin-top: 200px;
-      margin-left: 120px;
-      display: block;
-      @media screen and (min-width: 1500px) {
-        margin-left: 200px;
-      }
-      @media screen and (max-width: 930px) {
-        margin-left: 150px;
-      }
-      @media screen and (max-width: 800px) {
-        margin-left: 120px;
-      }
-      @media screen and (max-width: 700px) {
-        margin-left: 100px;
-      }
-      @media screen and (max-width: 600px) {
-        margin-left: 130px;
-      }
-      @media screen and (max-width: 550px) {
-        margin-left: 135px;
-      }
-      @media screen and (max-width: 400px) {
-        margin-left: 110px;
-        margin-top: 200px;
-      }
-    }
-  }
 `;
 
 export const Price = styled.div`

@@ -50,6 +50,10 @@ const WhatYouLearnSection = ({singleCourse, loading, error}) => {
               ))
             ) : (<Spinner />)
           }
+          <BulletPoint>
+            <img src={IconBullet} alt="icon" />
+            <span>And many many more :)</span>
+          </BulletPoint>
         </BulletPointContainer>
       <IllustrationWrapper2>
         <Img3><img src={IllustrationThree} alt="illustration3" /></Img3>
