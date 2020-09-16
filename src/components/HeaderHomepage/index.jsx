@@ -13,7 +13,7 @@ const HeaderHomepage = () => {
     <Container>
         <TextWrapper>
           <BounceInUpAnimation>
-            Master <span>Web development </span>  
+            Master <span>Web development </span>, <span>Web design </span>  
             & <span>Mobile development </span>in 6 months
             and boost your career.
           </BounceInUpAnimation>

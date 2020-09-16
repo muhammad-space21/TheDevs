@@ -26,7 +26,6 @@ const AboutPage = () => {
       <NavbarMain />
       <HeaderAboutPage />
       <TextWrapper>
-        <span>TheDevs </span>,
         Undoubtedly, Information Technology is becomming the dream proffession 
         day by day. And many people seek high quality and effective courses to
         master IT skills. In theDevs you will gain adequate knowledge to boost your
