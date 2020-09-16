@@ -21,6 +21,7 @@ export const useForm = () => {
     e.preventDefault();
     setLoading(true);
 
+    console.log('inputs', inputs)
     // send data to API
     var bodyFormData = new FormData();
     Object.entries(inputs).forEach(([key, value]) => {bodyFormData.append(key, value)});

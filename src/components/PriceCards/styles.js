@@ -33,6 +33,7 @@ export const Container = styled.div`
     width: 80%;
   }
   img {
+    display: hidden;
     width: 125px;
     height: 130px;
     position: absolute;

@@ -50,6 +50,7 @@ const LeadModalContainer = ({ open, callback }) => {
     handleChange
   } = useForm();
 
+  var patterns = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
 
   return (
     <>
@@ -77,26 +78,20 @@ const LeadModalContainer = ({ open, callback }) => {
                   maxLength={20}
                   onChange={handleChange}
                   value={inputs.name}
+                  required
                 />
               </InputRow>
               <InputRow>
                 <InputIcon><img src={IconPhone} alt="icon" /></InputIcon>
-                <Input
+                <InputTel
                   type="tel" 
                   name="phone_number" 
                   placeholder="Phone number"
                   onChange={handleChange}
                   value={inputs.phone_number}
-                  maxLength={13}
+                  mask={['(', '+', /9/, /9/, /8/, ')', ' ', /\d/, /\d/, ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, '-', /\d/, /\d/]}
+                  required
                 />
-                {/* <InputTel
-                  type="tel" 
-                  name="phone_number" 
-                  placeholder="Phone number"
-                  onChange={handleChange}
-                  value={inputs.phone_number}
-                  mask={['(', /9/, /9/, /8/, ')', ' ', /\d/, /\d/, ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, '-', /\d/, /\d/]}
-                /> */}
               </InputRow>
               <InputRow>
                 <InputIcon><img src={IconEmail} alt="icon" /></InputIcon>
@@ -106,6 +101,8 @@ const LeadModalContainer = ({ open, callback }) => {
                   placeholder="Email address" 
                   onChange={handleChange}
                   value={inputs.email}
+                  pattern={patterns}
+                  required
                 />
               </InputRow>
               <InputRow>
@@ -115,8 +112,9 @@ const LeadModalContainer = ({ open, callback }) => {
                   name="course" 
                   onChange={handleChange}
                   value={inputs.course}
+                  required
                 >
-                  <option disabled defaultValue='default'>Choose the Course...</option>
+                  <option selected="selected" hidden>Choose the Course...</option>
                   <option value="1">Frontend development</option>
                   <option value="2">Backend development</option>
                   <option value="3">UI/UX design</option>
