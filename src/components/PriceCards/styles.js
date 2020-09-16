@@ -32,22 +32,6 @@ export const Container = styled.div`
   @media screen and (max-width: 450px) {
     width: 80%;
   }
-  img {
-    display: hidden;
-    width: 125px;
-    height: 130px;
-    position: absolute;
-    margin-top: 145px;
-    margin-left: 80px;
-    -webkit-transition: all .4s ease-out 0s;
-    -moz-transition: all .4s ease-out 0s;
-    -ms-transition: all .4s ease-out 0s;
-    -o-transition: all .4s ease-out 0s;
-    transition: all .4s ease-out 0s;
-    @media screen and (max-width: 1200px) {
-      margin-left: 60px;
-    }
-  }
 `;
 
 export const Price = styled.div`

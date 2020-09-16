@@ -12,10 +12,12 @@ import {
 
 import PrimaryButton from '../PrimaryButton';
 
-import CardsDots from '../../assets/images/card-dots.png';
-
-
-const PriceCards = ({id, service_cards, price, title, previous_price}) => {
+const PriceCards = ({
+  id, 
+  service_cards, 
+  price, title, 
+  previous_price
+}) => {
   const history = useHistory();
 
   // routeChange
@@ -25,7 +27,10 @@ const PriceCards = ({id, service_cards, price, title, previous_price}) => {
 
   return (
     <Container id="3">
-      <Price>$ <h1>{previous_price}</h1> <span>{price}</span> /month</Price>
+      <Price>
+        $ <h1>{previous_price}</h1> 
+        <span>{price}</span> /month
+      </Price>
       <Hr />
         <CourseName>{title}</CourseName>
       <Pros>
@@ -40,7 +45,6 @@ const PriceCards = ({id, service_cards, price, title, previous_price}) => {
       <PrimaryButton btnCard onClick={routeChange}>
         Read More
       </PrimaryButton>
-      <img src={CardsDots} alt="card-dots"/>
     </Container>
   )
 };
