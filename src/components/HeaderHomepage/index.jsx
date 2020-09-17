@@ -4,6 +4,8 @@ import { Container, TextWrapper, ImageWrapper } from './styles';
 
 import { BounceInUpAnimation, BounceInRightAnimation } from '../../utils/animations';
 
+import { Text } from '../../containers/Languages';
+
 import ImageHeader from '../../assets/images/header.png';
 
 
@@ -13,9 +15,7 @@ const HeaderHomepage = () => {
     <Container>
         <TextWrapper>
           <BounceInUpAnimation>
-            Master <span>Web development </span>, <span>Web design </span>  
-            & <span>Mobile development </span>in 6 months
-            and boost your career.
+            <Text tid="headerHomepageText" />
           </BounceInUpAnimation>
         </TextWrapper>
       <ImageWrapper>

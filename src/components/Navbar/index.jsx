@@ -15,6 +15,7 @@ import './styles.scss';
 
 import LeadModalContainer from '../../containers/LeadModalContainer';
 import ButtonPrimary from '../PrimaryButton';
+import LanguageSelector from '../LanguageSelector';
 
 import IconMenu from '../../assets/icons/menu-mobile.png';
 import LogoBrand from '../../assets/icons/logo.png';
@@ -32,6 +33,7 @@ export const NavbarMain = () => {
       </NavbarToggle>
         <NavbarCollapse id="responsive-navbar-nav">
           <NavStyled className="ml-auto">
+          <LanguageSelector />
             <NavLinkCustom to="/">Home</NavLinkCustom>
             <NavLinkCustom to="/how-it-works">Process</NavLinkCustom>
             <NavLinkCustom to="/about">About</NavLinkCustom>

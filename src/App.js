@@ -6,6 +6,7 @@ import { Container } from './App.styles';
 import ErrorBoundary from './components/ErrorBoundary';
 import Spinner from './components/Spinner';
 import ScrollTop from './hooks/useScrollToTop';
+import { LanguageProvider } from './containers/Languages';
 
 const Homepage = lazy(() => import('./pages/Homepage'));
 const CoursePage = lazy(() => import('./pages/CoursePage'));
@@ -20,6 +21,8 @@ const Auth = lazy(() => import('./containers/Auth'));
 
 const App = () => {
   return (
+    <LanguageProvider>
+
       <Container>
         <ScrollTop>
           <Switch>
@@ -40,6 +43,7 @@ const App = () => {
           </Switch>
         </ScrollTop>
       </Container>
+    </LanguageProvider>
   );
 };
 
