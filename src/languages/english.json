@@ -1,3 +1,12 @@
 {
-  "headerHomepageText": "Master Web development , Web design & Mobile development in 6 months and boost your career."
+  "headerHomepageText": "Master Web development , Web design & Mobile development in 6 months and boost your career.",
+  "navbarHomeText": "Home",
+  "navbarProcessText": "Process",
+  "navbarAboutText": "About",
+  "navbarCoursesText": "Courses",
+  "navbarFrontedDevelopmentText": "Frontend development",
+  "navbarBackendDevelopmentText": "Backend development",
+  "navbarUi-UxDesignText": "UI/UX Design",
+  "navbarPriceText": "Price",
+  "buttonEnrollToTheCourseText": "enroll to the course"
 }

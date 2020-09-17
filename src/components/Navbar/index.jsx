@@ -13,6 +13,8 @@ import {
 
 import './styles.scss';
 
+import { Text } from '../../containers/Languages';
+
 import LeadModalContainer from '../../containers/LeadModalContainer';
 import ButtonPrimary from '../PrimaryButton';
 import LanguageSelector from '../LanguageSelector';
@@ -34,26 +36,26 @@ export const NavbarMain = () => {
         <NavbarCollapse id="responsive-navbar-nav">
           <NavStyled className="ml-auto">
           <LanguageSelector />
-            <NavLinkCustom to="/">Home</NavLinkCustom>
-            <NavLinkCustom to="/how-it-works">Process</NavLinkCustom>
-            <NavLinkCustom to="/about">About</NavLinkCustom>
+            <NavLinkCustom to="/"><Text tid="navbarHomeText"/></NavLinkCustom>
+            <NavLinkCustom to="/how-it-works"><Text tid="navbarProcessText"/></NavLinkCustom>
+            <NavLinkCustom to="/about"><Text tid="navbarAboutText"/></NavLinkCustom>
             <li>
-              <NavLinkCustom className='nav-item' to="#1">Courses</NavLinkCustom>
+              <NavLinkCustom className='nav-item' to="#1"><Text tid="navbarCoursesText"/></NavLinkCustom>
               <ul className="sub-menu">
-                <NavLinkStyledDropdown to="/courses/1">Frontend development</NavLinkStyledDropdown>
-                <NavLinkStyledDropdown to="/courses/2">Backend development</NavLinkStyledDropdown>
-                <NavLinkStyledDropdown to="/courses/3">UI/UX Design</NavLinkStyledDropdown>
+                <NavLinkStyledDropdown to="/courses/1"><Text tid="navbarFrontedDevelopmentText"/></NavLinkStyledDropdown>
+                <NavLinkStyledDropdown to="/courses/2"><Text tid="navbarBackendDevelopmentText"/></NavLinkStyledDropdown>
+                <NavLinkStyledDropdown to="/courses/3"><Text tid="navbarUi-UxDesignText"/></NavLinkStyledDropdown>
               </ul>
             </li>
-              <NavLinkHide to="/courses/1">Frontend development</NavLinkHide>
-              <NavLinkHide to="/courses/2">Backend development</NavLinkHide>
-              <NavLinkHide to="/courses/3">UI/UX Design</NavLinkHide>
-            <NavLinkCustom to="#3">Prices</NavLinkCustom>
+              <NavLinkHide to="/courses/1"><Text tid="navbarFrontedDevelopmentText"/></NavLinkHide>
+              <NavLinkHide to="/courses/2"><Text tid="navbarBackendDevelopmentText"/></NavLinkHide>
+              <NavLinkHide to="/courses/3"><Text tid="navbarUi-UxDesignText"/></NavLinkHide>
+            <NavLinkCustom to="#3"><Text tid="navbarPriceText"/></NavLinkCustom>
             <ButtonPrimary 
               onClick={() => setShowModal(true)} 
               btnEnrollNavbar
             >
-              <span>enroll to the course</span>
+              <span><Text tid="buttonEnrollToTheCourseText"/></span>
             </ButtonPrimary>
           </NavStyled>
         </NavbarCollapse>

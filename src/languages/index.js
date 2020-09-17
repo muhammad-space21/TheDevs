@@ -5,5 +5,5 @@ export const dictionaryList = { eng, ru };
 
 export const languageOptions = {
   eng: 'English',
-  ru: 'Russian'
+  ru: 'Русский'
 };

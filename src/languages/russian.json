@@ -1,3 +1,12 @@
 {
-  "headerHomepageText": "Освойте веб-разработку, веб-дизайн и мобильную разработку за 6 месяцев и сделайте карьеру выше."
+  "headerHomepageText": "Освойте веб-разработку, веб-дизайн и мобильную разработку за 6 месяцев и сделайте карьеру выше.",
+  "navbarHomeText": "Главная",
+  "navbarProcessText": "Процесс",
+  "navbarAboutText": " О нас",
+  "navbarCoursesText": "Курсы",
+  "navbarFrontedDevelopmentText": "Frontend разработка",
+  "navbarBackendDevelopmentText": "Backend разработка",
+  "navbarUi-UxDesignText": "UI/UX дизайн",
+  "navbarPriceText": "Цены",
+  "buttonEnrollToTheCourseText": "Записаться на курс"
 }
