@@ -18,7 +18,7 @@ import ImageCircle2 from '../../assets/images/circle2.png';
 import ImageCircle3 from '../../assets/images/circle3.png';
 import ImageCircle4 from '../../assets/images/circle4.png';
 
-// import SecondaryButton from '../SecondaryButton';
+import { Text } from '../../containers/Languages';
 
 import PrimaryButton from '../PrimaryButton';
 import LeadModalContainer from '../../containers/LeadModalContainer';
@@ -35,11 +35,10 @@ const CallToActionSection = () => {
       </IllustrationWrapper1>
       <Row>
         <Heading>
-          Join <span> our courses </span> as soon as <br/>possible,
-          places are limited.
+          <Text tid="callToActionSectionTextOne" />
         </Heading>
         <PrimaryButton btnCircle onClick={() => setShowModal(true)}>
-          Enroll
+          <Text tid="buttonEnroll" />
         </PrimaryButton>
         {
           showModal && (

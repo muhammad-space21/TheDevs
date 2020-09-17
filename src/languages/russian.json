@@ -8,5 +8,9 @@
   "navbarBackendDevelopmentText": "Backend разработка",
   "navbarUi-UxDesignText": "UI/UX дизайн",
   "navbarPriceText": "Цены",
-  "buttonEnrollToTheCourseText": "Записаться на курс"
+  "buttonEnrollToTheCourseText": "Записаться на курс",
+  "articleHeadingOneText": "Начните создавать потрясающие веб-приложения и мобильные приложения с помощью theDevs.",
+  "articleHeadingTwoText": "Создавайте удобные и ориентированные на мобильные устройства веб-приложения и мобильные приложения с помощью theDevs.",
+  "callToActionSectionTextOne": "Присоединяйтесь к нашим курсам, как только возможно, так как места ограничены.",
+  "buttonEnroll": "записаться"
 }

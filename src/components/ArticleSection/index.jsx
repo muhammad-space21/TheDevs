@@ -9,6 +9,8 @@ import {
   ImageWrapper2
 } from './styles';
 
+import { Text } from '../../containers/Languages';
+
 import ImageOne from '../../assets/images/macbook.png';
 import ImageTwo from '../../assets/images/img-comp2.png';
 
@@ -20,8 +22,7 @@ export const ArticleSection = () => {
       <Row>
         <TextWrapper1>
             <span>
-              Start creating stunning web
-              and mobile applications with theDevs.
+              <Text tid="articleHeadingOneText" />
             </span>
         </TextWrapper1>
         <ImageWrapper1>
@@ -34,8 +35,7 @@ export const ArticleSection = () => {
         </ImageWrapper2>
         <TextWrapper2>
             <span>
-              Design user-friendly and mobile-first 
-              web and mobile applications with theDevs.
+              <Text tid="articleHeadingTwoText" />
             </span>
         </TextWrapper2>
       </Row>

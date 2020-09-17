@@ -8,5 +8,9 @@
   "navbarBackendDevelopmentText": "Backend development",
   "navbarUi-UxDesignText": "UI/UX Design",
   "navbarPriceText": "Price",
-  "buttonEnrollToTheCourseText": "enroll to the course"
+  "buttonEnrollToTheCourseText": "enroll to the course",
+  "articleHeadingOneText": "Start creating stunning web and mobile applications with theDevs.",
+  "articleHeadingTwoText": "Design user-friendly and mobile-first web and mobile applications with theDevs.",
+  "callToActionSectionTextOne": "Join our courses as soon as possible, places are limited.",
+  "buttonEnroll": "enroll"
 }

@@ -92,24 +92,12 @@ export const Img4 = styled.div`
 `;
 
 export const Heading = styled.div`
-  width: fit-content;
+  width: 400px;
   height: fit-content;
   font-size: 25px;
   font-weight: 700;
   color: black;
   margin-right: 50px;
-  span {
-    font-size: 25px;
-    font-weight: 700;
-    font-style: italic;
-    color: #7054FF;
-    @media screen and (max-width: 768px) {
-      font-size: 22px;
-    }
-    @media screen and (max-width: 550px) {
-      font-weight: 500;
-    }
-  }
   @media screen and (max-width: 768px) {
     font-size: 22px;
     margin-right: 0;
