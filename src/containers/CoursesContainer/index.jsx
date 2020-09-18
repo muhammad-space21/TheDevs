@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 
 import * as Actions from '../../redux/modules/courses/coursesAction';
+import { Text } from '../Languages';
 
 import {
   Container, 
@@ -32,8 +33,14 @@ const CoursesContainer = ({
   return (
     <Container id="1">
       <TextWrapper>
-        <HeadingOne>Courses <span>We offer</span></HeadingOne>
-        <HeadingTwo>High quality<span>matters</span></HeadingTwo>
+        <HeadingOne>
+          <Text tid="coursesText" />
+          <span><Text tid="weOfferText" /></span>
+        </HeadingOne>
+        <HeadingTwo>
+          <Text tid="highQualityText" />
+          <span><Text tid="mattersText" /></span>
+        </HeadingTwo>
       </TextWrapper>
       <Row>
         {

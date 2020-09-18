@@ -102,7 +102,7 @@ export const ImageWrapper2 = styled.div`
 `;
 
 export const TextWrapper1 = styled.div`
-  width: 30%;
+  width: 40%;
   height: 80vh;
   text-align: center;
   padding: 50px;
@@ -112,8 +112,8 @@ export const TextWrapper1 = styled.div`
   align-items: center;
   z-index: 888;
   span {
-    font-size: 23px;
-    line-height: 28px;
+    font-size: 20px;
+    line-height: 25px;
     font-weight: 400;
     margin-right: -150px;
     padding-left: 100px;
@@ -144,7 +144,7 @@ export const TextWrapper1 = styled.div`
 `;
 
 export const TextWrapper2 = styled.div`
-  width: 30%;
+  width: 40%;
   height: 80vh;
   text-align: center;
   padding: 50px;
@@ -154,8 +154,8 @@ export const TextWrapper2 = styled.div`
   align-items: center;
   z-index: 888;
   span {
-    font-size: 23px;
-    line-height: 28px;
+    font-size: 20px;
+    line-height: 25px;
     font-weight: 400;
     margin-left: -150px;
     padding-right: 100px;

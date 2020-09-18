@@ -9,6 +9,8 @@ import {
   ServiceCard
  } from './styles';
 
+ import { Text } from '../../containers/Languages';
+
  // img.
  import IconCertified from '../../assets/icons/certificate-file.png';
  import IconControl from '../../assets/icons/control.png';
@@ -23,8 +25,9 @@ const ServiceCardsSection = () => {
   return (
     <Container id="2">
       <Heading> 
-        Make <span> profitable career </span> 
-        as a developer <br/> faster than ever
+        <Text tid="makeText" />
+        <span> <Text tid="profitableCareerText" /> </span> 
+        <Text tid="asADeveloperFasterThanEverText" />
       </Heading>
       <Row>
         <ServiceCard>
@@ -32,10 +35,9 @@ const ServiceCardsSection = () => {
             <img src={IconCertified} alt="icon"/>
           </IconWrapper>
           <TextWrapper>
-            Best Quality
+            <Text tid="serviceCardsTitleOneText" />
             <span>
-             We provide the best quality of the 
-             trainings to help you master the IT skills
+              <Text tid="serviceCardsSubtitleOneText" />
             </span>
           </TextWrapper>
         </ServiceCard>
@@ -44,11 +46,9 @@ const ServiceCardsSection = () => {
             <img src={IconControl} alt="icon"/>
           </IconWrapper>
           <TextWrapper>
-            Comfortable platforms
+          <Text tid="serviceCardsTitleTwoText" />
             <span>
-              Our lessons are recorded for further usage in 
-              our telegram bot, to make it comfortable for you
-              to use anytime you want
+              <Text tid="serviceCardsSubtitleTwoText" />
             </span>
           </TextWrapper>
         </ServiceCard>
@@ -57,11 +57,9 @@ const ServiceCardsSection = () => {
             <img src={IconWebCoding} alt="icon"/>
           </IconWrapper>
           <TextWrapper>
-            Debuging and code review assistance
+            <Text tid="serviceCardsTitleThreeText" />
             <span>
-              Our instructors will help you with code 
-              review and debugging as they are the most 
-              important aspects of programming
+              <Text tid="serviceCardsSubtitleThreeText" />
             </span>
           </TextWrapper>
         </ServiceCard>
@@ -70,11 +68,9 @@ const ServiceCardsSection = () => {
             <img src={IconWork} alt="icon"/>
           </IconWrapper>
           <TextWrapper>
-            Portfolio building assistance
+            <Text tid="serviceCardsTitleFourText" />
             <span>
-              We will help you to make your
-              professional portfolio to get
-              a job in industry as soon as possible
+              <Text tid="serviceCardsSubtitleFourText" />
             </span>
           </TextWrapper>
         </ServiceCard>
@@ -83,12 +79,9 @@ const ServiceCardsSection = () => {
             <img src={IconDiscussion} alt="icon"/>
           </IconWrapper>
           <TextWrapper>
-            Mentoring assistance and communication
+            <Text tid="serviceCardsTitleFiveText" />
             <span>
-              Our instructors will be mentoring you
-              24/7 and you can enjoy the communication
-              with them and your coursemates in our Discord 
-              platform
+              <Text tid="serviceCardsSubtitleFiveText" />
             </span>
           </TextWrapper>
         </ServiceCard>
@@ -97,10 +90,9 @@ const ServiceCardsSection = () => {
             <img src={IconAgenda} alt="icon"/>
           </IconWrapper>
           <TextWrapper>
-            Affordable and worthwhile price
+            <Text tid="serviceCardsTitleSixText" />
             <span>
-              We will help you to be an IT guy in really 
-              short period for less amount of money spent
+              <Text tid="serviceCardsSubtitleSixText" />
             </span>
           </TextWrapper>
         </ServiceCard>

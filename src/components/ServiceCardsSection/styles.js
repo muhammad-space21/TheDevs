@@ -18,7 +18,7 @@ export const Container = styled.div`
 `;
 
 export const Heading = styled.div`
-  width: 100%;
+  width: 50%;
   padding-left: 20px;
   padding-right: 20px;
   font-size: 20px;
@@ -37,6 +37,7 @@ export const Heading = styled.div`
     }
   }
   @media screen and (max-width: 550px) {
+    width: 85%;
     font-size: 18px;
     line-height: 22px;
     padding: 0;

@@ -22,11 +22,13 @@ import {
   SocialMedia
 } from './styles';
 
+import { Text } from '../../containers/Languages';
+
+// img.
 import IconInstagram from '../../assets/icons/instagram.svg';
 import IconFacebook from '../../assets/icons/facebook.svg';
 import IconTelegram from '../../assets/icons/telegram.svg';
 import IconYoutube from '../../assets/icons/youtube.svg';
-
 import ImageFooter from '../../assets/images/footer.png';
 import LogoBrand from '../../assets/icons/logo-white.png';
 
@@ -57,20 +59,20 @@ const Footer = () => {
         <Col1>
           <SubRow> 
               <SubCol>
-                <Heading>Service Links</Heading>
-                <Links to='#'>Our Portfolio</Links>
-                <Hashlink to='#3'>Pricing</Hashlink>
-                <Hashlink to='#1'>Courses</Hashlink>
+                <Heading><Text tid="footerHeadingOneText" /></Heading>
+                <Links to='/how-it-works'><Text tid="footerLinkOneText" /></Links>
+                <Hashlink to='#3'><Text tid="footerLinkTwoText" /></Hashlink>
+                <Hashlink to='#1'><Text tid="footerLinkThreeText" /></Hashlink>
               </SubCol>
               <SubCol>
-                <Heading>Links</Heading>
-                <Links to='/about'>About us</Links>
-                <Links to='/how-it-works'>How it works</Links>
-                <Hashlink to='#2'>Our Benefits</Hashlink>
+                <Heading><Text tid="footerHeadingTwoText" /></Heading>
+                <Links to='/about'><Text tid="footerLinkFourText" /></Links>
+                <Links to='#'><Text tid="footerLinkFiveText" /></Links>
+                <Hashlink to='#2'><Text tid="footerLinkSixText" /></Hashlink>
               </SubCol>
           </SubRow>
           <SubCol2>
-            <Heading>Contacts</Heading>
+            <Heading><Text tid="footerHeadingThreeText" /></Heading>
             <Tel href="tel:998909091016">+998 99 369 68 41</Tel>
             <Links to='#'>info@edu.thedevs.co</Links>
           </SubCol2>
@@ -81,10 +83,10 @@ const Footer = () => {
       </Row>
       <HR />
       <Row2>
-        <H7>© Copyright 2020 The Devs. All Rights Reserved.</H7>
+        <H7>© Copyright 2020 The Devs. <Text tid="footerLinkNineText" /></H7>
         <TextWrapper>
-          <H6 to="#">Terms of Service</H6>
-          <H6 to="#">Privacy Policy</H6>
+          <H6 to="#"><Text tid="footerLinkSevenText" /></H6>
+          <H6 to="#"><Text tid="footerLinkEightText" /></H6>
         </TextWrapper>
       </Row2>
     </Container>

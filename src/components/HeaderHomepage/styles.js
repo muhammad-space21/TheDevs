@@ -36,7 +36,7 @@ export const TextWrapper = styled.div`
         font-size: 25px;
       }
       @media screen and (max-width: 550px) {
-        font-size: 18px;
+        font-size: 22px;
       }
     }
     @media screen and (max-width: 991px) {
@@ -48,7 +48,7 @@ export const TextWrapper = styled.div`
       margin-left: 0;
     }
     @media screen and (max-width: 550px) {
-      font-size: 18px;
+      font-size: 22px;
     }
 `;
 

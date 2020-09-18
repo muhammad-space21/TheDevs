@@ -10,6 +10,7 @@ import {
   PrevPrice
 } from './styles';
 
+import { Text } from '../../containers/Languages';
 import PrimaryButton from '../PrimaryButton';
 
 const PriceCards = ({
@@ -29,7 +30,7 @@ const PriceCards = ({
     <Container id="3">
       <Price>
         $ <h1>{previous_price}</h1> 
-        <span>{price}</span> /month
+        <span>{price}</span> /<Text tid="monthText" />
       </Price>
       <Hr />
         <CourseName>{title}</CourseName>
@@ -43,7 +44,7 @@ const PriceCards = ({
         }
       </Pros>
       <PrimaryButton btnCard onClick={routeChange}>
-        Read More
+        <Text tid="readMoreText" />
       </PrimaryButton>
     </Container>
   )

@@ -6,6 +6,7 @@ import { bindActionCreators } from 'redux';
 import { Container, Heading, Row } from './styles';
 
 import * as Actions from '../../redux/modules/prices/pricesActions';
+import { Text } from '../Languages';
 
 import PriceCards from '../../components/PriceCards';
 import Spinner from '../../components/Spinner';
@@ -27,8 +28,11 @@ const PricesContainer = ({
   return (
     <Container>
       <Heading>
-        Choose Your Very Best <br/> 
-        <span> Pricing Plan.</span> 
+        <Text tid="chooseYourVeryBestText" />
+        <br/> 
+        <span> 
+        <Text tid="pricingPlanText" />
+        </span> 
       </Heading>
       <Row>
         {

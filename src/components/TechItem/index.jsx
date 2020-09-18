@@ -9,6 +9,7 @@ import {
   Duration
  } from './styles';
 
+import { Text } from '../../containers/Languages';
 
 const TechItem = ({
   name, 
@@ -34,7 +35,8 @@ const TechItem = ({
           {subtitle}
         </TechTitle>
         <Duration>
-          Duration: <span>{weeks_count} weeks</span>
+          <Text tid="durationText" />: 
+          <span>{weeks_count} <Text tid="weeksText" /></span>
         </Duration>    
       </Footer>
     </Container>

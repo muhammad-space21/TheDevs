@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const Select = styled.select`
   background: transparent;
-  border: none;
   font-size: 16px;
   color: black;
   font-weight: 600;
@@ -14,16 +13,22 @@ export const Select = styled.select`
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+  transition: 0.5s;
+  border: none;
   &:focus {
     outline: none;
-  }&:hover {
+  }
+  &:hover {
     color: #08D0BD;
+  }
+  @media screen and (max-width: 550px) {
+    margin-right: 0;
+    margin-bottom: -20px;
   }
 `;
 
 export const Option = styled.option`
   background: transparent;
-  border: none;
   font-size: 12px;
   color: black;
   font-weight: 600;

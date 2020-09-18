@@ -17,6 +17,8 @@ import {
   IconComponent
  } from './styles';
 
+ import { Text } from '../../containers/Languages';
+
  import IconShare from '../../assets/icons/icon-share.svg';
  import IconLike from '../../assets/icons/icon-like.svg';
 
@@ -53,7 +55,8 @@ const CourseItem = (courses) => {
             {courses.name} 
           </CourseTitle>
           <Duration onClick={routeChange}>
-            Duration: <span>{weeks_count} weeks</span>
+            <Text tid="durationText" />: 
+            <span>{weeks_count} <Text tid="weeksText" /></span>
           </Duration>
           <InfoContainer>
             {
