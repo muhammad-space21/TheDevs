@@ -9,7 +9,6 @@ export const Select = styled.select`
   margin-right: 20px;
   cursor: pointer;
   text-transform: uppercase;
-  transition: 0.5s;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -21,9 +20,10 @@ export const Select = styled.select`
   &:hover {
     color: #08D0BD;
   }
-  @media screen and (max-width: 550px) {
+  @media screen and (max-width: 991px) {
     margin-right: 0;
     margin-bottom: -20px;
+    font-weight: 300;
   }
 `;
 
@@ -33,4 +33,7 @@ export const Option = styled.option`
   color: black;
   font-weight: 600;
   background-color: #F4F7F6;
+  @media screen and (max-width: 991px) {
+    font-weight: 300;
+  }
 `;

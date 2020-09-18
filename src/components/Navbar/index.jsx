@@ -35,7 +35,6 @@ export const NavbarMain = () => {
       </NavbarToggle>
         <NavbarCollapse id="responsive-navbar-nav">
           <NavStyled className="ml-auto">
-          <LanguageSelector />
             <NavLinkCustom to="/"><Text tid="navbarHomeText"/></NavLinkCustom>
             <NavLinkCustom to="/how-it-works"><Text tid="navbarProcessText"/></NavLinkCustom>
             <NavLinkCustom to="/about"><Text tid="navbarAboutText"/></NavLinkCustom>
@@ -51,6 +50,7 @@ export const NavbarMain = () => {
               <NavLinkHide to="/courses/2"><Text tid="navbarBackendDevelopmentText"/></NavLinkHide>
               <NavLinkHide to="/courses/3"><Text tid="navbarUi-UxDesignText"/></NavLinkHide>
             <NavLinkCustom to="#3"><Text tid="navbarPriceText"/></NavLinkCustom>
+            <LanguageSelector />
             <ButtonPrimary 
               onClick={() => setShowModal(true)} 
               btnEnrollNavbar

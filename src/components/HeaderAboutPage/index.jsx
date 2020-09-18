@@ -6,12 +6,14 @@ import {
   Heading
 } from './styles';
 
+import { Text } from '../../containers/Languages';
+
 
 const HeaderAboutPage = () => {
   return (
     <Container>
       <TextWrapper>
-        <Heading>Inspiring discovery through creativity.</Heading>  
+        <Heading><Text tid="headerAboutUsText" /></Heading>  
       </TextWrapper>
     </Container>
   );

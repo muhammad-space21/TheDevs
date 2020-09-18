@@ -118,7 +118,7 @@ export const IconWrapper = styled.div`
   }
 `;
 
-export const Text = styled.div`
+export const TextMain = styled.div`
   width: 100%;
   height: fit-content;
   text-align: center;

@@ -17,21 +17,23 @@ export const NavbarStyled = styled(Navbar)`
 `;
 
 export const NavStyled = styled(Nav)`
-  width: 60vw; 
+  width: 65vw; 
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
   z-index: 888;
+  padding-right: 10px;
     @media screen and (max-width: 991px) {
       width: 100vw;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
       background-color: #F4F7F6;
-      height: 60vh;
+      height: 80vh;
       margin-left: auto;
       margin-right: auto;
+      padding-right: 0;
     }
 `;
 
@@ -101,7 +103,7 @@ export const NavLinkCustom = styled(HashLink)`
     margin-right: 0;
     margin-bottom: -32px;
     text-transform: none;
-    font-weight: 500;
+    font-weight: 300;
     &:hover {
       color: #1EE5CF;
       cursor: pointer;
@@ -128,6 +130,7 @@ export const NavLinkStyledDropdown = styled(Link)`
     margin-right: 0;
     display: none;
     text-decoration: none;
+    font-weight: 300;
     &:hover {
       color: #1EE5CF;
     }
@@ -166,6 +169,7 @@ export const NavItemStyled = styled.div`
     @media screen and (max-width: 991px) {
       margin-left: 10px;
       margin-top: 20px;
+      font-weight: 300;
       &:hover {
         color: #00AF66;
       }
@@ -184,9 +188,6 @@ export const NavbarBrand = styled(Navbar.Brand)`
   align-items: center;
   justify-content: center;
   margin-left: 10px;
-  font-size: 20px;
-  color: black;
-  font-weight: 600;
   cursor: pointer;
   img {
     height: 30px;
