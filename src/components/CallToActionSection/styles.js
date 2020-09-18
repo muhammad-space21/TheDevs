@@ -104,6 +104,11 @@ export const Heading = styled.div`
     margin-bottom: 30px;
   }
   @media screen and (max-width: 550px) {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
     font-weight: 500;
+    font-size: 22px;
+    text-align: center;
   }
 `;
