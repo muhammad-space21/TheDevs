@@ -15,6 +15,7 @@ import {
  import './styles.css';
 
 import { useForm } from '../../hooks/useForm';
+import { Text } from '../Languages';
 
  //com.
  import PrimaryButton from '../../components/PrimaryButton';
@@ -68,7 +69,7 @@ const LeadModalContainer = ({ open, callback }) => {
               <CloseIcon onClick={() => callback()}>
                 <img src={IconClose} alt="..." />
               </CloseIcon>
-              <Heading>Fill in an application</Heading>
+              <Heading><Text tid="modalHeadingText" /></Heading>
               <InputRow>
                 <InputIcon><img src={IconEdit} alt="icon" /></InputIcon>
                 <Input
@@ -123,7 +124,7 @@ const LeadModalContainer = ({ open, callback }) => {
               <InputRow>
                 <PrimaryButton formBtn>
                   {
-                    !error && loading ? (<SpinnerSmall />) : ('Submit')
+                    !error && loading ? (<SpinnerSmall />) : (<Text tid="buttonSubmitText" />)
                   }
                 </PrimaryButton>
               </InputRow>

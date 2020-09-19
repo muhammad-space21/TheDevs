@@ -10,6 +10,7 @@ import {
 } from './styles';
 
 import Spinner from '../Spinner';
+import { Text } from '../../containers/Languages';
 
 const InstructorInfo = ({singleCourse, loading, error}) => {
 
@@ -20,7 +21,7 @@ const InstructorInfo = ({singleCourse, loading, error}) => {
             singleCourse.authors.map(({id, image, name, information, lastname}) => (
               <Container key={id}>
                 <AvatarContainer>
-                <span>Your Instructor</span>
+                <span><Text tid="yourInstructorText" /></span>
                   <Avatar>
                     <img src={image} alt="instructor"/>
                   </Avatar>

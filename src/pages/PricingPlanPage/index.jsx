@@ -12,7 +12,7 @@ import {
 } from './styles';
 
 import { getSinglePrice } from '../../redux/modules/singlePrice/singlePriceAction';
-
+import  { Text } from '../../containers/Languages';
 // comp.
 import Navbar from '../../components/Navbar';
 import HeaderPricingPlanPage from '../../components/HeaderPricingPlanPage';
@@ -68,7 +68,7 @@ const PricingPlanPage = ({
               <JoinITCommunitySection />
               <BtnBackWrapper to="/">
                 <img src={IconBack} alt="back-btn" />
-                back
+                <Text tid="backText" />
               </BtnBackWrapper>
               <Footer />
           </>

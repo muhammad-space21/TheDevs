@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { 
+import {
   Container,
   IllustrationWrapper1,
   IllustrationWrapper2,
@@ -15,6 +15,8 @@ import {
   BulletPoint,
   BulletPointContainer
  } from './styles';
+
+import { Text } from '../../containers/Languages';
 
  // img.
 import IllustrationOne from '../../assets/images/circle1.png';
@@ -34,7 +36,7 @@ const WhatYouLearnSection = ({singleCourse, loading, error}) => {
         <Img2><img src={IllustrationTwo} alt="illustration2" /></Img2>
       </IllustrationWrapper1>
       <TextWrapper>
-        <Heading>What You'll Learn...</Heading>
+        <Heading><Text tid="thingsToLearnText" /></Heading>
         <SubTitle>
           {singleCourse.expectation_description}
         </SubTitle>
@@ -52,7 +54,7 @@ const WhatYouLearnSection = ({singleCourse, loading, error}) => {
           }
           <BulletPoint>
             <img src={IconBullet} alt="icon" />
-            <span>And many many more :)</span>
+            <span><Text tid="andMoreText" /></span>
           </BulletPoint>
         </BulletPointContainer>
       <IllustrationWrapper2>

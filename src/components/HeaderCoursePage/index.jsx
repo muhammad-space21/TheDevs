@@ -8,6 +8,7 @@ import {
   Heading
 } from './styles';
 
+import { Text } from '../../containers/Languages';
 import LeadModalCotainer from '../../containers/LeadModalContainer';
 import PrimaryButton from '../PrimaryButton';
 
@@ -23,7 +24,7 @@ const HeaderCoursePage = ({singleCourse}) => {
             </SecondaryTitle>
       </TextWrapper>
       <PrimaryButton btnHeaderLong onClick={() => setModalShow(true)}>
-        Enroll in Course
+        <Text tid="buttonEnrollToTheCourseText" />
       </PrimaryButton>
       {
         showModal && (

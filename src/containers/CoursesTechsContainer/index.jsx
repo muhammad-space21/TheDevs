@@ -4,12 +4,13 @@ import { connect } from 'react-redux';
 
 import { Container, Heading, Row } from './styles';
 
+import { Text } from '../Languages';
 import TechItem from '../../components/TechItem';
 import Spinner from '../../components/Spinner';
 
 const CoursesTechsContainer = ({singleCourse, loading, error}) => (
   <Container>
-    <Heading>The Technologies you will master in this course</Heading>
+    <Heading><Text tid="courseHeadingText" /></Heading>
     <Row>
       {
         !loading && !error && singleCourse.technologies ? (

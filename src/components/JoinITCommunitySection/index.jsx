@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import { Container, Heading } from './styles';
 
+import { Text } from '../../containers/Languages';
 import PrimaryButton from '../PrimaryButton';
 import LeadModalContainer from '../../containers/LeadModalContainer';
 
@@ -13,10 +14,10 @@ const JoinITCommunitySection = () => {
 
   return (
     <Container>
-      <Heading>Join the large community of happy programmers!</Heading>
+      <Heading><Text tid="joinUsText" /></Heading>
       <PrimaryButton onClick={() => setModalShow(true)} btnCircleRed>
         <img src={IconCart} alt="icon"/>
-        Enroll to course
+        <Text tid="buttonEnrollToTheCourseText" />
       </PrimaryButton>
       {
         modalShow && (

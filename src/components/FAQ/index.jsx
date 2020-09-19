@@ -9,6 +9,7 @@ import {
   TextWrapper
 } from './styles';
 
+import { Text } from '../../containers/Languages';
 import IconFAQ from '../../assets/icons/question.png';
 import Spinner from '../../components/Spinner';
 
@@ -16,7 +17,7 @@ const FAQ = ({singleCourse, loading, error}) => (
   <Container>
     <Heading>
       <img src={IconFAQ} alt="icon" />
-      Frequently Asked Questions
+      <Text tid="faqText" />
     </Heading>
     {
       !error && !loading && singleCourse.faqs ? (

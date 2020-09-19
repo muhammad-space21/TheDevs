@@ -9,6 +9,7 @@ import {
   Heading
 } from './styles';
 
+import { Text } from '../../containers/Languages';
 import PrimaryButton from '../PrimaryButton';
 import ImageIllustration from '../../assets/images/header-webdeveloper-png.png';
 
@@ -27,16 +28,16 @@ const CallToActionSectionTwo = ({singleCourse}) => {
       </ImageWrapper>
       <Column>
         <Heading>
-          Why to study 
+          <Text tid="articleHeadingPartOneText" />
             <span> {singleCourse.name} </span>  
-          in 2020, and is it worth it ?
+          <Text tid="articleHeadingPartTwoText" />
         </Heading>
         <PrimaryButton
           btnCircle 
           onClick={handleRouteChange}
           disabled
         >
-          Read more
+          <Text tid="readMoreText" />
         </PrimaryButton>
       </Column>
     </Container>
