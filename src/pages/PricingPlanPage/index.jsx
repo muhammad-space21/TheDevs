@@ -19,6 +19,7 @@ import HeaderPricingPlanPage from '../../components/HeaderPricingPlanPage';
 import PricingServiceCardsContainer from '../../containers/PricingServiceCardsContainer';
 import JoinITCommunitySection from '../../components/JoinITCommunitySection';
 import Footer from '../../components/Footer';
+import SpinnerMain from '../../components/SpinnerMain';
 import Spinner from '../../components/Spinner';
 
 // img.
@@ -72,7 +73,7 @@ const PricingPlanPage = ({
               </BtnBackWrapper>
               <Footer />
           </>
-        ) : (<Spinner />)
+        ) : (<SpinnerMain />)
       }
     </Container>
   )

@@ -28,8 +28,8 @@ export const Heading = styled.div`
   text-align: center;
   span {
     font-size: 22px;
-    font-weight: 700;
-    color: #2669FF;
+    font-weight: 600;
+    color:  #08D0BD;
     font-style: italic;
     @media screen and (max-width: 550px) {
       font-size: 20px;

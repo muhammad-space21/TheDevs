@@ -28,10 +28,10 @@ export const Heading = styled.div`
     margin-bottom: 30px;
   }
   span {
-    color: #FFD52E;
+    color:  #08D0BD;
     margin-left: 5px;
     margin-right: 5px;
-    font-weight: 1000;
+    font-weight: 600;
     font-size: 25px;
   }
 `;

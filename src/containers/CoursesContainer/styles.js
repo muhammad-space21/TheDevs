@@ -47,7 +47,7 @@ export const HeadingOne = styled.div`
   font-size: 22px;
   font-style: italic;
   font-weight: 600;
-  color:  #FFD52E;
+  color: #08D0BD;
   span {
     font-size: 20px;
     font-weight: 500;
@@ -72,7 +72,7 @@ export const HeadingTwo = styled.div`
   font-size: 22px;
   font-style: italic;
   font-weight: 600;
-  color:  #FFD52E;
+  color: #08D0BD;
   span {
     font-size: 20px;
     font-weight: 500;
