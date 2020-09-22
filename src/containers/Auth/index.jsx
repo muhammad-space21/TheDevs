@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 import  { init, tokenLocalToRedux } from '../../redux/modules/auth/authAction';
 
-import Spinner from '../../components/Spinner';
+import SpinnerMain from '../../components/SpinnerMain';
 
 
 const Auth = ({
@@ -33,7 +33,7 @@ const Auth = ({
 
   return (
     <>
-      {loading && <Spinner />}
+      {loading && <SpinnerMain />}
       {!loading && token && children}
     </>
   )

@@ -4,7 +4,7 @@ import { Switch, Route } from "react-router-dom";
 import { Container } from './App.styles';
 
 import ErrorBoundary from './components/ErrorBoundary';
-import Spinner from './components/Spinner';
+import SpinnerMain from './components/SpinnerMain';
 import ScrollTop from './hooks/useScrollToTop';
 import { LanguageProvider } from './containers/Languages';
 
@@ -22,12 +22,11 @@ const Auth = lazy(() => import('./containers/Auth'));
 const App = () => {
   return (
     <LanguageProvider>
-
       <Container>
         <ScrollTop>
           <Switch>
             <ErrorBoundary>
-              <Suspense fallback={<Spinner />}>
+              <Suspense fallback={<SpinnerMain />}>
                 <Auth>
                   <Route exact key='r-1' path='/' component={Homepage} />
                   <Route exact key='r-2' path='/courses/:id' component={CoursePage} />

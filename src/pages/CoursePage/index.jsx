@@ -19,7 +19,7 @@ import MoneyBackPolicy from '../../components/MoneyBackPolicy';
 import SalaryLabel from '../../components/SalaryLabel';
 // import CallToActionSection from '../../components/CallToActionSection';
 import Footer from '../../components/Footer';
-import Spinner from '../../components/Spinner';
+import SpinnerMain from '../../components/SpinnerMain';
 
 
 const styles = {
@@ -65,7 +65,7 @@ const CoursePage = ({
             {/* <CallToActionSection /> */}
             <Footer />
           </>
-        ) : (<Spinner />)
+        ) : (<SpinnerMain />)
       }
     </div>
   )
