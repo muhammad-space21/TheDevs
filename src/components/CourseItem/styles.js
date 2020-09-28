@@ -7,9 +7,9 @@ export const Container = styled.div`
   flex-direction: column;
   cursor: pointer;
   transition: 0.5s;
+  margin-bottom: 30px;
   @media screen and (max-width: 991px) {
     width: 40%;
-    margin-bottom: 30px;
   }
   @media screen and (max-width: 769px) {
     width: 45%;

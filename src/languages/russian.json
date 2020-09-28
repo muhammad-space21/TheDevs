@@ -90,6 +90,6 @@
   "modalHeadingText": "Заполнить заявку",
   "buttonSubmitText": "Отправить",
   "headerPricesHeadingOneText": "Что включает в себя наш",
-  "headerPricesHeadingTwoText": "тариф?"
-
+  "headerPricesHeadingTwoText": "тариф?",
+  "apiTranslateRussian": "api-translate"
 }

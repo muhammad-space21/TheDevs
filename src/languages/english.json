@@ -90,6 +90,6 @@
   "modalHeadingText": "Fill in an application",
   "buttonSubmitText": "Submit",
   "headerPricesHeadingOneText": "What our",
-  "headerPricesHeadingTwoText": "Tarif includes ?"
-
+  "headerPricesHeadingTwoText": "Tarif includes ?",
+  "apiTranslateEnglish": "api-translate"
 }
