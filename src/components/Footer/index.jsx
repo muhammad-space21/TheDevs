@@ -50,7 +50,7 @@ const Footer = () => {
           <a href="http://t.me/eduthedevsco">
             <img src={IconTelegram} alt="telegram" />
           </a>
-          <a href="">
+          <a href="https://www.youtube.com/channel/UCxV50Ok_JHDwMTZ5dNCMRFw">
             <img src={IconYoutube} alt="youtube" />          
           </a>
         </SocialMedia>
