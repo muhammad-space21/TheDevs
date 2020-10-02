@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 import {
   NavbarStyled, 
@@ -17,12 +19,13 @@ import { Text } from '../../containers/Languages';
 
 import LeadModalContainer from '../../containers/LeadModalContainer';
 import ButtonPrimary from '../PrimaryButton';
+import SpinnerSmall from '../SpinnerSmall';
 import LanguageSelector from '../LanguageSelector';
 
 import IconMenu from '../../assets/icons/menu-mobile.png';
 import LogoBrand from '../../assets/icons/logo.png';
 
-export const NavbarMain = () => {
+export const NavbarMain = ({ courses, loading }) => {
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -41,14 +44,20 @@ export const NavbarMain = () => {
             <li>
               <NavLinkCustom className='nav-item' to="#1"><Text tid="navbarCoursesText"/></NavLinkCustom>
               <ul className="sub-menu">
-                <NavLinkStyledDropdown to="/courses/1"><Text tid="navbarFrontedDevelopmentText"/></NavLinkStyledDropdown>
-                <NavLinkStyledDropdown to="/courses/2"><Text tid="navbarBackendDevelopmentText"/></NavLinkStyledDropdown>
-                <NavLinkStyledDropdown to="/courses/3"><Text tid="navbarUi-UxDesignText"/></NavLinkStyledDropdown>
+                {
+                  !loading && courses.length ? (courses.map(({id, name}) => (
+                    <NavLinkStyledDropdown key={id} to={`courses/${id}`}>{name}</NavLinkStyledDropdown>
+                  ))
+                  ) : (<SpinnerSmall />)
+                }
               </ul>
             </li>
-              <NavLinkHide to="/courses/1"><Text tid="navbarFrontedDevelopmentText"/></NavLinkHide>
-              <NavLinkHide to="/courses/2"><Text tid="navbarBackendDevelopmentText"/></NavLinkHide>
-              <NavLinkHide to="/courses/3"><Text tid="navbarUi-UxDesignText"/></NavLinkHide>
+            {
+              !loading && courses.length ? (courses.map(({id, name}) => (
+                <NavLinkHide key={id} to={`courses/${id}`}>{name}</NavLinkHide>
+              ))
+              ) : (<SpinnerSmall />)
+            }
             <NavLinkCustom to="#3"><Text tid="navbarPriceText"/></NavLinkCustom>
             <LanguageSelector />
             <ButtonPrimary 
@@ -68,4 +77,19 @@ export const NavbarMain = () => {
   );
 };
 
-export default NavbarMain;
+const defaultState = {
+  loading: false,
+  courses: {}
+};
+
+NavbarMain.propTypes = {
+  loading: PropTypes.bool.isRequired,
+  // courses: PropTypes.object.isRequired
+};
+
+const mapStateToProps = (state) => ({
+  loading: state.coursesReducer.loading,
+  courses: state.coursesReducer.courses
+});
+
+export default connect(mapStateToProps, null)(NavbarMain);

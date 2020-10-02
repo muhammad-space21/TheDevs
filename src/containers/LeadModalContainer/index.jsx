@@ -1,5 +1,6 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { Modal } from 'antd';
 
 import {
@@ -41,7 +42,12 @@ const customBodyStyle = {
   borderBottom: 'none',
 };
 
-const LeadModalContainer = ({ open, callback }) => {
+const LeadModalContainer = ({ 
+  open, 
+  callback,
+  courses,
+  loadingSpinner
+}) => {
   const {
     error,
     success,
@@ -116,9 +122,13 @@ const LeadModalContainer = ({ open, callback }) => {
                   required
                 >
                   <option selected="selected" hidden>Choose the Course...</option>
-                  <option value="1">Frontend development</option>
-                  <option value="2">Backend development</option>
-                  <option value="3">UI/UX design</option>
+                  {
+                    !loading && courses.length ? (
+                      courses.map(({name, id}) => (
+                      <option key={id} value={id}>{name}</option>
+                      ))
+                    ) : (<SpinnerSmall />)
+                  }
                 </Select>
               </InputRow>
               <InputRow>
@@ -136,4 +146,19 @@ const LeadModalContainer = ({ open, callback }) => {
   )
 };
 
-export default LeadModalContainer;
+const defaultState = {
+  loadingSpinner: false,
+  courses: {}
+};
+
+LeadModalContainer.propTypes = {
+  loadingSpinner: PropTypes.bool.isRequired,
+  // courses: PropTypes.object.isRequired
+};
+
+const mapStateToProps = (state) => ({
+  loadingSpinner: state.coursesReducer.loading,
+  courses: state.coursesReducer.courses
+});
+
+export default connect(mapStateToProps, null)(LeadModalContainer);
